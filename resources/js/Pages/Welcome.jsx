@@ -48,30 +48,42 @@ export default function Welcome(props) {
             <div class="md:container md:mx-auto px-4   ">
                 <div class="flex justify-center flex-col  pt-3 border-t ">
                     <div class="flex-shrink-0">
-                        <img class="h-14 w-14" src={Image} alt="Tshut Wrld" />
+                        <img
+                            class="h-14 w-14   cursor-pointer"
+                            src={Image}
+                            alt="Tshut Wrld"
+                        />
                     </div>
 
-                    <div class="text-center text-2xl text-white border-r-2 border-blue-400 p-3  ">
+                    <div class="text-center text-2xl text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
                         your own WORDS on t-Shirts
                     </div>
-                    <div class="tracking-tight text-right text-2xl   leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
+                    <div class="tracking-tight text-right text-2xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
                         Choose from our pHRASES Collection
                     </div>
-                    <div class="tracking-tight text-center border-l-2 text-4xl text-rose-600 hover:text-green-600 font-light P-2 border-blue-500 border-spacing-2 mt-2">
+                    <div class="tracking-tight text-center border-l-2 text-5xl   hover:text-lime-400 font-thin p-2 border-blue-500 border-spacing-2 mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                         cHOOSE any dESIGN from oUR cATALOGUE
                     </div>
-                    <div class="tracking-tight text-start text-2xl border-r-2   text-white  m-4 border-green-400 ">
+                    <div class="tracking-tight text-start text-2xl border-r-2 hover:translate-x-1 duration-300  text-white  m-4 border-green-400 ">
                         talk to uS for cUSTOM sOLUTIONs
                     </div>
-                    <button class="bg-gray-800 text-white p-2  rounded-md w-40 text-center    dark:bg-gray-200 border border-white">
+                    <button class="bg-gray-800 text-white p-2 hover:translate-y-2 duration-500 rounded-md w-40 text-center    dark:bg-gray-200 border border-white">
                         talk tO uS
                     </button>
                     <div class="flex justify-end gap-3">
                         <div class="text-center     text-5xl text-amber-500 mt-2">
                             rEADY?
                         </div>
-                        <button class="bg-gray-800 text-white p-2 h-10 rounded-md w-40 text-center  border-2  dark:bg-blue-200  border-white">
-                            start dESIGNING...
+                        <button
+                            type="submit"
+                             class="bg-gray-800 hover:translate-x-3 duration-300 text-white p-2 h-10 rounded-md w-40 text-center  border-2    border-white bg-clip-text bg-gradient-to-r from-purple-400 to-lime-600"
+                        >
+                            <Link
+                                className="mr-1 text-sm text-blue-200"
+                                // href={route("designs")}
+                            >
+                                start dESIGNING...
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -81,7 +93,7 @@ export default function Welcome(props) {
                 </div>
                 <div class="  mt-5 p-4">
                     <div class="flex flex-wrap justify-center gap-3">
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 rounded-md shadow-md border-2 border-cyan-500">
+                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 rounded-md shadow-md border-2 border-cyan-500 hover:scale-105 duration-500">
                             <a class="relative block h-96 overflow-hidden rounded ">
                                 <img
                                     alt="ecommerce"
@@ -99,7 +111,7 @@ export default function Welcome(props) {
                                 <p class="mt-1 text-white">01/09/2022</p>
                             </div>
                         </div>
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4   rounded-md shadow-md border-2 border-cyan-500">
+                        <div class="w-full p-4 md:w-1/2 lg:w-1/4   rounded-md shadow-md border-2 border-cyan-500 hover:scale-105 duration-500">
                             <a class="relative block h-96 overflow-hidden rounded">
                                 <img
                                     alt="ecommerce"
@@ -117,7 +129,7 @@ export default function Welcome(props) {
                                 <p class="mt-1 text-white">01/09/2022</p>
                             </div>
                         </div>
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 shadow-md rounded-md   border-2 border-cyan-500">
+                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 shadow-md rounded-md   border-2 border-cyan-500 hover:scale-105 duration-500">
                             <a class="relative block  overflow-hidden rounded h-96">
                                 <img
                                     alt="ecommerce"
@@ -138,10 +150,10 @@ export default function Welcome(props) {
                         </div>
                     </div>
                 </div>
-                <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500">
+                <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500 ">
                     <q>eVERYDAY iTS oWN mESSAGE or a lANGUAGE yOU cHOOSE</q>
                 </div>
-                <div class="text-start tracking-widest overline p-4 mt-4 text-2xl text-white">
+                <div class="text-start tracking-widest overline p-4 mt-4 text-2xl text-white hover:translate-x-2 duration-300">
                     aBOUT t-SHUT Wrld
                 </div>
                 <div class="p-3 text-xl leading-relaxed text-white indent-8 italic font-thin tracking-wide text-center">
@@ -159,7 +171,7 @@ export default function Welcome(props) {
                     our logo on it You can also request your own customized
                     phrase at your own pace
                 </div>
-                <div class="text-end tracking-widest overline p-4 mt-4 text-2xl text-white">
+                <div class="text-end tracking-widest overline p-4 mt-4 text-2xl text-white hover:-translate-x-3 duration-500">
                     pHRASES cATALOGUE
                 </div>
                 <div class="flex flex-wrap justify-center">
@@ -205,13 +217,13 @@ export default function Welcome(props) {
                 <div class="text-blue-300 text-end p-4 m-4 cursor-pointer hover:text-red-500 hover:scale-y-105 duration-75">
                     Explore Full Catalogue
                 </div>
-                <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white">
+                <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
                     oUR sERVICE
                 </div>
                 <div class="flex flex-wrap justify-center font-thin text-4xl p-4 text-blue-600 text-center">
                     ~jUST t-sHIRT bRANDING~
                 </div>
-                <div class="text-center tracking-widest text-white overline p-4 mt-4 text-2xl">
+                <div class="text-center tracking-widest text-white overline p-4 mt-4 text-2xl hover:scale-75 duration-300">
                     fIND uS oN
                 </div>
                 <div class="flex justify-center gap-2 p-3">
