@@ -76,7 +76,7 @@ export default function Welcome(props) {
                         </div>
                         <button
                             type="submit"
-                             class="bg-gray-800 hover:translate-x-3 duration-300 text-white p-2 h-10 rounded-md w-40 text-center  border-2    border-white bg-clip-text bg-gradient-to-r from-purple-400 to-lime-600"
+                            class="bg-gray-800 hover:translate-x-3 duration-300 text-white p-2 h-10 rounded-md w-40 text-center  border-2    border-white bg-clip-text bg-gradient-to-r from-purple-400 to-lime-600"
                         >
                             <Link
                                 className="mr-1 text-sm text-blue-200"
@@ -91,65 +91,155 @@ export default function Welcome(props) {
                 <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl brightness-100 transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-90 duration-300 ">
                     tODAY's pICKS
                 </div>
-                <div class="  mt-5 p-4">
-                    <div class="flex flex-wrap justify-center gap-3">
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 rounded-md shadow-md border-2 border-cyan-500 hover:scale-105 duration-500">
-                            <a class="relative block h-96 overflow-hidden rounded ">
-                                <img
-                                    alt="ecommerce"
-                                    class="block h-full w-full object-cover object-center cursor-pointer"
-                                    src="https://dummyimage.com/421x261"
-                                />
-                            </a>
-                            <div class="mt-4">
-                                <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                    PANGA
-                                </h3>
-                                <h2 class="title-font text-lg font-medium text-white">
-                                    KES 700
-                                </h2>
-                                <p class="mt-1 text-white">01/09/2022</p>
+
+                <div class="container mx-auto my-32 px-4 sm:px-0">
+                    <div class="flex flex-wrap">
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4   rounded-md shadow-md border-2 border-cyan-500 hover:scale-105 duration-500">
-                            <a class="relative block h-96 overflow-hidden rounded">
-                                <img
-                                    alt="ecommerce"
-                                    class="block h-full w-full object-cover object-center cursor-pointer"
-                                    src="https://dummyimage.com/421x261"
-                                />
-                            </a>
-                            <div class="mt-4">
-                                <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                    ADUI
-                                </h3>
-                                <h2 class="title-font text-lg font-medium text-white">
-                                    KES 700
-                                </h2>
-                                <p class="mt-1 text-white">01/09/2022</p>
+
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey-light shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="w-full p-4 md:w-1/2 lg:w-1/4 shadow-md rounded-md   border-2 border-cyan-500 hover:scale-105 duration-500">
-                            <a class="relative block  overflow-hidden rounded h-96">
-                                <img
-                                    alt="ecommerce"
-                                    class="block h-full w-full object-cover object-center cursor-pointer"
-                                    src="https://dummyimage.com/421x261"
-                                />
-                            </a>
-                            <div class="mt-4">
-                                <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                    LOVE
-                                </h3>
-                                <h2 class="title-font text-lg font-medium text-white">
-                                    KES 700
-                                </h2>
-                                <p class="mt-1 text-white">Available Sizes</p>
-                                <p class="mt-0 text-white">XXL XL L M S</p>
+
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey-light shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-4">
+                            <div class="w-full h-full bg-grey-light shadow-lg text-white text-center p-8">
+                                <a class="relative block  overflow-hidden rounded h-96">
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-full w-full object-cover object-center cursor-pointer"
+                                        src="https://dummyimage.com/421x261"
+                                    />
+                                </a>
+                                <div class="mt-4">
+                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                        LOVE
+                                    </h3>
+                                    <h2 class="title-font text-lg font-medium text-white">
+                                        KES 700
+                                    </h2>
+                                    <p class="mt-1 text-white">
+                                        Available Sizes
+                                    </p>
+                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500 ">
                     <q>eVERYDAY iTS oWN mESSAGE or a lANGUAGE yOU cHOOSE</q>
                 </div>
@@ -174,43 +264,50 @@ export default function Welcome(props) {
                 <div class="text-end tracking-widest overline p-4 mt-4 text-2xl text-white hover:-translate-x-3 duration-500">
                     pHRASES cATALOGUE
                 </div>
-                <div class="flex flex-wrap justify-center">
-                    <div class="grid grid-cols-4 gap-4">
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
+
+                <div class="container mx-auto  px-4 sm:px-0">
+                    <div class="flex flex-wrap">
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Awesome
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Kings Chase Crowns not clowns
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Awesome
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Kings Chase Crowns not clowns
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Awesome
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Kings Chase Crowns not clowns
-                        </div>
-                        <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
-                            Be Kind
+                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-2">
+                                <div class="shadow-md text-center hover:text-blue-200 text-white bg-black p-1 border-gray-50 rounded">
+                                    Be Kind
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
