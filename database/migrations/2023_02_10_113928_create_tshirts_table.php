@@ -20,11 +20,11 @@ return new class extends Migration
             $table->string('size');
             $table->integer('price')->nullable();
             $table->text('description')->nullable();
-            $table->string('url');
+            $table->string('img');
             $table->string('color');
         
-            $table->foreignId('user_id')
-                ->index()->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')
+            //     ->index()->constrained()->cascadeOnDelete();
         
             $table->timestamps();
         });

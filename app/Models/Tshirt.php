@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 
 class Tshirt extends Model
@@ -13,19 +14,24 @@ class Tshirt extends Model
     
     protected $fillable = [
         'name',
-        'url',
+        'img',
         'description',
-        'user_id',
         'price',
         'color',
         'size'
     ];
 
-    public function user(): BelongsTo
+    // public function user(): BelongsTo
+    // {
+    //     return $this->belongsTo(
+    //         related: User::class,
+    //         foreignKey: 'user_id',
+    //     );
+    // }
+     protected function img(): Attribute
     {
-        return $this->belongsTo(
-            related: User::class,
-            foreignKey: 'user_id',
+        return Attribute::make(
+            get: fn ($value) => url('uploads/'.$value),
         );
     }
 }

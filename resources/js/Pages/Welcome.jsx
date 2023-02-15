@@ -4,47 +4,12 @@ import Image from "@/Images/tshirt.png";
 import Tshirt1 from "@/Images/tshirt1.png";
 import Tshirt2 from "@/Images/tshirt2.png";
 import Tshirt3 from "@/Images/tshirt3.png";
+
+// import { InertiaLink, useForm } from "@inertiajs/ireact";
+
+
 export default function Welcome(props) {
-    let tshirts = [
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-    ];
-    let links = [
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-        {
-            name: "Maroon",
-            color: "Red",
-            size: "XL",
-            description: "A maroon Tshirt",
-        },
-    ];
+    
     return (
         <Layout>
             <Head title="Tshuts" />
@@ -57,7 +22,7 @@ export default function Welcome(props) {
                             alt="Tshut Wrld"
                         />
                     </div>
-
+                    
                     <div class="text-center text-2xl text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
                         your own WORDS on t-Shirts
                     </div>
@@ -276,10 +241,6 @@ export default function Welcome(props) {
                     {new Date().getFullYear()}
                     {"."}{" "}
                 </h2>
-
-                {tshirts.map((shirt) => {
-                    <div>{shirt.name}</div>;
-                })}
             </div>
         </Layout>
     );

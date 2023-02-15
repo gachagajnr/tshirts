@@ -4,8 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\TshirtController;
+use App\Http\Controllers\ShirtController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,15 +20,13 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::resource('posts', PostController::class);
 
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        // 'canDesign' => Route::has('design'),
-        'laravelVersion' => Application::VERSION,
+         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
 });
@@ -39,5 +40,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::resource('tshirts', ShirtController::class)
+        ->missing(function (Request $request) {
+            return Redirect::route('tshirts');
+        });
 
+        
 require __DIR__.'/auth.php';
