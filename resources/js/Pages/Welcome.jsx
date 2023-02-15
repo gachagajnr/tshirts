@@ -1,6 +1,9 @@
 import { Link, Head } from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
 import Image from "@/Images/tshirt.png";
+import Tshirt1 from "@/Images/tshirt1.png";
+import Tshirt2 from "@/Images/tshirt2.png";
+import Tshirt3 from "@/Images/tshirt3.png";
 export default function Welcome(props) {
     let tshirts = [
         {
@@ -92,15 +95,15 @@ export default function Welcome(props) {
                     tODAY's pICKS
                 </div>
 
-                <div class="container mx-4 my-8 px-8 sm:px-0">
+                <div class="container mx-4  px-8 sm:px-0">
                     <div class="flex flex-wrap  ">
                         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3  mb-4    ">
                             <div class="w-full h-full   text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded h-96">
+                                <a class="relative block  overflow-hidden rounded  ">
                                     <img
                                         alt="ecommerce"
                                         class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src="https://dummyimage.com/421x261"
+                                        src={Tshirt1}
                                     />
                                 </a>
                                 <div class="mt-4">
@@ -120,11 +123,11 @@ export default function Welcome(props) {
 
                         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3  mb-4   ">
                             <div class="w-full h-full   text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded h-96">
+                                <a class="relative block  overflow-hidden rounded  ">
                                     <img
                                         alt="ecommerce"
                                         class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src="https://dummyimage.com/421x261"
+                                        src={Tshirt2}
                                     />
                                 </a>
                                 <div class="mt-4">
@@ -144,11 +147,11 @@ export default function Welcome(props) {
 
                         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3   mb-4    ">
                             <div class="w-full h-full    text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded h-96">
+                                <a class="relative block  overflow-hidden rounded  ">
                                     <img
                                         alt="ecommerce"
                                         class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src="https://dummyimage.com/421x261"
+                                        src={Tshirt3}
                                     />
                                 </a>
                                 <div class="mt-4">
