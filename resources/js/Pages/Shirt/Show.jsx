@@ -1,4 +1,4 @@
-import { usePage, Head } from "@inertiajs/react";
+import { usePage, Head, Link } from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
@@ -10,13 +10,19 @@ export default function Show(props) {
             <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
                 sHUT dESIGNs
             </div>
+
             <div class="md:container md:mx-auto px-4   ">
+                <div class="text-white text-end hover:-translate-x-2 duration-500 my-3">
+                    <Link as="button" href="/tshirts/create">
+                        cREATE tSHUT
+                    </Link>
+                </div>
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {tshirts.map((tshirt) => {
                                 return (
-                                    <div class="w-full  h-full  p-4 hover:scale-105 duration:500">
+                                    <div class="w-full  h-full  p-4 hover:scale-105 duration-500">
                                         <a class="relative block  overflow-hidden rounded  ">
                                             <img
                                                 alt="ecommerce"
@@ -24,7 +30,7 @@ export default function Show(props) {
                                                 src={tshirt.img}
                                             />
                                         </a>
-                                        <div class="mt-4">
+                                        <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
                                                 <h3 class="title-font mb-1 text-xs tracking-widest text-white">
                                                     {tshirt.name}

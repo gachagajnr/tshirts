@@ -133,7 +133,7 @@ export default function Welcome(props) {
                         </div>
                     </div>
                     <div class="text-amber-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
-                        <Link href={route("register")}>
+                        <Link href="/tshirts" as='button'>
                             eXPLORE mORE dESIGNs
                         </Link>
                     </div>

@@ -5,7 +5,9 @@ export default function Layout({ children }) {
         <div class="bg-slate-900 p-4">
             <Head title="Tshuts Wrld" />
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
-                <p class="text-center pt-3 text-2xl text-white">tSHUTwRLD</p>
+                <p class="text-center pt-3 text-2xl text-white">
+                    <Link href="/">tSHUTwRLD</Link>
+                </p>
                 <header className="flex flex-row justify-center ">
                     <Link
                         className="mr-1 text-sm text-blue-200 hover:scale-105 duration-400"
@@ -25,8 +27,8 @@ export default function Layout({ children }) {
 
             <body>{children}</body>
             <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
-                    oUR sERVICE
-                </div>
+                oUR sERVICE
+            </div>
             <div class="flex flex-wrap justify-center font-thin text-4xl p-4 text-blue-600 text-center">
                 ~jUST t-sHIRT bRANDING~
             </div>

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Link, usePage, useForm } from "@inertiajs/react";
+import Layout from "@/Layouts/Layout";
+
+import { Link, usePage, useForm, Head } from "@inertiajs/react";
 
 export default function Create() {
     const { data, setData, post, errors, progress } = useForm({
@@ -10,7 +12,6 @@ export default function Create() {
         size: "",
         img: null,
     });
-    // console.log(data);
 
     function submit(e) {
         e.preventDefault();
@@ -18,117 +19,129 @@ export default function Create() {
     }
 
     return (
-        <div class="mt-10">
-            <div class="container flex flex-col justify-center mx-auto">
-                <div>
-                    <h1 class="mb-8 text-2xl  ">
-                        <Link
-                            href={route("tshirts.index")}
-                            class="text-indigo-600 hover:text-indigo-700"
-                        >
-                            Tshirts
-                        </Link>
-                        <span class="font-medium text-indigo-600"> / </span>
-                        Create
-                    </h1>
-                </div>
-                <div class="max-w-2xl p-8  rounded shadow">
-                    <form onSubmit={submit}>
-                        <div class="flex flex-col">
-                            <label htmlFor="name">Name:</label>
-                            <input
-                                id="name"
-                                value={data.name}
-                                onChange={(e) =>
-                                    setData("name", e.target.value)
-                                }
-                                class="border border-black p-1 m-2 rounded"
-                            />
-                            {errors.name && (
-                                <div class="text-red-600 text-end">
-                                    {errors.name}
-                                </div>
-                            )}
-                            <label htmlFor="price">Price:</label>
-                            <input
-                                id="price"
-                                value={data.price}
-                                onChange={(e) =>
-                                    setData("price", e.target.value)
-                                }
-                                class="border border-black p-1 m-2 rounded"
-                            />
-                            {errors.price && (
-                                <div class="text-red-600 text-end">
-                                    {errors.price}
-                                </div>
-                            )}
+        <Layout>
+            <Head title="Tshuts" />
 
-                            <label htmlFor="color">Color:</label>
-                            <input
-                                id="color"
-                                value={data.color}
-                                onChange={(e) =>
-                                    setData("color", e.target.value)
-                                }
-                                class="border border-black p-1 m-2 rounded"
-                            />
-                            {errors.color && (
-                                <div class="text-red-600 text-end">
-                                    {errors.color}
-                                </div>
-                            )}
-
-                            <label htmlFor="size">Size:</label>
-                            <input
-                                id="size"
-                                value={data.size}
-                                onChange={(e) =>
-                                    setData("size", e.target.value)
-                                }
-                                class="border border-black p-1 m-2 rounded"
-                            />
-                            {errors.size && (
-                                <div class="text-red-600 text-end">
-                                    {errors.size}
-                                </div>
-                            )}
-
-                            <label htmlFor="description">Description:</label>
-                            <input
-                                id="description"
-                                value={data.description}
-                                onChange={(e) =>
-                                    setData("description", e.target.value)
-                                }
-                                class="border border-black p-1 m-2 rounded"
-                            />
-                            {errors.description && (
-                                <div class="text-red-600 font-thin text-end">
-                                    {errors.description}
-                                </div>
-                            )}
-                            <input
-                                type="file"
-                                onChange={(e) =>
-                                    setData("img", e.target.files[0])
-                                }
-                            />
-                            {progress && (
-                                <progress value={progress.percentage} max="100">
-                                    {progress.percentage}%
-                                </progress>
-                            )}
-                            <button
-                                type="submit"
-                                class="border bg-blue-600 w-30 hover:bg-green-600 text-white, p-2 my-3 rounded"
-                            >
-                                Save Tshirt
-                            </button>
+            <div class="md:container md:mx-auto px-4   ">
+                <div class="container flex   mx-auto justify-center p-5">
+                    <div class="flex flex-row flex-wrap gap-3 justify-center">
+                        <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
+                            cREATE<br/> sHUT <br/>dESIGNs
                         </div>
-                    </form>
+
+                        <div class="max-w-2xl p-8  rounded shadow      bg-slate-400">
+                            <form onSubmit={submit}>
+                                <div class="flex flex-col">
+                                    <label htmlFor="name">Name:</label>
+                                    <input
+                                        id="name"
+                                        value={data.name}
+                                        placeholder="Name"
+                                        onChange={(e) =>
+                                            setData("name", e.target.value)
+                                        }
+                                        class="border border-white p-1 m-2 rounded"
+                                    />
+                                    {errors.name && (
+                                        <div class="text-red-600 text-end">
+                                            {errors.name}
+                                        </div>
+                                    )}
+                                    <label htmlFor="price">Price:</label>
+                                    <input
+                                        id="price"
+                                        type="number"
+                                        value={data.price}
+                                        placeholder="Price"
+                                        onChange={(e) =>
+                                            setData("price", e.target.value)
+                                        }
+                                        class="border border-white p-1 m-2 rounded"
+                                    />
+                                    {errors.price && (
+                                        <div class="text-red-600 text-end">
+                                            {errors.price}
+                                        </div>
+                                    )}
+
+                                    <label htmlFor="color">Colors</label>
+                                    <input
+                                        id="color"
+                                        value={data.color}
+                                        placeholder="Color"
+                                        onChange={(e) =>
+                                            setData("color", e.target.value)
+                                        }
+                                        class="border border-white p-1 m-1 rounded"
+                                    />
+                                    {errors.color && (
+                                        <div class="text-red-600 text-end">
+                                            {errors.color}
+                                        </div>
+                                    )}
+
+                                    <label htmlFor="size">Sizes</label>
+                                    <input
+                                        id="size"
+                                        value={data.size}
+                                        placeholder="Sizes"
+                                        onChange={(e) =>
+                                            setData("size", e.target.value)
+                                        }
+                                        class="border border-white p-1 m-1 rounded"
+                                    />
+                                    {errors.size && (
+                                        <div class="text-red-600 text-end">
+                                            {errors.size}
+                                        </div>
+                                    )}
+
+                                    <label htmlFor="description">
+                                        Description
+                                    </label>
+                                    <input
+                                        id="description"
+                                        value={data.description}
+                                        placeholder="Description"
+                                        onChange={(e) =>
+                                            setData(
+                                                "description",
+                                                e.target.value
+                                            )
+                                        }
+                                        class="border border-white p-1 m-1 rounded"
+                                    />
+                                    {errors.description && (
+                                        <div class="text-red-600 font-thin text-end">
+                                            {errors.description}
+                                        </div>
+                                    )}
+                                    <input
+                                        type="file"
+                                        onChange={(e) =>
+                                            setData("img", e.target.files[0])
+                                        }
+                                    />
+                                    {progress && (
+                                        <progress
+                                            value={progress.percentage}
+                                            max="100"
+                                        >
+                                            {progress.percentage}%
+                                        </progress>
+                                    )}
+                                    <button
+                                        type="submit"
+                                        class="  bg-blue-600 w-30 hover:bg-green-600 text-white, p-2 my-3 rounded"
+                                    >
+                                        sAVE tSHUT
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     );
 }
