@@ -7,9 +7,7 @@ import Tshirt3 from "@/Images/tshirt3.png";
 
 // import { InertiaLink, useForm } from "@inertiajs/ireact";
 
-
 export default function Welcome(props) {
-    
     return (
         <Layout>
             <Head title="Tshuts" />
@@ -22,7 +20,7 @@ export default function Welcome(props) {
                             alt="Tshut Wrld"
                         />
                     </div>
-                    
+
                     <div class="text-center text-2xl text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
                         your own WORDS on t-Shirts
                     </div>
@@ -134,6 +132,11 @@ export default function Welcome(props) {
                             </div>
                         </div>
                     </div>
+                    <div class="text-amber-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
+                        <Link href={route("register")}>
+                            eXPLORE mORE dESIGNs
+                        </Link>
+                    </div>
                 </div>
 
                 <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500 ">
@@ -210,37 +213,6 @@ export default function Welcome(props) {
                 <div class="text-blue-300 text-end p-4 m-4 cursor-pointer hover:text-red-500 hover:scale-y-105 duration-75">
                     Explore Full Catalogue
                 </div>
-                <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
-                    oUR sERVICE
-                </div>
-                <div class="flex flex-wrap justify-center font-thin text-4xl p-4 text-blue-600 text-center">
-                    ~jUST t-sHIRT bRANDING~
-                </div>
-                <div class="text-center tracking-widest text-white overline p-4 mt-4 text-2xl hover:scale-75 duration-300">
-                    fIND uS oN
-                </div>
-                <div class="flex justify-center gap-2 p-3">
-                    <div href="" class="text-blue-500">
-                        Facebook
-                    </div>
-                    <div href="" class="text-blue-500">
-                        Instagram
-                    </div>
-                    <div href="" class="text-blue-500">
-                        Twitter
-                    </div>
-                </div>
-                <div class="text-start tracking-widest text-white  p-2 mt-4 text-md overline">
-                    @tSHUTwRLD
-                </div>
-                <h2 class="text-end text-white">
-                    {"Copyright © "}{" "}
-                    <Link to="/" alt="" style={{ textDecoration: "none" }}>
-                        TshutWrld{" "}
-                    </Link>{" "}
-                    {new Date().getFullYear()}
-                    {"."}{" "}
-                </h2>
             </div>
         </Layout>
     );
