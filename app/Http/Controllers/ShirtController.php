@@ -129,7 +129,7 @@ class ShirtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tshirt $id)
+    public function destroy($id)
     {
         Tshirt::find($id)->delete();
         return Redirect()->route('tshirts.index');

@@ -1,15 +1,14 @@
-import { usePage, Head, Link, useForm } from "@inertiajs/react";
-// import { Inertia } from "@inertiajs/react";
+import { usePage, Head, Link, useForm,router } from "@inertiajs/react";
 
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const { tshirts } = usePage().props;
-    const { delete: destroy } = useForm();
+    const { post } = useForm();
 
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
-            route("tshirts.destroy", e.currentTarget.id);
+            router.delete(route("tshirts.destroy", e.currentTarget.id));
         }
     }
     return (
