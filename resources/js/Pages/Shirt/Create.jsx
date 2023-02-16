@@ -52,7 +52,7 @@ export default function Create() {
                                         class="border border-white p-1 m-2 rounded"
                                     />
                                     {errors.name && (
-                                        <div class="text-red-600 text-end">
+                                        <div class="text-red-600 text-end text-xs">
                                             {errors.name}
                                         </div>
                                     )}
@@ -68,7 +68,7 @@ export default function Create() {
                                         class="border border-white p-1 m-2 rounded"
                                     />
                                     {errors.price && (
-                                        <div class="text-red-600 text-end">
+                                        <div class="text-red-600 text-end text-xs">
                                             {errors.price}
                                         </div>
                                     )}
@@ -84,7 +84,7 @@ export default function Create() {
                                         class="border border-white p-1 m-1 rounded"
                                     />
                                     {errors.color && (
-                                        <div class="text-red-600 text-end">
+                                        <div class="text-red-600 text-end text-xs">
                                             {errors.color}
                                         </div>
                                     )}
@@ -100,7 +100,7 @@ export default function Create() {
                                         class="border border-white p-1 m-1 rounded"
                                     />
                                     {errors.size && (
-                                        <div class="text-red-600 text-end">
+                                        <div class="text-red-600 text-end text-xs">
                                             {errors.size}
                                         </div>
                                     )}
@@ -121,7 +121,7 @@ export default function Create() {
                                         class="border border-white p-1 m-1 rounded"
                                     />
                                     {errors.description && (
-                                        <div class="text-red-600 font-thin text-end">
+                                        <div class="text-red-600 font-thin text-end text-xs">
                                             {errors.description}
                                         </div>
                                     )}

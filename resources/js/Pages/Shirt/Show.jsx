@@ -1,10 +1,9 @@
-import { usePage, Head, Link, useForm,router } from "@inertiajs/react";
+import { usePage, Head, Link, useForm, router } from "@inertiajs/react";
 
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const { tshirts } = usePage().props;
-    const { post } = useForm();
 
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
@@ -74,7 +73,6 @@ export default function Show(props) {
                                             <button
                                                 onClick={destruct}
                                                 id={tshirt.id}
-                                                tabIndex="-1"
                                                 type="button"
                                                 className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
                                             >
