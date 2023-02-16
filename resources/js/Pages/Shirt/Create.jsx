@@ -14,7 +14,7 @@ export default function Create() {
 
     function submit(e) {
         e.preventDefault();
-        post("/tshirts",data);
+        post("/tshirts", data);
     }
 
     return (

@@ -38,7 +38,7 @@ class ShirtController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+      public function store(Request $request)
     {
          $request->validate([
         'name' => 'required|string|max:255',
@@ -50,7 +50,10 @@ class ShirtController extends Controller
     ]);
     $image_path = '';
     if ($request->hasFile('img')) {
-        $image_path = $request->file('img')->store('tshirts', 'public');
+        // $image_path = $request->file('img')->store('images', 'public');
+          $image_path = time().'.'.$request->img->extension();  
+        $request->img->move(public_path('imgs'), $image_path);
+    
     }
     
      Tshirt::create([

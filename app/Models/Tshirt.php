@@ -31,7 +31,7 @@ class Tshirt extends Model
      protected function img(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => url('uploads/'.$value),
+            get: fn ($value) => url('imgs/'.$value),
         );
     }
 }
