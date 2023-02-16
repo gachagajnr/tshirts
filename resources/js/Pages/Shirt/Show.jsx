@@ -1,9 +1,17 @@
-import { usePage, Head, Link } from "@inertiajs/react";
+import { usePage, Head, Link, useForm } from "@inertiajs/react";
+// import { Inertia } from "@inertiajs/react";
+
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const { tshirts } = usePage().props;
+    const { delete: destroy } = useForm();
 
+    function destruct(e) {
+        if (confirm("Are you sure you want to delete this tshirt?")) {
+            route("tshirts.destroy", e.currentTarget.id);
+        }
+    }
     return (
         <Layout>
             <Head title="Tshuts" />
@@ -54,6 +62,25 @@ export default function Show(props) {
                                                     XXL XL L M S
                                                 </p>
                                             </div>
+                                            <Link
+                                                tabIndex="1"
+                                                className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
+                                                href={route(
+                                                    "tshirts.edit",
+                                                    tshirt.id
+                                                )}
+                                            >
+                                                Edit
+                                            </Link>
+                                            <button
+                                                onClick={destruct}
+                                                id={tshirt.id}
+                                                tabIndex="-1"
+                                                type="button"
+                                                className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
+                                            >
+                                                Delete
+                                            </button>
                                         </div>
                                     </div>
                                 );

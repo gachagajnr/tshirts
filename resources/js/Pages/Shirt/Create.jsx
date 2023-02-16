@@ -24,9 +24,18 @@ export default function Create() {
 
             <div class="md:container md:mx-auto px-4   ">
                 <div class="container flex   mx-auto justify-center p-5">
+                    
+
                     <div class="flex flex-row flex-wrap gap-3 justify-center">
-                        <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
-                            cREATE<br/> sHUT <br/>dESIGNs
+                        <div class="text-white  text-center p-5 border-t m-2  ">
+                            <div class="text-white mx-2 text-center p-3 hover:text-red-500 hover:-translate-x-1 duration-500">
+                                <Link href="/tshirts">tSHUTs</Link>
+                            </div>
+                            <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-x-2 duration-500">
+                                <br /> cREATE
+                                <br /> tSHUT <br />
+                                dESIGNs
+                            </div>
                         </div>
 
                         <div class="max-w-2xl p-8  rounded shadow      bg-slate-400">

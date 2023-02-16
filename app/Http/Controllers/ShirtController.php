@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Tshirt;
 use App\Http\Requests\StoreTshirtRequest;
+use Illuminate\Support\Facades\Validator;
 
 class ShirtController extends Controller
 {
@@ -68,7 +69,7 @@ class ShirtController extends Controller
         //     $request->validated()
         // );
 
-        return to_route('tshirts.index');
+        return Redirect()->route('tshirts.index');
     
     }
 
@@ -81,11 +82,7 @@ class ShirtController extends Controller
     public function show(Tshirt $tshirt)
     {
        return Inertia::render('Shirt/Show', [
-            'event' => $tshirt->only(
-              'name',
-              'size',
-               
-            ),
+            'tshirt' => $tshirt
         ]);
     }
 
@@ -95,14 +92,10 @@ class ShirtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($tshirt)
+    public function edit(Tshirt $tshirt)
     {
         return Inertia::render('Shirt/Edit', [
-            'tshirt' => [
-                'id' => $tshirt->id,
-                'name' => $tshirt->name,
-                'size' => $tshirt->size
-            ]
+            'tshirt' => $tshirt
         ]);
     }
 
@@ -113,12 +106,21 @@ class ShirtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreTshirtRequest $request, Tshirt $tshirt)
+    public function update($id,Request $request)
     {
-        $tshirt->update($request->validated());
 
-            return to_route('tshirts.index');
-
+        Validator::make($request->all(), [
+        'name' => ['required'],
+        'size' => ['required'],
+        'color' => ['required'],
+        'description' => ['required'],
+         
+        ])->validate();
+    
+        Tshirt::find($id)->update($request->all());
+        
+        return redirect()->route('tshirts.index');
+     
     }
 
     /**
@@ -127,12 +129,10 @@ class ShirtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tshirt $tshirt)
+    public function destroy(Tshirt $id)
     {
-        {
-        $tshirt->delete();
-
-            return to_route('tshirts.index');
-    }
+        Tshirt::find($id)->delete();
+        return Redirect()->route('tshirts.index');
+    
     }
 }
