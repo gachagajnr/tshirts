@@ -76,16 +76,29 @@ export default function Welcome(props) {
                                     </h1>
                                 </a>
                                 <div class="mt-4">
-                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        tSHUT wRLD
-                                    </h3>
-                                    <h2 class="title-font text-lg font-medium text-white">
-                                        KES 700
+                                    <div class="flex flex-row justify-between">
+                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                            tSHUT wRLD
+                                        </h3>
+                                        <h2 class="title-font  text-lg font-medium text-white">
+                                            KES 700
+                                        </h2>
+                                    </div>
+
+                                    <h2 class="title-font text-xs font-medium text-white">
+                                        All Colors Available
                                     </h2>
-                                    <p class="mt-1 text-white">
-                                        Available Sizes
-                                    </p>
-                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                    <h2 class="title-font text-md text-end font-medium text-white">
+                                        tWRLD
+                                    </h2>
+                                    <div class="flex flex-row justify-between">
+                                        <p class="mt-1 text-white font-light text-xs">
+                                            Available Sizes:
+                                        </p>
+                                        <p class="mt-0 text-white text-sm ">
+                                            XXL XL L M S
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,16 +118,29 @@ export default function Welcome(props) {
                                     </h1>
                                 </a>
                                 <div class="mt-4">
-                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        pENDA uPENDWE
-                                    </h3>
-                                    <h2 class="title-font text-lg font-medium text-white">
-                                        KES 700
+                                    <div class="flex flex-row justify-between">
+                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                            lIFE
+                                        </h3>
+                                        <h2 class="title-font  text-lg font-medium text-white">
+                                            KES 700
+                                        </h2>
+                                    </div>
+
+                                    <h2 class="title-font text-xs font-medium text-white">
+                                        All Colors Available
                                     </h2>
-                                    <p class="mt-1 text-white">
-                                        Available Sizes
-                                    </p>
-                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                    <h2 class="title-font text-md text-end font-medium text-white">
+                                        3Ls
+                                    </h2>
+                                    <div class="flex flex-row justify-between">
+                                        <p class="mt-1 text-white font-light text-xs">
+                                            Available Sizes:
+                                        </p>
+                                        <p class="mt-0 text-white text-sm ">
+                                            XXL XL L M S
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,21 +156,35 @@ export default function Welcome(props) {
                                     <h1 class="absolute text-xs text-end text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                         MONEY
                                         <br /> WALK
-                                        <br /> BULLSHIT<br/>
+                                        <br /> BULLSHIT
+                                        <br />
                                         TALK
                                     </h1>
                                 </a>
                                 <div class="mt-4">
-                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        Advice
-                                    </h3>
-                                    <h2 class="title-font text-lg font-medium text-white">
-                                        KES 700
+                                    <div class="flex flex-row justify-between">
+                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                            aDVICE
+                                        </h3>
+                                        <h2 class="title-font  text-lg font-medium text-white">
+                                            KES 700
+                                        </h2>
+                                    </div>
+
+                                    <h2 class="title-font text-xs font-medium text-white">
+                                        All Colors Available
                                     </h2>
-                                    <p class="mt-1 text-white">
-                                        Available Sizes
-                                    </p>
-                                    <p class="mt-0 text-white">XXL XL L M S</p>
+                                    <h2 class="title-font text-md text-end font-medium text-white">
+                                        Give Advice
+                                    </h2>
+                                    <div class="flex flex-row justify-between">
+                                        <p class="mt-1 text-white font-light text-xs">
+                                            Available Sizes:
+                                        </p>
+                                        <p class="mt-0 text-white text-sm ">
+                                            XXL XL L M S
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
