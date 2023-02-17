@@ -15,6 +15,7 @@ class ShirtController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   
     public function index()
     {
          $tshirts = Tshirt::latest()->get();
@@ -51,8 +52,7 @@ class ShirtController extends Controller
     ]);
     $image_path = '';
     if ($request->hasFile('img')) {
-        // $image_path = $request->file('img')->store('images', 'public');
-          $image_path = time().'.'.$request->img->extension();  
+        $image_path = time().'.'.$request->img->extension();  
         $request->img->move(public_path('imgs'), $image_path);
     
     }

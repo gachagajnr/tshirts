@@ -26,7 +26,7 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-         'laravelVersion' => Application::VERSION,
+        'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
 });
@@ -44,6 +44,6 @@ Route::resource('tshirts', ShirtController::class)
         ->missing(function (Request $request) {
             return Redirect::route('tshirts');
         });
-
+ 
         
 require __DIR__.'/auth.php';

@@ -1,4 +1,4 @@
-import { Link, Head } from "@inertiajs/react";
+import { Link, Head, usePage } from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
 import Image from "@/Images/tshirt.png";
 import Tshirt1 from "@/Images/tshirt1.png";
@@ -6,8 +6,11 @@ import Tshirt2 from "@/Images/tshirt2.png";
 import Tshirt3 from "@/Images/tshirt3.png";
 
 // import { InertiaLink, useForm } from "@inertiajs/ireact";
+// var item = items[Math.floor(Math.random()*items.length)];
 
 export default function Welcome(props) {
+    const { tshirts } = usePage().props;
+    console.log(tshirts);
     return (
         <Layout>
             <Head title="Tshuts" />
@@ -55,7 +58,7 @@ export default function Welcome(props) {
                 </div>
 
                 <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl brightness-100 transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-90 duration-300 ">
-                    tODAY's pICKS
+                    oUR dESIGNS
                 </div>
 
                 <div class="container mx-4  px-8 sm:px-0">
@@ -68,10 +71,13 @@ export default function Welcome(props) {
                                         class="block h-full w-full object-cover object-center cursor-pointer"
                                         src={Tshirt1}
                                     />
+                                    <h1 class="absolute text-sm text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        tSHUT wRLD
+                                    </h1>
                                 </a>
                                 <div class="mt-4">
                                     <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        LOVE
+                                        tSHUT wRLD
                                     </h3>
                                     <h2 class="title-font text-lg font-medium text-white">
                                         KES 700
@@ -92,10 +98,15 @@ export default function Welcome(props) {
                                         class="block h-full w-full object-cover object-center cursor-pointer"
                                         src={Tshirt2}
                                     />
+                                    <h1 class="absolute text-sm text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        lIVE
+                                        <br /> lOVE
+                                        <br /> lAUGH
+                                    </h1>
                                 </a>
                                 <div class="mt-4">
                                     <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        LOVE
+                                        pENDA uPENDWE
                                     </h3>
                                     <h2 class="title-font text-lg font-medium text-white">
                                         KES 700
@@ -116,10 +127,16 @@ export default function Welcome(props) {
                                         class="block h-full w-full object-cover object-center cursor-pointer"
                                         src={Tshirt3}
                                     />
+                                    <h1 class="absolute text-xs text-end text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        MONEY
+                                        <br /> WALK
+                                        <br /> BULLSHIT<br/>
+                                        TALK
+                                    </h1>
                                 </a>
                                 <div class="mt-4">
                                     <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                        LOVE
+                                        Advice
                                     </h3>
                                     <h2 class="title-font text-lg font-medium text-white">
                                         KES 700
@@ -133,7 +150,7 @@ export default function Welcome(props) {
                         </div>
                     </div>
                     <div class="text-amber-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
-                        <Link href="/tshirts" as='button'>
+                        <Link href="/tshirts" as="button">
                             eXPLORE mORE dESIGNs
                         </Link>
                     </div>
