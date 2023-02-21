@@ -35,6 +35,7 @@ console.log(cart)
                                                 class="block h-full w-full object-cover object-center cursor-pointer"
                                                 src={cart.img}
                                             />
+                                           
                                         </a>
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">

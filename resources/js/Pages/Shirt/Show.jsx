@@ -29,19 +29,19 @@ export default function Show(props) {
                             {tshirts.map((tshirt) => {
                                 return (
                                     <div class="w-full  h-full  p-4 hover:scale-105 duration-500">
-                                        <a class="relative block  overflow-hidden rounded  ">
+                                        <div class="relative     ">
                                             <img
                                                 alt="ecommerce"
                                                 class="block h-full w-full object-cover object-center cursor-pointer"
                                                 src={tshirt.img}
                                             />
-                                        </a>
+                                        </div>
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
                                                 <h3 class="title-font mb-1 text-xs tracking-widest text-white">
                                                     {tshirt.name}
                                                 </h3>
-                                                <h2 class="title-font  text-lg font-medium text-white">
+                                                <h2 class="title-font  text-md font-medium text-white">
                                                     KES {tshirt.price}
                                                 </h2>
                                             </div>
@@ -49,18 +49,26 @@ export default function Show(props) {
                                             <h2 class="title-font text-xs font-medium text-white">
                                                 {tshirt.color}
                                             </h2>
-                                            <h2 class="title-font text-md text-end font-medium text-white">
+                                            <h2 class="title-font text-xs text-end font-medium text-white">
                                                 {tshirt.description}
                                             </h2>
                                             <div class="flex flex-row justify-between">
-                                                <p class="mt-1 text-white font-light text-xs">
+                                                <p class="mt-0 text-white font-light text-xs">
                                                     Available Sizes:
                                                 </p>
-                                                <p class="mt-0 text-white text-sm ">
+                                                <p class="mt-0 text-white text-xs ">
                                                     XXL XL L M S
                                                 </p>
                                             </div>
-                                            <Link
+                                            <button
+                                                class="text-white text-center w-full bg-slate-500 p-0 my-1 hover:bg-green-400"
+                                                onClick={() =>
+                                                    console.log("Showing modal")
+                                                }
+                                            >
+                                                aDD tO cART
+                                            </button>
+                                            {/* <Link
                                                 tabIndex="1"
                                                 className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
                                                 href={route(
@@ -77,7 +85,7 @@ export default function Show(props) {
                                                 className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
                                             >
                                                 Delete
-                                            </button>
+                                            </button> */}
                                         </div>
                                     </div>
                                 );
