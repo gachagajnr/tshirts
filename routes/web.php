@@ -4,8 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use App\Http\Controllers\TshirtController;
+
 use App\Http\Controllers\ShirtController;
+use App\Http\Controllers\CartsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
  
@@ -19,6 +20,12 @@ use Illuminate\Support\Facades\Redirect;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('cart', CartsController::class);
+Route::resource('tshirts', ShirtController::class);
+// Route::resources(['tshirts'=> ShirtController::class,'carts'=> CartController::class]);
+
+// Route::resource('tshirts', 'ShirtController');
+// Route::resource('cart', 'CartController');
 
 
 
@@ -40,10 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::resource('tshirts', ShirtController::class)
-        ->missing(function (Request $request) {
-            return Redirect::route('tshirts');
-        });
+
  
         
 require __DIR__.'/auth.php';
