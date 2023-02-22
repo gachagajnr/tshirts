@@ -22,11 +22,7 @@ use Illuminate\Support\Facades\Redirect;
 */
 Route::resource('cart', CartsController::class);
 Route::resource('tshirts', ShirtController::class);
-// Route::resources(['tshirts'=> ShirtController::class,'carts'=> CartController::class]);
-
-// Route::resource('tshirts', 'ShirtController');
-// Route::resource('cart', 'CartController');
-
+ 
 
 
 Route::get('/', function () {
