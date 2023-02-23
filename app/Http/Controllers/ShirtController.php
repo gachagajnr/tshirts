@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ShirtController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
    
     public function index()
     {
@@ -23,23 +19,14 @@ class ShirtController extends Controller
         return Inertia::render('Shirt/Show', ['tshirts' => $tshirts]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         return Inertia::render('Shirt/Create');
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
       public function store(Request $request)
     {
          $request->validate([
@@ -65,20 +52,13 @@ class ShirtController extends Controller
         'color'=>$request->color,
         'size'=>$request->size
     ]);
-        // Tshirt::create(
-        //     $request->validated()
-        // );
+        
 
         return Redirect()->route('tshirts.index');
     
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     
     public function show(Tshirt $tshirt)
     {
        return Inertia::render('Shirt/Show', [
@@ -86,12 +66,7 @@ class ShirtController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     
     public function edit(Tshirt $tshirt)
     {
         return Inertia::render('Shirt/Edit', [
@@ -99,13 +74,7 @@ class ShirtController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update($id,Request $request)
     {
 
@@ -123,12 +92,7 @@ class ShirtController extends Controller
      
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         Tshirt::find($id)->delete();

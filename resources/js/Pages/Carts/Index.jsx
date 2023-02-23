@@ -3,8 +3,9 @@ import { usePage, Head, Link, useForm, router } from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
 
 export default function Index(props) {
-    const { cart } = usePage().props;
-console.log(cart)
+    const { carts } = usePage().props;
+    console.log(carts);
+
     function destruct(e) {
         if (confirm("Are you sure you want to delete this cart?")) {
             router.delete(route("cart.destroy", e.currentTarget.id));
@@ -14,11 +15,11 @@ console.log(cart)
         <Layout>
             <Head title="Tshuts" />
             <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
-               mY sHUT cART
+                mY sHUT cART
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-white text-end hover:-translate-x-2 duration-500 my-3">
+                <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
                     <Link as="button" href="/tshirts">
                         sHOP tSHUTs
                     </Link>
@@ -26,7 +27,7 @@ console.log(cart)
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {cart.map((cart) => {
+                            {carts.map((cart) => {
                                 return (
                                     <div class="w-full  h-full  p-4 hover:scale-105 duration-500">
                                         <a class="relative block  overflow-hidden rounded  ">
@@ -35,7 +36,6 @@ console.log(cart)
                                                 class="block h-full w-full object-cover object-center cursor-pointer"
                                                 src={cart.img}
                                             />
-                                           
                                         </a>
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">

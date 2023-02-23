@@ -3,9 +3,18 @@ import { useState } from "react";
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
-    const { tshirts } = usePage().props;
     const [cart, setCart] = useState({});
-    const [show, setShow] = useState(false);
+
+    const { data,  setData,router, post, errors, progress } = useForm({
+        name: "",
+        description: "",
+        price: "",
+        color: "",
+        size: "",
+        img: "",
+    });
+    const { tshirts } = usePage().props;
+
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
             router.delete(route("tshirts.destroy", e.currentTarget.id));
@@ -13,7 +22,22 @@ export default function Show(props) {
     }
     const clickMe = (tshirt) => () => {
         setCart(tshirt);
-    };
+        setData({
+            name: tshirt.name,
+            description: tshirt.description,
+            price: tshirt.price,
+            color: tshirt.color,
+            img: tshirt.img,
+            size: tshirt.size,
+        });
+
+     };
+
+    function submit(e) {
+        e.preventDefault();
+         post("/cart",data);
+    }
+
     return (
         <Layout>
             <Head title="Tshuts" />
@@ -22,7 +46,7 @@ export default function Show(props) {
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-white text-end hover:-translate-x-2 duration-500 my-3">
+                <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
                     <Link as="button" href="/tshirts/create">
                         cREATE tSHUT
                     </Link>
@@ -64,70 +88,54 @@ export default function Show(props) {
                     <div class="offcanvas-body flex-grow overflow-y-auto p-4">
                         <div class="flex flex-row justify-center">
                             <div class="w-full  h-full  p-4 ">
-                                <div class="relative     ">
-                                    <img
-                                        alt="ecommerce"
-                                        class="block h-1/4 w-full object-cover object-center cursor-pointer"
-                                        src={cart.img}
-                                    />
-                                </div>
-                                <div class="mt-2 ">
-                                    <div class="flex flex-row justify-between">
-                                        <h2 class="title-font  text-md font-medium text-black">
-                                            KES {cart.price}
+                                <form onSubmit={submit}>
+                                    <div class="relative  ">
+                                        <img
+                                            alt="ecommerce"
+                                            class="block h-1/4 w-full object-cover object-center cursor-pointer"
+                                            src={cart.img}
+                                        />
+                                    </div>
+                                    <div class="mt-2 ">
+                                        <div class="flex flex-row justify-between">
+                                            <h2 class="title-font  text-md font-medium text-black">
+                                                KES {cart.price}
+                                            </h2>
+                                        </div>
+
+                                        <h2 class="title-font text-xs font-medium text-black">
+                                            {cart.color}
                                         </h2>
-                                    </div>
-
-                                    <h2 class="title-font text-xs font-medium text-black">
-                                        {cart.color}
-                                    </h2>
-                                    <h2 class="title-font text-xs text-end font-medium text-black">
-                                        {cart.description}
-                                    </h2>
-                                    <div class="flex flex-row justify-between">
-                                        <p class="mt-0 text-black font-light text-xs">
-                                            Available Sizes:
-                                        </p>
-                                        <p class="mt-0 text-black text-xs ">
-                                            XXL XL L M S
-                                        </p>
-                                    </div>
-
+                                        <h2 class="title-font text-xs text-end font-medium text-black">
+                                            {cart.description}
+                                        </h2>
+                                        <div class="flex flex-row justify-between">
+                                            <p class="mt-0 text-black font-light text-xs">
+                                                Available Sizes:
+                                            </p>
+                                            <p class="mt-0 text-black text-xs ">
+                                                {cart.size}
+                                            </p>
+                                        </div>
+                                        {/* 
                                     <Link
-                                        href="/cart"
-                                        // method="post"
-                                        data={{ cartItems: cart }}
+                                        href={route("cart.store",data)}
+                                        // data={cart}
+                                        // onClick={clickMe(cart)}
+                                        as="button"
+                                        method="POST"
                                         class=" my-2 py-2 text-sm w-full   text-white bg-green-500 rounded"
-                                    >
+                                    > */}
                                         <button
-                                            // onClick={() => {}}
-                                            id={cart.id}
-                                            type="button"
-                                            className=" my-2 py-2 text-sm w-full text-white bg-green-500 rounded"
+                                            // type="submit"
+                                            class="p-2 w-full bg-slate-500"
+                                            // onclick={() => post("/cart")}
                                         >
                                             sAVE tO cART
                                         </button>
-                                    </Link>
-
-                                    {/* <Link
-                                                tabIndex="1"
-                                                className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
-                                                href={route(
-                                                    "tshirts.edit",
-                                                    tshirt.id
-                                                )}
-                                            >
-                                                Edit
-                                            </Link>
-                                            <button
-                                                onClick={destruct}
-                                                id={tshirt.id}
-                                                type="button"
-                                                className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
-                                            >
-                                                Delete
-                                            </button> */}
-                                </div>
+                                        {/* </Link> */}
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -9,58 +9,50 @@ use Illuminate\Support\Facades\Validator;
 
 class CartsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     
     public function index()
     {
-             $cart = Cart::latest()->get();
+        $carts = Cart::latest()->get();
 
-        return Inertia::render('Carts/Index', ['cart' => $cart]);
+        return Inertia::render('Carts/Index', ['carts' => $carts]);
     
     }
 
-     public function create()
-    {
-        return Inertia::render('Carts/Create');
-    }
     
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function store(Request $request)
+ public function store(Request $request)
     {
-        Validator::make($request->all(), [
-            'title' => ['required'],
-            'body' => ['required'],
-        ])->validate();
+        $request->validate([
+                'name' => 'required',
+                'description' => 'required',
+                'img' => 'required',
+                'price'=>'required',
+                'color'=>'required',
+                'size'=>'required'
+            ]);
+            
+            
+            Cart::create([
+                'name' => $request->name,
+                'description' => $request->description,
+                'img' => $request->img,
+                'price'=>$request->price,
+                'color'=>$request->color,
+                'size'=>$request->size
+            ]);
+            session()->flash('success', 'Product is Added to Cart Successfully !');
+        
+            return redirect()->route('cart.index');
+    }     
+    
    
-        Cart::create($request->all());
-    
-        return redirect()->route('carts.index');
-    }
-  
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function edit(Cart $post)
+    public function edit(Cart $cart)
     {
         return Inertia::render('Carts/Edit', [
-            'post' => $post
+            'cart' => $cart
         ]);
     }
     
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
+     
     public function update($id, Request $request)
     {
         Validator::make($request->all(), [
@@ -72,11 +64,7 @@ class CartsController extends Controller
         return redirect()->route('carts.index');
     }
     
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
+    
     public function destroy($id)
     {
         Cart::find($id)->delete();
