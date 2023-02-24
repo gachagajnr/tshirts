@@ -5,7 +5,7 @@ import Layout from "@/Layouts/Layout";
 export default function Show(props) {
     const [cart, setCart] = useState({});
 
-    const { data,  setData,router, post, errors, progress } = useForm({
+    const { data, setData, router, post, errors, progress } = useForm({
         name: "",
         description: "",
         price: "",
@@ -30,12 +30,11 @@ export default function Show(props) {
             img: tshirt.img,
             size: tshirt.size,
         });
-
-     };
+    };
 
     function submit(e) {
         e.preventDefault();
-         post("/cart",data);
+        post("/cart", data);
     }
 
     return (
@@ -60,8 +59,6 @@ export default function Show(props) {
                     data-te-offcanvas-init
                 >
                     <div class="flex items-center justify-between p-4">
-                        <div class="text-center text-2xl">{cart.name}</div>
-
                         <button
                             type="button"
                             class="box-content rounded-none border-none opacity-50 hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
@@ -87,17 +84,19 @@ export default function Show(props) {
                     </div>
                     <div class="offcanvas-body flex-grow overflow-y-auto p-4">
                         <div class="flex flex-row justify-center">
-                            <div class="w-full  h-full  p-4 ">
+                            <div class="w-full  h-full  p-6 ">
                                 <form onSubmit={submit}>
-                                    <div class="relative  ">
-                                        <img
-                                            alt="ecommerce"
-                                            class="block h-1/4 w-full object-cover object-center cursor-pointer"
-                                            src={cart.img}
-                                        />
-                                    </div>
+                                    <img
+                                        alt="ecommerce"
+                                        class="block h-auto w-full object-cover object-center cursor-pointer"
+                                        src={cart.img}
+                                    />
                                     <div class="mt-2 ">
                                         <div class="flex flex-row justify-between">
+                                            <div class="text-center text-md">
+                                                {cart.name}
+                                            </div>
+
                                             <h2 class="title-font  text-md font-medium text-black">
                                                 KES {cart.price}
                                             </h2>
@@ -117,23 +116,13 @@ export default function Show(props) {
                                                 {cart.size}
                                             </p>
                                         </div>
-                                        {/* 
-                                    <Link
-                                        href={route("cart.store",data)}
-                                        // data={cart}
-                                        // onClick={clickMe(cart)}
-                                        as="button"
-                                        method="POST"
-                                        class=" my-2 py-2 text-sm w-full   text-white bg-green-500 rounded"
-                                    > */}
+
                                         <button
                                             // type="submit"
                                             class="p-2 w-full bg-slate-500"
-                                            // onclick={() => post("/cart")}
                                         >
                                             sAVE tO cART
                                         </button>
-                                        {/* </Link> */}
                                     </div>
                                 </form>
                             </div>
@@ -147,7 +136,7 @@ export default function Show(props) {
                             {tshirts.map((tshirt) => {
                                 return (
                                     <div
-                                        class="w-full  h-full  p-4 "
+                                        class="w-full  h-full   "
                                         onClick={clickMe(tshirt)}
                                         type="button"
                                         data-te-offcanvas-toggle
@@ -156,13 +145,11 @@ export default function Show(props) {
                                         data-te-ripple-init
                                         data-te-ripple-color="light"
                                     >
-                                        <div class="relative     ">
-                                            <img
-                                                alt="ecommerce"
-                                                class="block h-full w-full object-cover object-center cursor-pointer"
-                                                src={tshirt.img}
-                                            />
-                                        </div>
+                                        <img
+                                            alt="ecommerce"
+                                            class="block h-96 w-full object-cover object-center cursor-pointer"
+                                            src={tshirt.img}
+                                        />
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
                                                 <h3 class="title-font mb-1 text-xs tracking-widest text-white">
