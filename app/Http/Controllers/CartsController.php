@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class CartsController extends Controller
 {
      
+    
     public function index()
     {
         $carts = Cart::latest()->get();
@@ -57,10 +58,10 @@ class CartsController extends Controller
      
     public function update($id, Request $request)
     {
-        Validator::make($request->all(), [
-            'quantity' => ['required'],
-            // 'body' => ['required'],
-        ])->validate();
+        // Validator::make($request->all(), [
+        //     'quantity' => ['required'],
+        //     // 'body' => ['required'],
+        // ])->validate();
     
         Cart::find($id)->update($request->all());
         return redirect()->route('cart.index');

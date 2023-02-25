@@ -21,7 +21,6 @@ export default function Create() {
             ...data,
             quantity: data.quantity ? " " :'1',
         }));
-        // console.log(data);
         post("/tshirts", data);
     }
 

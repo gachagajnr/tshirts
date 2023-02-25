@@ -3,9 +3,8 @@ import Layout from "@/Layouts/Layout";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 
 export default function Index(props) {
-    const { data, setData, router, post, errors, progress } = useForm({});
-
     const { carts } = usePage().props;
+
     // console.log(carts);
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
@@ -117,34 +116,46 @@ export default function Index(props) {
                                                     <div class="text-white text-2xl">
                                                         {cart.quantity}
                                                     </div>
-                                                    <Link
-                                                        as="button"
-                                                        type="button"
-                                                        href={route(
-                                                            `cart.update`,
-                                                            cart,
-
-                                                            {
-                                                                quantity:
-                                                                    cart.quantity +
-                                                                    1,
-                                                            }
-                                                        )}
+                                                    <button
+                                                        onClick={() =>
+                                                            router.put(
+                                                                route(
+                                                                    "cart.update",
+                                                                    cart.id,
+                                                                    {
+                                                                        quantity: 3,
+                                                                    }
+                                                                    //     name: cart.name,
+                                                                    //     description:
+                                                                    //         cart.description,
+                                                                    //     price: cart.price,
+                                                                    //     color: cart.color,
+                                                                    //     size: cart.size,
+                                                                    // }
+                                                                )
+                                                            )
+                                                        }
+                                                        type="submit"
                                                     >
+                                                        {/* remove */}
                                                         <PlusIcon class="text-white h-6 w-6 mx-2 hover:text-red-600" />
-                                                    </Link>
+                                                    </button>
                                                 </div>
-                                                <Link
+                                                <button
                                                     as="button"
                                                     id={cart.id}
-                                                    href={route(
-                                                        "cart.destroy",
-                                                        cart.id
-                                                    )}
+                                                    onClick={() =>
+                                                        router.delete(
+                                                            route(
+                                                                "cart.destroy",
+                                                                cart.id
+                                                            )
+                                                        )
+                                                    }
                                                     class="cursor-pointer text-white text-center text-md bg-red-600 p-1 rounded text-xs my-1"
                                                 >
                                                     rEMOVE fROM cART
-                                                </Link>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

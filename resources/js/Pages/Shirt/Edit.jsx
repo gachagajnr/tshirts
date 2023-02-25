@@ -34,7 +34,8 @@ export default function Edit({ tshirt }) {
                         </div>
 
                         <div class="max-w-2xl p-8  rounded shadow      bg-slate-400">
-                            <form onSubmit={submit}>
+                            <form onSubmit={submit}> 
+                            
                                 <div class="flex flex-col">
                                     <label htmlFor="name">Name:</label>
                                     <input
