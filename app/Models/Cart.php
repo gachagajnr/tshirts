@@ -16,7 +16,8 @@ class Cart extends Model
         'description',
         'price',
         'color',
-        'size'
+        'size',
+        'quantity'
     ];
     //  protected function img(): Attribute
     // {

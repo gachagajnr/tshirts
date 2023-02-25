@@ -13,14 +13,14 @@ export default function Welcome(props) {
     console.log(tshirts);
     return (
         <Layout>
-            <Head title="Tshuts" />
+            <Head title="tSHUT wRLD" />
             <div class="md:container md:mx-auto px-4   ">
                 <div class="flex justify-center flex-col  pt-3 border-t ">
                     <div class="flex-shrink-0">
                         <img
                             class="h-14 w-14   cursor-pointer"
                             src={Image}
-                            alt="Tshut Wrld"
+                            alt="tSHUT wRLD"
                         />
                     </div>
 

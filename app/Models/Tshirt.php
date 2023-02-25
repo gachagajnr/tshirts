@@ -18,7 +18,8 @@ class Tshirt extends Model
         'description',
         'price',
         'color',
-        'size'
+        'size',
+        'quantity'
     ];
 
     // public function user(): BelongsTo

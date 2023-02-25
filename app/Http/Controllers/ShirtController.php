@@ -35,7 +35,8 @@ class ShirtController extends Controller
         'img' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         'price'=>'required',
         'color'=>'required',
-        'size'=>'required'
+        'size'=>'required',
+        'quantity'=>'required'
     ]);
     $image_path = '';
     if ($request->hasFile('img')) {
@@ -50,7 +51,8 @@ class ShirtController extends Controller
         'img' => $image_path,
         'price'=>$request->price,
         'color'=>$request->color,
-        'size'=>$request->size
+        'size'=>$request->size,
+        'quantity'=>$request->quantity
     ]);
         
 

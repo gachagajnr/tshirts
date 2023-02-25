@@ -1,18 +1,23 @@
 import { usePage, Head, Link, useForm, router } from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
-import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
+import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 
 export default function Index(props) {
+    const { data, setData, router, post, errors, progress } = useForm({});
+
     const { carts } = usePage().props;
- 
+    // console.log(carts);
     function destruct(e) {
-        if (confirm("Are you sure you want to delete this cart?")) {
+        if (confirm("Are you sure you want to delete this tshirt?")) {
+            // console.log(e.currentTarget.id);
+            e.preventDefault();
             router.delete(route("cart.destroy", e.currentTarget.id));
         }
     }
+
     return (
         <Layout>
-            <Head title="Tshuts" />
+            <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
                 mY sHUT cART
             </div>
@@ -25,61 +30,31 @@ export default function Index(props) {
                 </div>
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
+                        <div class="flex flex-row p-2 justify-center my-3">
+                            <div class="text-slate-400 text-md text-center font-extralight mx-2">
+                                tOTAL tSHUTs
+                            </div>
+                            <div class="text-white text-2xl text-center font-extralight">
+                                {carts
+                                    .map((item) => item.quantity)
+                                    .reduce((prev, next) => prev + next, 0)
+                                    .toString()
+                                    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, ",")}
+                            </div>
+                            <div class="text-slate-400 text-md text-center font-extralight mx-2">
+                                tOTAL aMOUNT
+                            </div>
+                            <div class="text-white text-2xl text-center font-extralight">
+                                {carts
+                                    .map((item) => item.price)
+                                    .reduce((prev, next) => prev + next, 0)
+                                    .toString()
+                                    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, ",")}
+                            </div>
+                        </div>
                         <div class="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-4 gap-6">
                             {carts.map((cart) => {
                                 return (
-                                    // <div class="w-full  h-full  p-4   duration-500">
-                                    //     <a class="relative block  overflow-hidden rounded  ">
-                                    //         <img
-                                    //             alt="ecommerce"
-                                    //             class="block h-full w-full object-cover object-center cursor-pointer"
-                                    //             src={cart.img}
-                                    //         />
-                                    //     </a>
-                                    //     <div class="mt-4 ">
-                                    //         <div class="flex flex-row justify-between">
-                                    //             <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                    //                 {cart.name}
-                                    //             </h3>
-                                    //             <h2 class="title-font  text-lg font-medium text-white">
-                                    //                 KES {cart.price}
-                                    //             </h2>
-                                    //         </div>
-
-                                    //         <h2 class="title-font text-xs font-medium text-white">
-                                    //             {cart.color}
-                                    //         </h2>
-                                    //         <h2 class="title-font text-md text-end font-medium text-white">
-                                    //             {cart.description}
-                                    //         </h2>
-                                    //         <div class="flex flex-row justify-between">
-                                    //             <p class="mt-1 text-white font-light text-xs">
-                                    //                 Available Sizes:
-                                    //             </p>
-                                    //             <p class="mt-0 text-white text-sm ">
-                                    //                 XXL XL L M S
-                                    //             </p>
-                                    //         </div>
-                                    //         <Link
-                                    //             tabIndex="1"
-                                    //             className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
-                                    //             href={route(
-                                    //                 "cart.edit",
-                                    //                 cart.id
-                                    //             )}
-                                    //         >
-                                    //             Edit
-                                    //         </Link>
-                                    //         <button
-                                    //             onClick={destruct}
-                                    //             id={cart.id}
-                                    //             type="button"
-                                    //             className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
-                                    //         >
-                                    //             Delete
-                                    //         </button>
-                                    //     </div>
-                                    // </div>
                                     <div class="flex justify-center">
                                         <div class="flex flex-col rounded-lg   shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
                                             <img
@@ -121,21 +96,55 @@ export default function Index(props) {
                                                     </h5>
                                                 </div>
                                                 <div class="flex flex-row justify-start  ">
-                                                    <MinusCircleIcon class='text-white h-6 w-6 mx-2'/>
-
-                                                    <input
-                                                        type="number"
-                                                        placeholder="Quantity"
-                                                        class="text-xs p-1 mx-2 mb-1"
-                                                    />
-                                                    <PlusCircleIcon class='text-white h-6 w-6 mx-2'/>
+                                                    <h5 class="mx-2 text-md  text-neutral-600 dark:text-neutral-50">
+                                                        Quantity:
+                                                    </h5>
+                                                    <h5 class="  text-md   text-white dark:text-neutral-50">
+                                                        {cart.quantity}
+                                                    </h5>
                                                 </div>
-                                                <button
-                                                    type="button"
-                                                    class="text-white text-md bg-red-600 p-1 rounded text-xs my-1"
+                                                <div class="flex flex-row justify-between  ">
+                                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
+                                                        KES:
+                                                    </h5>
+                                                    <h5 class="  text-lg   text-white dark:text-neutral-50">
+                                                        {cart.price}
+                                                    </h5>
+                                                </div>
+                                                <div class="flex flex-row justify-between  ">
+                                                    <MinusIcon class="text-white h-6 w-6 mx-2 hover:text-green-500" />
+
+                                                    <div class="text-white text-2xl">
+                                                        {cart.quantity}
+                                                    </div>
+                                                    <Link
+                                                        as="button"
+                                                        type="button"
+                                                        href={route(
+                                                            `cart.update`,
+                                                            cart,
+
+                                                            {
+                                                                quantity:
+                                                                    cart.quantity +
+                                                                    1,
+                                                            }
+                                                        )}
+                                                    >
+                                                        <PlusIcon class="text-white h-6 w-6 mx-2 hover:text-red-600" />
+                                                    </Link>
+                                                </div>
+                                                <Link
+                                                    as="button"
+                                                    id={cart.id}
+                                                    href={route(
+                                                        "cart.destroy",
+                                                        cart.id
+                                                    )}
+                                                    class="cursor-pointer text-white text-center text-md bg-red-600 p-1 rounded text-xs my-1"
                                                 >
                                                     rEMOVE fROM cART
-                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

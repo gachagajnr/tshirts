@@ -27,7 +27,8 @@ class CartsController extends Controller
                 'img' => 'required',
                 'price'=>'required',
                 'color'=>'required',
-                'size'=>'required'
+                'size'=>'required',
+                'quantity'=>'required'
             ]);
             
             
@@ -37,7 +38,8 @@ class CartsController extends Controller
                 'img' => $request->img,
                 'price'=>$request->price,
                 'color'=>$request->color,
-                'size'=>$request->size
+                'size'=>$request->size,
+                'quantity'=>$request->quantity,
             ]);
             session()->flash('success', 'Product is Added to Cart Successfully !');
         
@@ -56,18 +58,18 @@ class CartsController extends Controller
     public function update($id, Request $request)
     {
         Validator::make($request->all(), [
-            'title' => ['required'],
-            'body' => ['required'],
+            'quantity' => ['required'],
+            // 'body' => ['required'],
         ])->validate();
     
         Cart::find($id)->update($request->all());
-        return redirect()->route('carts.index');
+        return redirect()->route('cart.index');
     }
     
     
     public function destroy($id)
     {
         Cart::find($id)->delete();
-        return redirect()->route('carts.index');
+        return redirect()->route('cart.index');
     }
 }

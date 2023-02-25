@@ -4,17 +4,24 @@ import Layout from "@/Layouts/Layout";
 import { Link, usePage, useForm, Head } from "@inertiajs/react";
 
 export default function Create() {
-    const { data, setData, post, errors, progress } = useForm({
-        name: "",
-        description: "",
-        price: "",
-        color: "",
-        size: "",
-        img: null,
-    });
+    const { data, setData, post, errors, progress, processing, transform } =
+        useForm({
+            name: "",
+            description: "",
+            price: "",
+            color: "",
+            size: "",
+            img: null,
+            quantity: '1',
+        });
 
     function submit(e) {
         e.preventDefault();
+        transform((data) => ({
+            ...data,
+            quantity: data.quantity ? " " :'1',
+        }));
+        // console.log(data);
         post("/tshirts", data);
     }
 
@@ -24,8 +31,6 @@ export default function Create() {
 
             <div class="md:container md:mx-auto px-4   ">
                 <div class="container flex   mx-auto justify-center p-5">
-                    
-
                     <div class="flex flex-row flex-wrap gap-3 justify-center">
                         <div class="text-white  text-center p-5 border-t m-2  ">
                             <div class="text-white mx-2 text-center p-3 hover:text-red-500 hover:-translate-x-1 duration-500">
@@ -67,6 +72,7 @@ export default function Create() {
                                         }
                                         class="border border-white p-1 m-2 rounded"
                                     />
+
                                     {errors.price && (
                                         <div class="text-red-600 text-end text-xs">
                                             {errors.price}
@@ -140,6 +146,7 @@ export default function Create() {
                                         </progress>
                                     )}
                                     <button
+                                        disabled={processing}
                                         type="submit"
                                         class="  bg-blue-600 w-30 hover:bg-green-600 text-white, p-2 my-3 rounded"
                                     >

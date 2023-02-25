@@ -29,6 +29,7 @@ export default function Show(props) {
             color: tshirt.color,
             img: tshirt.img,
             size: tshirt.size,
+            quantity: tshirt.quantity,
         });
     };
 
