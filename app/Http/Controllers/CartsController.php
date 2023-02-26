@@ -62,8 +62,20 @@ class CartsController extends Controller
         //     'quantity' => ['required'],
         //     // 'body' => ['required'],
         // ])->validate();
+// Page::where('id', $id)->update(array('image' => 'asdasd'));
+
+
+        $cart = Cart::find($id);
+
+// // Make sure you've got the Page model
+        if($cart) {
+            // print_r($request->all());
+            $cart->quantity = $request->get('quantity');
+            // $cart->total = quantity * price;
+            $cart->save();
+        }
     
-        Cart::find($id)->update($request->all());
+        // Cart::where('id',$id)->update($request->all());
         return redirect()->route('cart.index');
     }
     

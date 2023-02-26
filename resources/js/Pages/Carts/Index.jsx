@@ -111,8 +111,24 @@ export default function Index(props) {
                                                     </h5>
                                                 </div>
                                                 <div class="flex flex-row justify-between  ">
-                                                    <MinusIcon class="text-white h-6 w-6 mx-2 hover:text-green-500" />
-
+                                                    <button
+                                                        onClick={() =>
+                                                            router.put(
+                                                                route(
+                                                                    "cart.update",
+                                                                    cart.id
+                                                                ),
+                                                                {
+                                                                    quantity:
+                                                                        cart.quantity -
+                                                                        1,
+                                                                }
+                                                            )
+                                                        }
+                                                        type="submit"
+                                                    >
+                                                        <MinusIcon class="text-white h-6 w-6 mx-2 hover:text-green-500" />
+                                                    </button>
                                                     <div class="text-white text-2xl">
                                                         {cart.quantity}
                                                     </div>
@@ -121,23 +137,17 @@ export default function Index(props) {
                                                             router.put(
                                                                 route(
                                                                     "cart.update",
-                                                                    cart.id,
-                                                                    {
-                                                                        quantity: 3,
-                                                                    }
-                                                                    //     name: cart.name,
-                                                                    //     description:
-                                                                    //         cart.description,
-                                                                    //     price: cart.price,
-                                                                    //     color: cart.color,
-                                                                    //     size: cart.size,
-                                                                    // }
-                                                                )
+                                                                    cart.id
+                                                                ),
+                                                                {
+                                                                    quantity:
+                                                                        cart.quantity +
+                                                                        1,
+                                                                }
                                                             )
                                                         }
                                                         type="submit"
                                                     >
-                                                        {/* remove */}
                                                         <PlusIcon class="text-white h-6 w-6 mx-2 hover:text-red-600" />
                                                     </button>
                                                 </div>
