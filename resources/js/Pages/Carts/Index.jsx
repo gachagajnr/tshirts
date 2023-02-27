@@ -5,7 +5,6 @@ import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 export default function Index(props) {
     const { carts } = usePage().props;
 
-    // console.log(carts);
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
             // console.log(e.currentTarget.id);
@@ -38,17 +37,19 @@ export default function Index(props) {
                                     .map((item) => item.quantity)
                                     .reduce((prev, next) => prev + next, 0)
                                     .toString()
-                                    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, ",")}
+                                    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1")}
                             </div>
                             <div class="text-slate-400 text-md text-center font-extralight mx-2">
                                 tOTAL aMOUNT
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">
-                                {carts
-                                    .map((item) => item.price)
-                                    .reduce((prev, next) => prev + next, 0)
-                                    .toString()
-                                    .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, ",")}
+                                {
+                                    carts
+                                        .map((item) => item.total)
+                                        .reduce((prev, next) => prev + next, 0)
+                                    // .toString()
+                                    // .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "")
+                                }
                             </div>
                         </div>
                         <div class="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-4 gap-6">
@@ -106,8 +107,17 @@ export default function Index(props) {
                                                     <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
                                                         KES:
                                                     </h5>
-                                                    <h5 class="  text-lg   text-white dark:text-neutral-50">
+                                                    <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.price}
+                                                    </h5>
+                                                </div>
+                                                <div class="flex flex-row justify-between  ">
+                                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
+                                                        Total:
+                                                    </h5>
+                                                    <h5 class="  text-lg   text-white dark:text-neutral-50">
+                                                        {cart.price *
+                                                            cart.quantity}
                                                     </h5>
                                                 </div>
                                                 <div class="flex flex-row justify-between  ">
@@ -122,6 +132,8 @@ export default function Index(props) {
                                                                     quantity:
                                                                         cart.quantity -
                                                                         1,
+                                                                    total: cart.total,
+                                                                    price: cart.price,
                                                                 }
                                                             )
                                                         }
@@ -143,6 +155,8 @@ export default function Index(props) {
                                                                     quantity:
                                                                         cart.quantity +
                                                                         1,
+                                                                    total: cart.total,
+                                                                    price: cart.price,
                                                                 }
                                                             )
                                                         }

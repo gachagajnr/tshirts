@@ -30,11 +30,13 @@ export default function Show(props) {
             img: tshirt.img,
             size: tshirt.size,
             quantity: tshirt.quantity,
+            total: tshirt.quantity * tshirt.price,
         });
     };
 
     function submit(e) {
         e.preventDefault();
+        console.log(data);
         post("/cart", data);
     }
 
@@ -119,7 +121,7 @@ export default function Show(props) {
                                         </div>
 
                                         <button
-                                            // type="submit"
+                                            type="submit"
                                             class="p-2 w-full bg-slate-500"
                                         >
                                             sAVE tO cART

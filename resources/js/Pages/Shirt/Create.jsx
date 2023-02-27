@@ -4,6 +4,7 @@ import Layout from "@/Layouts/Layout";
 import { Link, usePage, useForm, Head } from "@inertiajs/react";
 
 export default function Create() {
+    const {flash} = usePage().props;
     const { data, setData, post, errors, progress, processing, transform } =
         useForm({
             name: "",
@@ -12,14 +13,14 @@ export default function Create() {
             color: "",
             size: "",
             img: null,
-            quantity: '1',
+            quantity: "",
         });
 
     function submit(e) {
         e.preventDefault();
         transform((data) => ({
             ...data,
-            quantity: data.quantity ? " " :'1',
+            quantity: data.quantity ? " " : "1",
         }));
         post("/tshirts", data);
     }
@@ -41,7 +42,9 @@ export default function Create() {
                                 dESIGNs
                             </div>
                         </div>
-
+                        {flash.message && (
+                            <div class="alert">{flash.message}</div>
+                        )}
                         <div class="max-w-2xl p-8  rounded shadow      bg-slate-400">
                             <form onSubmit={submit}>
                                 <div class="flex flex-col">

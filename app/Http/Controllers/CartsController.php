@@ -29,7 +29,8 @@ class CartsController extends Controller
                 'price'=>'required',
                 'color'=>'required',
                 'size'=>'required',
-                'quantity'=>'required'
+                'quantity'=>'required',
+                'total'=>'required'
             ]);
             
             
@@ -41,6 +42,7 @@ class CartsController extends Controller
                 'color'=>$request->color,
                 'size'=>$request->size,
                 'quantity'=>$request->quantity,
+                'total'=>$request->total,
             ]);
             session()->flash('success', 'Product is Added to Cart Successfully !');
         
@@ -58,25 +60,20 @@ class CartsController extends Controller
      
     public function update($id, Request $request)
     {
-        // Validator::make($request->all(), [
-        //     'quantity' => ['required'],
-        //     // 'body' => ['required'],
-        // ])->validate();
-// Page::where('id', $id)->update(array('image' => 'asdasd'));
-
+      
 
         $cart = Cart::find($id);
 
-// // Make sure you've got the Page model
-        if($cart) {
-            // print_r($request->all());
-            $cart->quantity = $request->get('quantity');
-            // $cart->total = quantity * price;
+         if($cart) {
+             $cart->quantity = $request->get('quantity');
+            $quat=$request->get('quantity');
+            $pri=$request->get('price');
+            $finalTotal = $quat * $pri;
+            $cart->total = $finalTotal;
             $cart->save();
         }
     
-        // Cart::where('id',$id)->update($request->all());
-        return redirect()->route('cart.index');
+         return redirect()->route('cart.index');
     }
     
     

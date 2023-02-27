@@ -31,7 +31,7 @@ export default function Layout({ children }) {
                 </header>
             </header>
 
-            <body>{children}</body>
+            <div>{children}</div>
             <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
                 oUR sERVICE
             </div>
