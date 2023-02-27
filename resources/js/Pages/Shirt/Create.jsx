@@ -27,7 +27,7 @@ export default function Create() {
 
     return (
         <Layout>
-            <Head title="Tshuts" />
+            <Head title="tSHUT wRLD" />
 
             <div class="md:container md:mx-auto px-4   ">
                 <div class="container flex   mx-auto justify-center p-5">

@@ -7,8 +7,8 @@ use Inertia\Inertia;
 
 use App\Http\Controllers\ShirtController;
 use App\Http\Controllers\CartsController;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\ShutsController;
+
  
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Redirect;
 */
 Route::resource('cart', CartsController::class);
 Route::resource('tshirts', ShirtController::class);
+Route::resource('shuts', ShutsController::class);
  
 
 

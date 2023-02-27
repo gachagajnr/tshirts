@@ -9,8 +9,6 @@ import Tshirt3 from "@/Images/tshirt3.png";
 // var item = items[Math.floor(Math.random()*items.length)];
 
 export default function Welcome(props) {
-    const { tshirts } = usePage().props;
-    console.log(tshirts);
     return (
         <Layout>
             <Head title="tSHUT wRLD" />
@@ -267,9 +265,12 @@ export default function Welcome(props) {
                         </div>
                     </div>
                 </div>
-                <div class="text-blue-300 text-end p-4 m-4 cursor-pointer hover:text-red-500 hover:scale-y-105 duration-75">
+                <Link
+                    href="/shuts"
+                    class="text-blue-300 text-end p-4 m-4 cursor-pointer hover:text-red-500 hover:scale-y-105 duration-75"
+                >
                     Explore Full Catalogue
-                </div>
+                </Link>
             </div>
         </Layout>
     );

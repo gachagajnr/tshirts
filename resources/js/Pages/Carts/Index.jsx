@@ -28,7 +28,7 @@ export default function Index(props) {
                 </div>
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
-                        <div class="flex flex-row p-2 justify-center my-3">
+                        <div class="flex flex-row p-2 justify-center my-3 flex-wrap">
                             <div class="text-slate-400 text-md text-center font-extralight mx-2">
                                 tOTAL tSHUTs
                             </div>
@@ -43,13 +43,12 @@ export default function Index(props) {
                                 tOTAL aMOUNT
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">
-                                {
-                                    carts
-                                        .map((item) => item.total)
-                                        .reduce((prev, next) => prev + next, 0)
+                                {carts
+                                    .map((item) => item.total)
+                                    .reduce((prev, next) => prev + next, 0)
                                     // .toString()
-                                    // .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "")
-                                }
+                                    // .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, ",")
+                                    }
                             </div>
                         </div>
                         <div class="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-4 gap-6">
@@ -58,14 +57,14 @@ export default function Index(props) {
                                     <div class="flex justify-center">
                                         <div class="flex flex-col rounded-lg   shadow-lg dark:bg-neutral-700 md:max-w-xl md:flex-row">
                                             <img
-                                                class="h-48 w-full rounded-t-lg object-cover md:h-auto md:w-36 md:rounded-none md:rounded-l-lg"
+                                                class="h-96 w-full   object-fit md:h-auto md:w-36  "
                                                 src={cart.img}
                                                 alt={cart.name}
                                             />
-                                            <div class="flex flex-col justify-start mx-10  ">
-                                                <div class="flex flex-row justify-start ">
+                                            <div class="flex flex-col justify-start  p-2  ">
+                                                <div class="flex flex-row justify-between ">
                                                     <h5 class=" mx-2 text-md  text-neutral-600 dark:text-neutral-50">
-                                                        Name:
+                                                        nAME:
                                                     </h5>
                                                     <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.name}
@@ -73,7 +72,7 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-start ">
                                                     <h5 class="mx-2  text-md  text-neutral-600 dark:text-neutral-50">
-                                                        Color:
+                                                        cOLOR:
                                                     </h5>
                                                     <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.color}
@@ -81,7 +80,7 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-start  ">
                                                     <h5 class="mx-2  text-md  text-neutral-600 dark:text-neutral-50">
-                                                        Description:
+                                                        dESCRIPTION:
                                                     </h5>
                                                     <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.description}
@@ -89,7 +88,7 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-start  ">
                                                     <h5 class="mx-2 text-md  text-neutral-600 dark:text-neutral-50">
-                                                        Size:
+                                                        sIZE:
                                                     </h5>
                                                     <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.size}
@@ -97,7 +96,7 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-start  ">
                                                     <h5 class="mx-2 text-md  text-neutral-600 dark:text-neutral-50">
-                                                        Quantity:
+                                                        qUANTITY:
                                                     </h5>
                                                     <h5 class="  text-md   text-white dark:text-neutral-50">
                                                         {cart.quantity}
@@ -105,15 +104,15 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-between  ">
                                                     <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
-                                                        KES:
+                                                        pRICE:
                                                     </h5>
-                                                    <h5 class="  text-md   text-white dark:text-neutral-50">
+                                                    <h5 class="  text-sm   text-white dark:text-neutral-50">
                                                         {cart.price}
                                                     </h5>
                                                 </div>
                                                 <div class="flex flex-row justify-between  ">
                                                     <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
-                                                        Total:
+                                                        tOTAL:
                                                     </h5>
                                                     <h5 class="  text-lg   text-white dark:text-neutral-50">
                                                         {cart.price *
@@ -122,6 +121,9 @@ export default function Index(props) {
                                                 </div>
                                                 <div class="flex flex-row justify-between  ">
                                                     <button
+                                                        disabled={
+                                                            cart.quantity <= 1
+                                                        }
                                                         onClick={() =>
                                                             router.put(
                                                                 route(
@@ -139,7 +141,7 @@ export default function Index(props) {
                                                         }
                                                         type="submit"
                                                     >
-                                                        <MinusIcon class="text-white h-6 w-6 mx-2 hover:text-green-500" />
+                                                        <MinusIcon class="cursor-pointer text-white h-6 w-6 mx-2 hover:text-red-500" />
                                                     </button>
                                                     <div class="text-white text-2xl">
                                                         {cart.quantity}
@@ -162,7 +164,7 @@ export default function Index(props) {
                                                         }
                                                         type="submit"
                                                     >
-                                                        <PlusIcon class="text-white h-6 w-6 mx-2 hover:text-red-600" />
+                                                        <PlusIcon class="text-white h-6 w-6 mx-2 hover:text-green-600" />
                                                     </button>
                                                 </div>
                                                 <button

@@ -3,82 +3,81 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Shuts;
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Validator;
 
 class ShutsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $shuts = Shuts::latest()->get();
+
+        return Inertia::render('Shut/Show', ['shuts' => $shuts]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return Inertia::render('Shut/Create');
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+             
+        ]);
+        
+
+
+        Shuts::create([
+            'name' => $request->name,
+            
+        ]);
+
+        return Redirect()->route('shuts.index');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+
+    public function show(Shuts $shut)
     {
-        //
+        return Inertia::render('Shut/Show', [
+            'shut' => $shut
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+
+    public function edit(Shuts $shut)
     {
-        //
+        return Inertia::render('Shut/Edit', [
+            'shut' => $shut
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update($id, Request $request)
     {
-        //
+
+        Validator::make($request->all(), [
+            'name' => ['required'],
+             
+        ])->validate();
+
+        Shuts::find($id)->update($request->all());
+
+        return redirect()->route('shuts.index');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        Shuts::find($id)->delete();
+        return Redirect()->route('shuts.index');
+
     }
 }

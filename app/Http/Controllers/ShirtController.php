@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Tshirt;
-use App\Http\Requests\StoreTshirtRequest;
 use Illuminate\Support\Facades\Validator;
-use App\Exceptions;
+
  
 class ShirtController extends Controller
 {
@@ -46,7 +45,7 @@ class ShirtController extends Controller
     
     }
 
-    // try {
+
          Tshirt::create([
         'name' => $request->name,
         'description' => $request->description,
@@ -56,14 +55,6 @@ class ShirtController extends Controller
         'size'=>$request->size,
         'quantity'=>$request->quantity
     ]);
-        // } catch(Exception  $e) {
-        //     return redirect()->back()->withErrors([
-        //         'create' => 'ups, there was an error'
-        //     ]);
-        // }        ;
-    
-    
-        
 
         return Redirect()->route('tshirts.index');
     
