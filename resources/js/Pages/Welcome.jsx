@@ -12,51 +12,35 @@ export default function Welcome(props) {
     return (
         <Layout>
             <Head title="tSHUT wRLD" />
-            <div class="md:container md:mx-auto px-4   ">
-                <div class="flex justify-center flex-col  pt-3 border-t ">
-                    <div class="flex-shrink-0">
-                        <img
-                            class="h-14 w-14   cursor-pointer"
-                            src={Image}
-                            alt="tSHUT wRLD"
-                        />
-                    </div>
+            <div class="   ">
+                <div class="flex justify-center flex-col  pt-3   ">
+                    
 
-                    <div class="text-center text-2xl text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
-                        your own WORDS on t-Shirts
+                    <div class="text-center text-2xl font-extralight text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
+                        yOUR oWN wORDS oN t-sHIRTS
                     </div>
-                    <div class="tracking-tight text-right text-2xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
-                        Choose from our pHRASES Collection
+                    <div class="tracking-tight text-right font-light text-2xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
+                        cHOOSE fROM oUR pHRASES cATALOGUE
                     </div>
-                    <div class="tracking-tight text-center border-l-2 text-5xl   hover:text-lime-400 font-thin p-2 border-blue-500 border-spacing-2 mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                        cHOOSE any dESIGN from oUR cATALOGUE
+                    <div class="tracking-tight text-center  text-5xl   hover:text-lime-400  p-2 border-blue-500 border-spacing-2 mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                        cHOOSE aNY dESIGN fROM oUR cATALOGUE
                     </div>
-                    <div class="tracking-tight text-start text-2xl border-r-2 hover:translate-x-1 duration-300  text-white  m-4 border-green-400 ">
-                        talk to uS for cUSTOM sOLUTIONs
+                    <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2 hover:translate-x-1 duration-300  text-white    border-green-400 ">
+                        tALK tO uS fOR cUSTOM sOLUTIONS
                     </div>
-                    <button class="bg-gray-800 text-white p-2 hover:translate-y-2 duration-500 rounded-md w-40 text-center    dark:bg-gray-200 border border-white">
-                        talk tO uS
-                    </button>
-                    <div class="flex justify-end gap-3">
-                        <div class="text-center     text-5xl text-amber-500 mt-2">
-                            rEADY?
-                        </div>
-                        <button
-                            type="submit"
-                            class="bg-gray-800 hover:translate-x-3 duration-300 text-white p-2 h-10 rounded-md w-40 text-center  border-2    border-white bg-clip-text bg-gradient-to-r from-purple-400 to-lime-600"
+                    <div class="text-center border rounded-md  m-auto w-48 py-3 ">
+                        <Link
+                            href="/contact"
+                            // as="button"
+                            class="  text-red-500 text-lg font-extralight p-4 hover:translate-y-2 duration-500 rounded-md  "
                         >
-                            <Link
-                                className="mr-1 text-sm text-blue-200"
-                                // href={route("designs")}
-                            >
-                                start dESIGNING...
-                            </Link>
-                        </button>
+                            tALK tO uS
+                        </Link>
                     </div>
                 </div>
 
-                <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl brightness-100 transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-90 duration-300 ">
-                    oUR dESIGNS
+                <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl   transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-90 duration-300 ">
+                    oUR tSHUT dESIGNS
                 </div>
 
                 <div class="container mx-4  px-8 sm:px-0">

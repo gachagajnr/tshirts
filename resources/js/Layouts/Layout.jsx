@@ -1,5 +1,6 @@
 import { Link, Head } from "@inertiajs/react";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+import Image from "@/Images/tshirt.png";
 
 export default function Layout({ children }) {
     return (
@@ -31,7 +32,36 @@ export default function Layout({ children }) {
                 </header>
             </header>
 
-            <div>{children}</div>
+            <div class="md:container md:mx-auto px-4   ">
+                <div class="flex justify-center flex-col  pt-3 border-t ">
+                    <div class="flex flex-shrink-0 flex-row">
+                        <img
+                            class="h-14 w-14 cursor-pointer"
+                            src={Image}
+                            alt="tSHUT wRLD"
+                        />
+                        <Link
+                            href="/about"
+                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                        >
+                            aBOUT
+                        </Link>
+                        <Link
+                            href="/tshirts"
+                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                        >
+                            tSHIRTS
+                        </Link>
+                        <Link
+                            href="/shuts"
+                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                        >
+                            pHRASES
+                        </Link>
+                    </div>
+                </div>
+                {children}
+            </div>
             <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
                 oUR sERVICE
             </div>
