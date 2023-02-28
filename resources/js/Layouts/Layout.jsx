@@ -75,7 +75,7 @@ export default function Layout({ children }) {
                 <div href="" class="hover:scale-105 duration-500">
                     <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                         <svg
-                            class="w-10 h-10 fill-current"
+                            class="w-8 h-8 fill-current"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export default function Layout({ children }) {
                 <div href="" class="hover:scale-105 duration-500">
                     <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
                         <svg
-                            class="w-10 h-10 fill-current"
+                            class="w-8 h-8 fill-current"
                             role="img"
                             viewBox="0 0 256 256"
                             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export default function Layout({ children }) {
                 <div href="" class="hover:scale-105 duration-500">
                     <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
                         <svg
-                            class="w-10 h-10 fill-current"
+                            class="w-8 h-8 fill-current"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"

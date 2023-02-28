@@ -19,7 +19,7 @@ export default function Welcome(props) {
                     <div class="text-center text-2xl font-extralight text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
                         yOUR oWN wORDS oN t-sHIRTS
                     </div>
-                    <div class="tracking-tight text-right font-light text-2xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
+                    <div class="tracking-tight text-right font-light text-3xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
                         cHOOSE fROM oUR pHRASES cATALOGUE
                     </div>
                     <div class="tracking-tight text-center  text-5xl   hover:text-lime-400  p-2 border-blue-500 border-spacing-2 mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -39,7 +39,7 @@ export default function Welcome(props) {
                     </div>
                 </div>
 
-                <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl   transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-90 duration-300 ">
+                <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl   transition ease-in-out delay-150  hover:-translate-x-1   duration-300 ">
                     oUR tSHUT dESIGNS
                 </div>
 
