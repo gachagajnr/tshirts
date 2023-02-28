@@ -8,6 +8,8 @@ use Inertia\Inertia;
 use App\Http\Controllers\ShirtController;
 use App\Http\Controllers\CartsController;
 use App\Http\Controllers\ShutsController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 
  
 /*
@@ -23,6 +25,8 @@ use App\Http\Controllers\ShutsController;
 Route::resource('cart', CartsController::class);
 Route::resource('tshirts', ShirtController::class);
 Route::resource('shuts', ShutsController::class);
+Route::resource('about', AboutController::class);
+Route::resource('contact', ContactController::class);
  
 
 

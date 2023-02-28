@@ -16,7 +16,7 @@ export default function Index(props) {
     return (
         <Layout>
             <Head title="tSHUT wRLD" />
-            <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
+            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 mY sHUT cART
             </div>
 
@@ -28,8 +28,8 @@ export default function Index(props) {
                 </div>
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
-                        <div class="flex flex-row p-2 justify-center my-3 flex-wrap">
-                            <div class="text-slate-400 text-md text-center font-extralight mx-2">
+                        <div class="flex flex-row p-2 gap-3 justify-center my-3 flex-wrap">
+                            <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 tOTAL tSHUTs
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">
@@ -39,7 +39,7 @@ export default function Index(props) {
                                     .toString()
                                     .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1")}
                             </div>
-                            <div class="text-slate-400 text-md text-center font-extralight mx-2">
+                            <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 tOTAL aMOUNT
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">

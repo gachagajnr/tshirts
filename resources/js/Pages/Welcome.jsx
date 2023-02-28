@@ -4,35 +4,32 @@ import Image from "@/Images/tshirt.png";
 import Tshirt1 from "@/Images/tshirt1.png";
 import Tshirt2 from "@/Images/tshirt2.png";
 import Tshirt3 from "@/Images/tshirt3.png";
-
-// import { InertiaLink, useForm } from "@inertiajs/ireact";
-// var item = items[Math.floor(Math.random()*items.length)];
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 export default function Welcome(props) {
     return (
         <Layout>
             <Head title="tSHUT wRLD" />
             <div class="   ">
-                <div class="flex justify-center flex-col  pt-3   ">
-                    
-
-                    <div class="text-center text-2xl font-extralight text-white border-r-2 border-blue-400 p-3 hover:-translate-y-2 duration-200 ">
-                        yOUR oWN wORDS oN t-sHIRTS
+                <div class="flex justify-center flex-col  pt-6   ">
+                    <div class="text-center py-6 text-4xl font-extralight text-white border-r-2 border-lime-400 hover:-translate-y-2 duration-200 ">
+                        wORDS oN t-sHIRTs
                     </div>
-                    <div class="tracking-tight text-right font-light text-3xl hover:-translate-x-1 duration-150  leading-tight text-amber-500 border-l-2 border-rose-600 p-3 ">
-                        cHOOSE fROM oUR pHRASES cATALOGUE
+                    <div class="tracking-tight text-center font-light text-3xl hover:-translate-x-1 duration-150 border-r-2 border-lime-400 leading-tight text-amber-500    ">
+                        uSE aNY pHRASES fROM oUR cATALOGUE
                     </div>
-                    <div class="tracking-tight text-center  text-5xl   hover:text-lime-400  p-2 border-blue-500 border-spacing-2 mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    <div class="tracking-tightest text-center  text-6xl border-r-2  hover:text-lime-400  p-2 border-blue-500   mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                         cHOOSE aNY dESIGN fROM oUR cATALOGUE
                     </div>
-                    <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2 hover:translate-x-1 duration-300  text-white    border-green-400 ">
+                    <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2  hover:translate-x-1 duration-300  text-white    border-lime-400 ">
                         tALK tO uS fOR cUSTOM sOLUTIONS
                     </div>
-                    <div class="text-center border rounded-md  m-auto w-48 py-3 ">
+
+                    <div class="text-center border rounded-md  m-auto w-48 py-3 hover:scale-105 duration-300">
                         <Link
                             href="/contact"
                             // as="button"
-                            class="  text-red-500 text-lg font-extralight p-4 hover:translate-y-2 duration-500 rounded-md  "
+                            class="  text-lime-500 text-lg font-extralight  hover:text-green-500 rounded-md  "
                         >
                             tALK tO uS
                         </Link>

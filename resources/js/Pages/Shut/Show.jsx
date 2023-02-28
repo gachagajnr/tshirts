@@ -3,7 +3,7 @@ import { useState } from "react";
 import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
-    const [cart, setCart] = useState({});
+    const [shut, setShut] = useState("");
 
     const { data, setData, router, post, errors, progress } = useForm({
         name: "",
@@ -20,23 +20,15 @@ export default function Show(props) {
             router.delete(route("shuts.destroy", e.currentTarget.id));
         }
     }
-    const clickMe = (tshirt) => () => {
-        setCart(tshirt);
+    const clickMe = (shut) => () => {
+        setShut(shut);
         setData({
-            name: tshirt.name,
-            description: tshirt.description,
-            price: tshirt.price,
-            color: tshirt.color,
-            img: tshirt.img,
-            size: tshirt.size,
-            quantity: tshirt.quantity,
-            total: tshirt.quantity * tshirt.price,
+            name: shut.name,
         });
     };
 
     function submit(e) {
         e.preventDefault();
-        console.log(data);
         post("/cart", data);
     }
 
@@ -92,7 +84,7 @@ export default function Show(props) {
                                     <div class="mt-2 ">
                                         <div class="flex flex-row justify-center">
                                             <div class="text-center text-3xl p-3">
-                                                {cart.name}
+                                                {shut.name}
                                             </div>
                                         </div>
 
@@ -126,7 +118,7 @@ export default function Show(props) {
                                     >
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
-                                                <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                                <h3 class="title-font mb-1 text-lg border rounded p-2 tracking-wide hover:-translate-y-1 cursor-pointer duration-300 text-white">
                                                     {shut.name}
                                                 </h3>
                                             </div>

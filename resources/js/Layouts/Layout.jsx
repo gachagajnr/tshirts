@@ -7,9 +7,16 @@ export default function Layout({ children }) {
         <div class="bg-slate-900 p-4">
             <Head title="Tshuts Wrld" />
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
-                <p class="text-center pt-3 text-2xl text-white">
-                    <Link href="/">tSHUTwRLD</Link>
-                </p>
+                <div class="flex flex-row  justify-center">
+                    <img
+                        class="h-14 w-14 cursor-pointer"
+                        src={Image}
+                        alt="tSHUT wRLD"
+                    />
+                    <p class="text-center pt-3 text-2xl text-white">
+                        <Link href="/">tSHUTwRLD</Link>
+                    </p>
+                </div>
                 <header class="flex flex-row justify-center mb-2 ">
                     <Link
                         class="mr-1 text-sm text-blue-200 hover:scale-105 duration-400"
@@ -35,28 +42,29 @@ export default function Layout({ children }) {
             <div class="md:container md:mx-auto px-4   ">
                 <div class="flex justify-center flex-col  pt-3 border-t ">
                     <div class="flex flex-shrink-0 flex-row">
-                        <img
-                            class="h-14 w-14 cursor-pointer"
-                            src={Image}
-                            alt="tSHUT wRLD"
-                        />
                         <Link
                             href="/about"
-                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                            class="  text-lime-400 text-md font-light  p-1 hover:-translate-y-1 duration-500    "
                         >
                             aBOUT
                         </Link>
                         <Link
                             href="/tshirts"
-                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                            class="  text-lime-400 text-md font-light  p-1 hover:-translate-y-1 duration-500    "
                         >
-                            tSHIRTS
+                            tSHUTS
                         </Link>
                         <Link
                             href="/shuts"
-                            class="  text-red-500 text-md font-extralight p-4 hover:translate-y-2 duration-500    "
+                            class="  text-lime-400 text-md font-light  p-1 hover:-translate-y-1 duration-500    "
                         >
                             pHRASES
+                        </Link>
+                        <Link
+                            href="/contact"
+                            class="  text-lime-400 text-md font-light  p-1 hover:-translate-y-1 duration-500    "
+                        >
+                            cONTACT
                         </Link>
                     </div>
                 </div>
@@ -117,7 +125,7 @@ export default function Layout({ children }) {
             <h2 class="text-end text-white">
                 {"Copyright © "}{" "}
                 <Link to="/" alt="" style={{ textDecoration: "none" }}>
-                    TshutWrld{" "}
+                    tSHUTwRLD{" "}
                 </Link>{" "}
                 {new Date().getFullYear()}
                 {"."}{" "}
