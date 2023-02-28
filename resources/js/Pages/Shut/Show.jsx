@@ -44,7 +44,7 @@ export default function Show(props) {
         <Layout>
             <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5 border-t m-2 hover:-translate-y-2 duration-500">
-                sHUT wORDs
+                sHUT pHRASEs
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
@@ -89,42 +89,18 @@ export default function Show(props) {
                         <div class="flex flex-row justify-center">
                             <div class="w-full  h-full  p-6 ">
                                 <form onSubmit={submit}>
-                                    <img
-                                        alt="ecommerce"
-                                        class="block h-auto w-full object-cover object-center cursor-pointer"
-                                        src={cart.img}
-                                    />
                                     <div class="mt-2 ">
-                                        <div class="flex flex-row justify-between">
-                                            <div class="text-center text-md">
+                                        <div class="flex flex-row justify-center">
+                                            <div class="text-center text-3xl p-3">
                                                 {cart.name}
                                             </div>
-
-                                            <h2 class="title-font  text-md font-medium text-black">
-                                                KES {cart.price}
-                                            </h2>
-                                        </div>
-
-                                        <h2 class="title-font text-xs font-medium text-black">
-                                            {cart.color}
-                                        </h2>
-                                        <h2 class="title-font text-xs text-end font-medium text-black">
-                                            {cart.description}
-                                        </h2>
-                                        <div class="flex flex-row justify-between">
-                                            <p class="mt-0 text-black font-light text-xs">
-                                                Available Sizes:
-                                            </p>
-                                            <p class="mt-0 text-black text-xs ">
-                                                {cart.size}
-                                            </p>
                                         </div>
 
                                         <button
                                             type="submit"
                                             class="p-2 w-full bg-slate-500"
                                         >
-                                            sAVE tO cART
+                                            rEQUEST tO uSE
                                         </button>
                                     </div>
                                 </form>
@@ -136,11 +112,11 @@ export default function Show(props) {
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {shuts.map((tshirt) => {
+                            {shuts.map((shut) => {
                                 return (
                                     <div
                                         class="w-full  h-full   "
-                                        onClick={clickMe(tshirt)}
+                                        onClick={clickMe(shut)}
                                         type="button"
                                         data-te-offcanvas-toggle
                                         data-te-target="#offcanvasRight"
@@ -148,34 +124,11 @@ export default function Show(props) {
                                         data-te-ripple-init
                                         data-te-ripple-color="light"
                                     >
-                                        <img
-                                            alt="ecommerce"
-                                            class="block h-full w-full object-cover object-center cursor-pointer"
-                                            src={tshirt.img}
-                                        />
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
                                                 <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                                    {tshirt.name}
+                                                    {shut.name}
                                                 </h3>
-                                                <h2 class="title-font  text-md font-medium text-white">
-                                                    KES {tshirt.price}
-                                                </h2>
-                                            </div>
-
-                                            <h2 class="title-font text-xs font-medium text-white">
-                                                {tshirt.color}
-                                            </h2>
-                                            <h2 class="title-font text-xs text-end font-medium text-white">
-                                                {tshirt.description}
-                                            </h2>
-                                            <div class="flex flex-row justify-between">
-                                                <p class="mt-0 text-white font-light text-xs">
-                                                    Available Sizes:
-                                                </p>
-                                                <p class="mt-0 text-white text-xs ">
-                                                    XXL XL L M S
-                                                </p>
                                             </div>
 
                                             {/* <Link

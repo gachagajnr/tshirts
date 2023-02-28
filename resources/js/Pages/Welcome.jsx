@@ -265,12 +265,11 @@ export default function Welcome(props) {
                         </div>
                     </div>
                 </div>
-                <Link
-                    href="/shuts"
-                    class="text-blue-300 text-end p-4 m-4 cursor-pointer hover:text-red-500 hover:scale-y-105 duration-75"
-                >
-                    Explore Full Catalogue
-                </Link>
+                <div class="text-green-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
+                    <Link href="/shuts" as="button">
+                        eXPLORE mORE pHRASEs
+                    </Link>
+                </div>
             </div>
         </Layout>
     );

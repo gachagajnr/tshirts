@@ -4,24 +4,15 @@ import Layout from "@/Layouts/Layout";
 import { Link, usePage, useForm, Head } from "@inertiajs/react";
 
 export default function Create() {
-    const {flash} = usePage().props;
+    const { flash } = usePage().props;
     const { data, setData, post, errors, progress, processing, transform } =
         useForm({
             name: "",
-            description: "",
-            price: "",
-            color: "",
-            size: "",
-            img: null,
-            quantity: "",
         });
 
     function submit(e) {
         e.preventDefault();
-        transform((data) => ({
-            ...data,
-            quantity: data.quantity ? " " : "1",
-        }));
+
         post("/shuts", data);
     }
 
@@ -63,15 +54,13 @@ export default function Create() {
                                             {errors.name}
                                         </div>
                                     )}
-                                    
-                                   
-                                     
+
                                     <button
                                         disabled={processing}
                                         type="submit"
                                         class="  bg-blue-600 w-30 hover:bg-green-600 text-white, p-2 my-3 rounded"
                                     >
-                                        sAVE sHUT
+                                        sAVE sHUT pHRASE
                                     </button>
                                 </div>
                             </form>
