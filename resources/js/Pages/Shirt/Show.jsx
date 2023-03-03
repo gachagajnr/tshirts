@@ -44,7 +44,7 @@ export default function Show(props) {
         <Layout>
             <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                sHUT dESIGNs
+                t-sHUT dESIGNs
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
@@ -122,9 +122,9 @@ export default function Show(props) {
 
                                         <button
                                             type="submit"
-                                            class="p-2 w-full bg-slate-500"
+                                            class="p-2 w-full bg-slate-500 text-white"
                                         >
-                                            sAVE tO cART
+                                            aDD tO cART
                                         </button>
                                     </div>
                                 </form>
