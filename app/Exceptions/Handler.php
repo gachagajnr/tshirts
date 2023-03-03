@@ -57,21 +57,28 @@ class Handler extends ExceptionHandler
         });
     }
 
-//    public function render($request, Throwable $e)
-//     {
-//         $response = parent::render($request, $e);
+
+
+public function render($request, Throwable $e)
+{
+    $response = parent::render($request, $e);
  
-//         $status = $response->getStatusCode();
+    if($response->status() == 403) {
+        return redirect()->back()->with('notification', [
+            'color' => 'red',
+            'title' => 'Error',
+            'message'=> $e->getMessage(),
+        ]);
+    }
  
-//         if (! array_key_exists($status, $this->messages)) {
-//             return $response;
-//         }
- 
-//         return inertia('error/page', [
-//             'status' => $status,
-//             'message' => $this->messages[$status],
-//         ])
-//             ->toResponse($request)
-//             ->setStatusCode($status);
-//     } 
+    return $response;
+}
+public function share(Request $request)
+{
+    return array_merge(parent::share($request), [
+        'flash' => [
+            'notification' => fn () => $request->session()->get('notification')
+        ],
+    ]);
+}
 }
