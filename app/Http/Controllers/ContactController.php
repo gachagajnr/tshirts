@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-
+use App\Models\Contact;
+ 
 class ContactController extends Controller
 {
     
@@ -12,40 +13,20 @@ class ContactController extends Controller
     {
          return Inertia::render('Contact/Index' );
     }
-
-     
-    public function create()
-    {
-        //
-    }
-
-    
     public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'phone' => 'required',
+            'email' => 'required|email',
+            'question' => 'required'
+        ]);
 
+        Contact::create($request->all());
+
+        return back()->with('success', 'Thanks for contacting me, I will get back to you soon!');
+    }
     
-    public function show($id)
-    {
-        //
-    }
-
-    
-    public function edit($id)
-    {
-        //
-    }
-
    
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-     
-    public function destroy($id)
-    {
-        //
-    }
 }

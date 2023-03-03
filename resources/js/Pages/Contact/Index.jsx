@@ -4,7 +4,7 @@ import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const [cart, setCart] = useState({});
-
+    const { mail } = usePage().props;
     const { data, setData, router, post, processing, errors, progress } =
         useForm({
             firstname: "",
@@ -13,7 +13,7 @@ export default function Show(props) {
             phone: "",
             question: "",
         });
-
+console.log(mail)
     function submit(e) {
         e.preventDefault();
         post("/contact", data);
