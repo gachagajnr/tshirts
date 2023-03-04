@@ -59,26 +59,26 @@ class Handler extends ExceptionHandler
 
 
 
-public function render($request, Throwable $e)
-{
-    $response = parent::render($request, $e);
+// public function render($request, Throwable $e)
+// {
+//     $response = parent::render($request, $e);
  
-    if($response->status() == 403) {
-        return redirect()->back()->with('notification', [
-            'color' => 'red',
-            'title' => 'Error',
-            'message'=> $e->getMessage(),
-        ]);
-    }
+//     if($response->status() == 403) {
+//         return redirect()->back()->with('notification', [
+//             'color' => 'red',
+//             'title' => 'Error',
+//             'message'=> $e->getMessage(),
+//         ]);
+//     }
  
-    return $response;
-}
-public function share(Request $request)
-{
-    return array_merge(parent::share($request), [
-        'flash' => [
-            'notification' => fn () => $request->session()->get('notification')
-        ],
-    ]);
-}
+//     return $response;
+// }
+// public function share(Request $request)
+// {
+//     return array_merge(parent::share($request), [
+//         'flash' => [
+//             'notification' => fn () => $request->session()->get('notification')
+//         ],
+//     ]);
+// }
 }
