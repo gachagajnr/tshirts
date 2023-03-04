@@ -127,10 +127,10 @@ export default function Index(props) {
                                     </div>
                                 </div> */}
                                 <div class="flex flex-row  flex-wrap  ">
-                                    <h5 class="mx-2 text-md  text-neutral-600 dark:text-neutral-50">
-                                        qUANTITY:
+                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
+                                        iTEMS:
                                     </h5>
-                                    <h5 class="  text-md   text-white dark:text-neutral-50">
+                                    <h5 class="  text-sm   text-white dark:text-neutral-50">
                                         {cart.quantity}
                                     </h5>
                                     <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
@@ -189,19 +189,22 @@ export default function Index(props) {
                                         >
                                             <PlusCircleIcon class="text-white h-6 w-6 mx-2 hover:text-green-600" />
                                         </button>
+                                        <button
+                                            as="button"
+                                            id={cart.id}
+                                            onClick={() =>
+                                                router.delete(
+                                                    route(
+                                                        "cart.destroy",
+                                                        cart.id
+                                                    )
+                                                )
+                                            }
+                                            class="cursor-pointer text-end text-white   text-md bg-red-600 p-1 rounded text-xs my-1"
+                                        >
+                                            rEMOVE fROM cART
+                                        </button>
                                     </div>
-                                    <button
-                                        as="button"
-                                        id={cart.id}
-                                        onClick={() =>
-                                            router.delete(
-                                                route("cart.destroy", cart.id)
-                                            )
-                                        }
-                                        class="cursor-pointer text-white text-center text-md bg-red-600 p-1 rounded text-xs my-1"
-                                    >
-                                        rEMOVE fROM cART
-                                    </button>
                                 </div>
                             </div>
                         </div>
