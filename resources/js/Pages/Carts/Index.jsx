@@ -7,7 +7,7 @@ export default function Index(props) {
 
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
-             e.preventDefault();
+            e.preventDefault();
             router.delete(route("cart.destroy", e.currentTarget.id));
         }
     }
@@ -54,169 +54,157 @@ export default function Index(props) {
                     </div>
                 </div>
             </div>
-            <div class=" ">
-                {carts.map((cart) => {
-                    return (
-                        <div class="flex flex-row flex-wrap gap-3 p-3  justify-center   sm:flex-col   md:flex-row">
-                            <img
-                                class="h-full w-full  object-fit md:h-auto md:w-36  "
-                                src={cart.img}
-                                alt={cart.name}
-                            />
-                            <div class="flex flex-col justify-start  p-3 ">
-                                <div class="flex flex-row justify-between  ">
-                                    <h5 class="  text-xl   text-white dark:text-neutral-50">
-                                        {cart.name}
-                                    </h5>
-                                    <h5 class="  font-mono text-white dark:text-neutral-50">
-                                        {cart.color.toLowerCase()}
-                                    </h5>
-                                </div>
 
-                                <div class="flex flex-row   ">
-                                    <h5 class="mx-2 text-md  text-neutral-600 dark:text-neutral-50">
-                                        sIZE:
-                                    </h5>
-                                    <h5 class="  text-md   text-white dark:text-neutral-50">
-                                        {cart.size}
-                                    </h5>
+            {carts.map((cart) => {
+                return (
+                    <div class="flex flex-row flex-wrap gap-3 p-3  justify-center   sm:flex-col   md:flex-row">
+                        <img
+                            class="h-full w-full  object-fit md:h-auto md:w-36  "
+                            src={cart.img}
+                            alt={cart.name}
+                        />
+                        <div class="flex flex-col justify-start  p-3 ">
+                            <div class="flex flex-row justify-between  ">
+                                <h5 class="  text-xl   text-white ">
+                                    {cart.name}
+                                </h5>
+                                <h5 class="  font-mono text-white ">
+                                    {cart.color.toLowerCase()}
+                                </h5>
+                            </div>
+
+                            <div class="flex flex-row   ">
+                                <h5 class="mx-2 text-md  text-neutral-600 ">
+                                    sIZE:
+                                </h5>
+                                <h5 class="  text-md   text-white  ">
+                                    {cart.size}
+                                </h5>
+                            </div>
+                            <div class="flex justify-center">
+                                <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
+                                    <input
+                                        class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                                        type="radio"
+                                        name="inlineRadioOptions"
+                                        id="inlineRadio1"
+                                        value="option1"
+                                    />
+                                    <label
+                                        class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                        for="inlineRadio1"
+                                    >
+                                        1
+                                    </label>
                                 </div>
-                                <div class="flex justify-center">
-                                    <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
-                                        <input
-                                            class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio1"
-                                            value="option1"
-                                        />
-                                        <label
-                                            class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
-                                            for="inlineRadio1"
-                                        >
-                                            1
-                                        </label>
-                                    </div>
-                                    <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
-                                        <input
-                                            class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio2"
-                                            value="option2"
-                                        />
-                                        <label
-                                            class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
-                                            for="inlineRadio2"
-                                        >
-                                            2
-                                        </label>
-                                    </div>
-                                    <div class="mb-[0.125rem] inline-block min-h-[1.5rem] pl-[1.5rem]">
-                                        <input
-                                            class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:pointer-events-none hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] disabled:opacity-60"
-                                            type="radio"
-                                            name="inlineRadioOptions"
-                                            id="inlineRadio3"
-                                            value="option3"
-                                            disabled
-                                        />
-                                        <label
-                                            class="mt-px inline-block pl-[0.15rem] opacity-50 hover:pointer-events-none"
-                                            for="inlineRadio3"
-                                        >
-                                            3 (disabled)
-                                        </label>
-                                    </div>
+                                <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
+                                    <input
+                                        class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s]"
+                                        type="radio"
+                                        name="inlineRadioOptions"
+                                        id="inlineRadio2"
+                                        value="option2"
+                                    />
+                                    <label
+                                        class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer"
+                                        for="inlineRadio2"
+                                    >
+                                        2
+                                    </label>
                                 </div>
-                                <div class="flex flex-row  flex-wrap  ">
-                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
-                                        iTEMS:
-                                    </h5>
-                                    <h5 class="  text-sm   text-white dark:text-neutral-50">
+                                <div class="mb-[0.125rem] inline-block min-h-[1.5rem] pl-[1.5rem]">
+                                    <input
+                                        class="relative float-left mt-0.5 mr-1 -ml-[1.5rem] h-5 w-5 appearance-none rounded-full border-2 border-solid border-[rgba(0,0,0,0.25)] bg-white before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:bg-white after:content-[''] checked:border-primary checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:pointer-events-none hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:bg-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] disabled:opacity-60"
+                                        type="radio"
+                                        name="inlineRadioOptions"
+                                        id="inlineRadio3"
+                                        value="option3"
+                                        disabled
+                                    />
+                                    <label
+                                        class="mt-px inline-block pl-[0.15rem] opacity-50 hover:pointer-events-none"
+                                        for="inlineRadio3"
+                                    >
+                                        3 (disabled)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flex flex-row  flex-wrap  ">
+                                <h5 class="mx-2 text-sm  text-neutral-600 ">
+                                    iTEMS:
+                                </h5>
+                                <h5 class="  text-sm   text-white  ">
+                                    {cart.quantity}
+                                </h5>
+                                <h5 class="mx-2 text-sm  text-neutral-600  ">
+                                    pRICE:
+                                </h5>
+                                <h5 class="  text-sm   text-white ">
+                                    {cart.price}
+                                </h5>
+
+                                <h5 class="mx-2 text-sm  text-neutral-600 ">
+                                    tOTAL:
+                                </h5>
+                                <h5 class="  text-sm   text-lime-600 ">
+                                    {cart.price * cart.quantity}
+                                </h5>
+                                <div class="flex   p-1">
+                                    <button
+                                        disabled={cart.quantity <= 1}
+                                        onClick={() =>
+                                            router.put(
+                                                route("cart.update", cart.id),
+                                                {
+                                                    quantity: cart.quantity - 1,
+                                                    total: cart.total,
+                                                    price: cart.price,
+                                                }
+                                            )
+                                        }
+                                        type="submit"
+                                    >
+                                        <MinusCircleIcon class="cursor-pointer text-white h-6 w-6 mx-2 hover:text-red-500" />
+                                    </button>
+                                    <div class="text-white text-2xl">
                                         {cart.quantity}
-                                    </h5>
-                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
-                                        pRICE:
-                                    </h5>
-                                    <h5 class="  text-sm   text-white dark:text-neutral-50">
-                                        {cart.price}
-                                    </h5>
-
-                                    <h5 class="mx-2 text-sm  text-neutral-600 dark:text-neutral-50">
-                                        tOTAL:
-                                    </h5>
-                                    <h5 class="  text-sm   text-lime-600 dark:text-neutral-50">
-                                        {cart.price * cart.quantity}
-                                    </h5>
-                                    <div class="flex   p-1">
-                                        <button
-                                            disabled={cart.quantity <= 1}
-                                            onClick={() =>
-                                                router.put(
-                                                    route(
-                                                        "cart.update",
-                                                        cart.id
-                                                    ),
-                                                    {
-                                                        quantity:
-                                                            cart.quantity - 1,
-                                                        total: cart.total,
-                                                        price: cart.price,
-                                                    }
-                                                )
-                                            }
-                                            type="submit"
-                                        >
-                                            <MinusCircleIcon class="cursor-pointer text-white h-6 w-6 mx-2 hover:text-red-500" />
-                                        </button>
-                                        <div class="text-white text-2xl">
-                                            {cart.quantity}
-                                        </div>
-                                        <button
-                                            onClick={() =>
-                                                router.put(
-                                                    route(
-                                                        "cart.update",
-                                                        cart.id
-                                                    ),
-                                                    {
-                                                        quantity:
-                                                            cart.quantity + 1,
-                                                        total: cart.total,
-                                                        price: cart.price,
-                                                    }
-                                                )
-                                            }
-                                            type="submit"
-                                        >
-                                            <PlusCircleIcon class="text-white h-6 w-6 mx-2 hover:text-green-600" />
-                                        </button>
-                                        <button
-                                            as="button"
-                                            id={cart.id}
-                                            onClick={() =>
-                                                router.delete(
-                                                    route(
-                                                        "cart.destroy",
-                                                        cart.id
-                                                    )
-                                                )
-                                            }
-                                            class="cursor-pointer text-end text-white   text-md bg-red-600 p-1 rounded text-xs my-1"
-                                        >
-                                            rEMOVE fROM cART
-                                        </button>
                                     </div>
+                                    <button
+                                        onClick={() =>
+                                            router.put(
+                                                route("cart.update", cart.id),
+                                                {
+                                                    quantity: cart.quantity + 1,
+                                                    total: cart.total,
+                                                    price: cart.price,
+                                                }
+                                            )
+                                        }
+                                        type="submit"
+                                    >
+                                        <PlusCircleIcon class="text-white h-6 w-6 mx-2 hover:text-green-600" />
+                                    </button>
+                                    <button
+                                        as="button"
+                                        id={cart.id}
+                                        onClick={() =>
+                                            router.delete(
+                                                route("cart.destroy", cart.id)
+                                            )
+                                        }
+                                        class="cursor-pointer text-end text-white   text-md bg-red-600 p-1 rounded text-xs my-1"
+                                    >
+                                        rEMOVE fROM cART
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                    );
-                })}
-                <button class="text-white text-center p-3 m-2 border hover:bg-lime-400 border-cyan-100 w-full justify-center rounded">
-                    Checkout
-                </button>
-            </div>
+                    </div>
+                );
+            })}
+            <button class="text-white text-center p-3 m-2 border hover:bg-lime-400 border-cyan-100 w-full justify-center rounded">
+                Checkout
+            </button>
         </Layout>
     );
 }

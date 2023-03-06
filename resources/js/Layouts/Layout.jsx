@@ -1,5 +1,5 @@
 import { Link, Head } from "@inertiajs/react";
-import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
@@ -38,7 +38,7 @@ export default function Layout({ auth, children }) {
                         href="/cart"
                         class="ml-1 text-sm text-blue-300 dark:text-gray-500 hover:scale-105 duration-400"
                     >
-                        <ShoppingBagIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
+                        <ShoppingCartIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
                     </Link>
                 </header>
                 
