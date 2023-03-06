@@ -1,10 +1,14 @@
 import { Link, Head } from "@inertiajs/react";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+
+import Dropdown from "@/Components/Dropdown";
+import NavLink from "@/Components/NavLink";
+import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import Image from "@/Images/tshirt.png";
 
-export default function Layout({ children }) {
+export default function Layout({ auth, children }) {
     return (
-        <div class="bg-slate-900 p-4">
+        <div class="bg-slate-900 p-4 overflow-hidden">
             <Head title="Tshuts Wrld" />
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
                 <div class="flex flex-row  justify-center">
@@ -37,6 +41,7 @@ export default function Layout({ children }) {
                         <ShoppingBagIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
                     </Link>
                 </header>
+                
             </header>
 
             <div class="md:container md:mx-auto px-4   ">

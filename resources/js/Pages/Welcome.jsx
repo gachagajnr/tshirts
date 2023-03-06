@@ -7,9 +7,10 @@ import Tshirt3 from "@/Images/tshirt3.png";
 import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 export default function Welcome(props) {
-    return (
-        <Layout>
-            <Head title="tSHUT wRLD" />
+    const { tshirts, shuts } = usePage().props;
+     return (
+        <Layout auth={props.auth} errors={props.errors}>
+            <Head title="tSHUTwRLD" />
             <div class="   ">
                 <div class="flex justify-center flex-col  pt-6   ">
                     <div class="text-center py-6 text-4xl font-extralight text-white border-r-2 border-lime-400 hover:-translate-y-2 duration-200 ">
@@ -42,131 +43,51 @@ export default function Welcome(props) {
 
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="flex flex-wrap  ">
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3  mb-4    ">
-                            <div class="w-full h-full   text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded  ">
-                                    <img
-                                        alt="ecommerce"
-                                        class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src={Tshirt1}
-                                    />
-                                    <h1 class="absolute text-sm text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                        tSHUT wRLD
-                                    </h1>
-                                </a>
-                                <div class="mt-4">
-                                    <div class="flex flex-row justify-between">
-                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                            tSHUT wRLD
-                                        </h3>
-                                        <h2 class="title-font  text-lg font-medium text-white">
-                                            KES 700
-                                        </h2>
-                                    </div>
+                        {tshirts.length >= 1
+                            ? tshirts.map((tshirt) => {
+                                  return (
+                                      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3  mb-4    ">
+                                          <div class="w-full h-full   text-white  p-4">
+                                              <a class="relative block  overflow-hidden rounded  ">
+                                                  <img
+                                                      alt="tshirt"
+                                                      class="block h-full w-full object-cover object-center cursor-pointer"
+                                                      src={tshirt.img}
+                                                  />
+                                                  {/* <h1 class="absolute text-sm text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                                      {tshirt.name}
+                                                  </h1> */}
+                                              </a>
+                                              <div class="mt-4">
+                                                  <div class="flex flex-row justify-between">
+                                                      <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                                          {tshirt.name}
+                                                      </h3>
+                                                      <h2 class="title-font  text-lg font-medium text-white">
+                                                          KES {tshirt.price}
+                                                      </h2>
+                                                  </div>
 
-                                    <h2 class="title-font text-xs font-medium text-white">
-                                        All Colors Available
-                                    </h2>
-                                    <h2 class="title-font text-md text-end font-medium text-white">
-                                        tWRLD
-                                    </h2>
-                                    <div class="flex flex-row justify-between">
-                                        <p class="mt-1 text-white font-light text-xs">
-                                            Available Sizes:
-                                        </p>
-                                        <p class="mt-0 text-white text-sm ">
-                                            XXL XL L M S
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3  mb-4   ">
-                            <div class="w-full h-full   text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded  ">
-                                    <img
-                                        alt="ecommerce"
-                                        class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src={Tshirt2}
-                                    />
-                                    <h1 class="absolute text-sm text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                        lIVE
-                                        <br /> lOVE
-                                        <br /> lAUGH
-                                    </h1>
-                                </a>
-                                <div class="mt-4">
-                                    <div class="flex flex-row justify-between">
-                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                            lIFE
-                                        </h3>
-                                        <h2 class="title-font  text-lg font-medium text-white">
-                                            KES 700
-                                        </h2>
-                                    </div>
-
-                                    <h2 class="title-font text-xs font-medium text-white">
-                                        All Colors Available
-                                    </h2>
-                                    <h2 class="title-font text-md text-end font-medium text-white">
-                                        3Ls
-                                    </h2>
-                                    <div class="flex flex-row justify-between">
-                                        <p class="mt-1 text-white font-light text-xs">
-                                            Available Sizes:
-                                        </p>
-                                        <p class="mt-0 text-white text-sm ">
-                                            XXL XL L M S
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3   mb-4    ">
-                            <div class="w-full h-full    text-white  p-4">
-                                <a class="relative block  overflow-hidden rounded  ">
-                                    <img
-                                        alt="ecommerce"
-                                        class="block h-full w-full object-cover object-center cursor-pointer"
-                                        src={Tshirt3}
-                                    />
-                                    <h1 class="absolute text-xs text-end text-white top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                        MONEY
-                                        <br /> WALK
-                                        <br /> BULLSHIT
-                                        <br />
-                                        TALK
-                                    </h1>
-                                </a>
-                                <div class="mt-4">
-                                    <div class="flex flex-row justify-between">
-                                        <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                            aDVICE
-                                        </h3>
-                                        <h2 class="title-font  text-lg font-medium text-white">
-                                            KES 700
-                                        </h2>
-                                    </div>
-
-                                    <h2 class="title-font text-xs font-medium text-white">
-                                        All Colors Available
-                                    </h2>
-                                    <h2 class="title-font text-md text-end font-medium text-white">
-                                        Give Advice
-                                    </h2>
-                                    <div class="flex flex-row justify-between">
-                                        <p class="mt-1 text-white font-light text-xs">
-                                            Available Sizes:
-                                        </p>
-                                        <p class="mt-0 text-white text-sm ">
-                                            XXL XL L M S
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                                  <h2 class="title-font text-xs font-medium text-white">
+                                                      All Colors Available
+                                                  </h2>
+                                                  <h2 class="title-font text-md text-end font-medium text-white">
+                                                      {tshirt.description}
+                                                  </h2>
+                                                  <div class="flex flex-row justify-between">
+                                                      <p class="mt-1 text-white font-light text-xs">
+                                                          Available Sizes:
+                                                      </p>
+                                                      <p class="mt-0 text-white text-sm ">
+                                                          XXL XL L M S
+                                                      </p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  );
+                              })
+                            : []}
                     </div>
                     <div class="text-amber-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
                         <Link href="/tshirts" as="button">
@@ -176,7 +97,7 @@ export default function Welcome(props) {
                 </div>
 
                 <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500 ">
-                    <q>eVERYDAY iTS oWN mESSAGE or a lANGUAGE yOU cHOOSE</q>
+                    <q>eVERYDAY iTS oWN mESSAGE or  lANGUAGE; yOU dECIDe</q>
                 </div>
                 <div class="text-start tracking-widest overline p-4 mt-4 text-2xl text-white hover:translate-x-2 duration-300">
                     aBOUT t-SHUT Wrld
@@ -202,48 +123,19 @@ export default function Welcome(props) {
 
                 <div class="container mx-auto  px-4 sm:px-0">
                     <div class="flex flex-wrap">
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                            <div class="w-full h-full bg-grey shadow-lg text-white text-center p-2">
-                                <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
-                                    Be Kind
-                                </div>
-                            </div>
-                        </div>
+                        {shuts.length >= 1
+                            ? shuts.map((shut) => {
+                                  return (
+                                      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                                          <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                              <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
+                                                  {shut.name}
+                                              </div>
+                                          </div>
+                                      </div>
+                                  );
+                              })
+                            : []}
                     </div>
                 </div>
                 <div class="text-green-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
