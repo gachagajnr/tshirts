@@ -35,12 +35,10 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
-            'auth' => [
-                'user' => $request->user(),
-            ],
+            'user' =>   $request->user(),
+            
             'tshirts' => 
                Tshirt::latest()->get()
-
             ,
             'shuts' => 
                Shuts::latest()->get()
@@ -56,6 +54,9 @@ class HandleInertiaRequests extends Middleware
                 // in your case, you named your flash message "success"
                 'message' => fn () => $request->session()->get('message')
             ],
+            'roles' => $request->user() ? $request->user()->roles->pluck('name') : [],
+            'permissions' => $request->user() ? $request->user()->getPermissionsViaRoles()->pluck('name') : [],
+        
         ]);
     }
 }

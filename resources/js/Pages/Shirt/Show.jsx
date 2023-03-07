@@ -4,7 +4,6 @@ import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const [cart, setCart] = useState({});
-
     const { data, setData, router, post, errors, progress } = useForm({
         name: "",
         description: "",
@@ -13,8 +12,7 @@ export default function Show(props) {
         size: "",
         img: "",
     });
-    const { tshirts } = usePage().props;
-
+    const { tshirts, permissions } = usePage().props;
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
             router.delete(route("tshirts.destroy", e.currentTarget.id));
@@ -48,12 +46,13 @@ export default function Show(props) {
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
-                    <Link as="button" href="/tshirts/create">
-                        cREATE tSHUT
-                    </Link>
-                </div>
-
+                {permissions.includes("write tshirts") ? (
+                    <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
+                        <Link as="button" href="/tshirts/create">
+                            cREATE tSHUT
+                        </Link>
+                    </div>
+                ) : null}
                 <div
                     class="invisible fixed bottom-0 top-0 right-0 z-[1045] flex w-96 max-w-full translate-x-full flex-col border-none bg-white bg-clip-padding text-neutral-700 shadow-sm outline-none transition duration-300 ease-in-out dark:bg-neutral-800 dark:text-neutral-200 [&[data-te-offcanvas-show]]:transform-none"
                     tabindex="-1"
@@ -177,25 +176,30 @@ export default function Show(props) {
                                                     XXL XL L M S
                                                 </p>
                                             </div>
-
-                                            {/* <Link
-                                                tabIndex="1"
-                                                className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
-                                                href={route(
-                                                    "tshirts.edit",
-                                                    tshirt.id
-                                                )}
-                                            >
-                                                Edit
-                                            </Link>
-                                            <button
-                                                onClick={destruct}
-                                                id={tshirt.id}
-                                                type="button"
-                                                className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
-                                            >
-                                                Delete
-                                            </button> */}
+                                            {permissions.includes(
+                                                "delete tshirts"
+                                            ) ? (
+                                                <div class="flex flex-row justify-between gap-2 p-2">
+                                                    <Link
+                                                        tabIndex="1"
+                                                        className="px-4 py-2 w-1/2 text-xs text-white bg-blue-500 rounded"
+                                                        href={route(
+                                                            "tshirts.edit",
+                                                            tshirt.id
+                                                        )}
+                                                    >
+                                                        eDIT tSHUT
+                                                    </Link>
+                                                    <button
+                                                        onClick={destruct}
+                                                        id={tshirt.id}
+                                                        type="button"
+                                                        className="  px-4 py-2 text-xs w-1/2 text-white bg-red-500 rounded"
+                                                    >
+                                                        dELETE tSHUT
+                                                    </button>
+                                                </div>
+                                            ) : null}
                                         </div>
                                     </div>
                                 );
