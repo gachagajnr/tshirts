@@ -12,7 +12,7 @@ export default function Show(props) {
         size: "",
         img: "",
     });
-    const { tshirts, permissions } = usePage().props;
+    const { tshirts, permissions, user } = usePage().props;
     function destruct(e) {
         if (confirm("Are you sure you want to delete this tshirt?")) {
             router.delete(route("tshirts.destroy", e.currentTarget.id));
@@ -118,13 +118,18 @@ export default function Show(props) {
                                                 {cart.size}
                                             </p>
                                         </div>
-
-                                        <button
-                                            type="submit"
-                                            class="p-2 w-full bg-slate-500 text-white"
-                                        >
-                                            aDD tO cART
-                                        </button>
+                                        {user !== null ? (
+                                            <button
+                                                type="submit"
+                                                class="p-2 w-full bg-slate-500 text-white"
+                                            >
+                                                aDD tO cART
+                                            </button>
+                                        ) : (
+                                            <Link href={route("login")} as='button' class='p-3 text-center my-2 bg-lime-200 w-full'>
+                                                lOGIN tO aCCOUNT
+                                            </Link>
+                                        )}
                                     </div>
                                 </form>
                             </div>

@@ -7,8 +7,8 @@ import Image from "@/Images/tshirt.png";
 
 export default function Layout({ children }) {
     const { user } = usePage().props;
-    // console.log(user)
-     return (
+    console.log(user)
+      return (
          <div class="bg-slate-900 p-4 overflow-hidden">
              <Head title="Tshuts Wrld" />
              <header class="flex  justify-center pt-2 flex-col gap-4 ">
@@ -22,14 +22,14 @@ export default function Layout({ children }) {
                          <Link href="/">tSHUTwRLD</Link>
                      </p>
                  </div>
-                 {user.name ? (
+                 {user !== null ? (
                      <header class="flex flex-row justify-center mb-2 ">
                          <div className="flex justify-around">
                              <Link
                                  class="mr-2 text-sm capitalize text-blue-200 hover:scale-105 duration-400"
                                  href={route("profile.edit")}
                              >
-                                      {user.name }
+                                      {user.name}
                               </Link>
                              <Link
                                  class=" text-sm text-red-600 hover:scale-105 duration-400"
