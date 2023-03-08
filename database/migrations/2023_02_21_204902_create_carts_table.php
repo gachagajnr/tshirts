@@ -17,12 +17,18 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('size');
+            $table->foreignId('user_id')->nullable();
+            $table->foreignId('tshirt_id')->nullable();
             $table->integer('price')->nullable();
             $table->integer('quantity');
             $table->integer('total');
             $table->text('description')->nullable();
             $table->string('img');
             $table->string('color');
+            // $table->foreign('user_id')
+            //     ->references('id')
+            //     ->on('users')
+            //     ->onDelete('cascade');
             $table->timestamps();
         });
     }

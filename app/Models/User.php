@@ -8,14 +8,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
      
-    
+    // has many carts/orders
     protected $fillable = [
         'name',
         'email',
@@ -37,11 +37,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function bookmarks(): HasMany
+    public function cart(): HasOne
     {
-        return $this->hasMany(
-            related: Bookmark::class,
-            foreignKey: 'user_id',
-        );
+        return $this->hasOne(Cart::class);
     }
 }

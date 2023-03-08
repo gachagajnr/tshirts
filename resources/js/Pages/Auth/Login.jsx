@@ -90,14 +90,14 @@ export default function Login({ status, canResetPassword }) {
                 <div className="flex items-center justify-end gap-3 mt-4">
                     <Link
                         href={route("register")}
-                        className="underline text-sm text-white     dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                        className="underline text-sm text-white     "
                     >
                         Register
                     </Link>
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
-                            className="underline text-sm text-white dark:text-gray-400   dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                            className="underline text-sm text-white"
                         >
                             Forgot your password?
                         </Link>

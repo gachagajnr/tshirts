@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
@@ -22,17 +23,16 @@ class Tshirt extends Model
         'quantity'
     ];
 
-    // public function user(): BelongsTo
-    // {
-    //     return $this->belongsTo(
-    //         related: User::class,
-    //         foreignKey: 'user_id',
-    //     );
-    // }
+   
      protected function img(): Attribute
     {
         return Attribute::make(
             get: fn ($value) => url('imgs/'.$value),
         );
+    }
+ 
+    public function cart(): BelongsToMany
+    {
+        return $this->belongsToMany(Cart::class);
     }
 }

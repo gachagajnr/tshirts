@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Cart;
+use Illuminate\Support\Facades\Auth;
  
 class CartsController extends Controller
 {
@@ -12,7 +13,7 @@ class CartsController extends Controller
     
     public function index()
     {
-        $carts = Cart::latest()->get();
+        $carts = Cart::latest()->where('user_id', '=', Auth::user()->id)->get();
 
         return Inertia::render('Carts/Index', ['carts' => $carts]);
     
@@ -29,10 +30,14 @@ class CartsController extends Controller
                 'color'=>'required',
                 'size'=>'required',
                 'quantity'=>'required',
-                'total'=>'required'
+                'total'=>'required',
+                'id'=>'required'
             ]);
             
-            
+            if (Auth::check()) {
+
+            $user= Auth::id();
+
             Cart::create([
                 'name' => $request->name,
                 'description' => $request->description,
@@ -42,7 +47,11 @@ class CartsController extends Controller
                 'size'=>$request->size,
                 'quantity'=>$request->quantity,
                 'total'=>$request->total,
-            ]);
+                'user_id'=>$user,
+                'tshirt_id'=>$request->id
+            ]);        
+            }
+           
             session()->flash('success', 'Product is Added to Cart Successfully !');
         
             return redirect()->route('cart.index');

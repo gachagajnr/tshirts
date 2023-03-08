@@ -28,14 +28,14 @@ export default function Show(props) {
             img: tshirt.img,
             size: tshirt.size,
             quantity: tshirt.quantity,
+            id:tshirt.id,
             total: tshirt.quantity * tshirt.price,
         });
     };
 
     function submit(e) {
         e.preventDefault();
-        console.log(data);
-        post("/cart", data);
+         post("/cart", data);
     }
 
     return (

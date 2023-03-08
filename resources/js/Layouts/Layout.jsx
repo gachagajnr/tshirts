@@ -7,8 +7,7 @@ import Image from "@/Images/tshirt.png";
 
 export default function Layout({ children }) {
     const { user } = usePage().props;
-    console.log(user)
-      return (
+       return (
          <div class="bg-slate-900 p-4 overflow-hidden">
              <Head title="Tshuts Wrld" />
              <header class="flex  justify-center pt-2 flex-col gap-4 ">
