@@ -40,8 +40,7 @@ export default function Show(props) {
 
     return (
         <Layout>
-            <Head title="tSHUT wRLD" />
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 t-sHUT dESIGNs
             </div>
 
@@ -142,70 +141,72 @@ export default function Show(props) {
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {tshirts.map((tshirt) => {
                                 return (
-                                    <div
-                                        class="w-full  h-full   "
-                                        onClick={clickMe(tshirt)}
-                                        type="button"
-                                        data-te-offcanvas-toggle
-                                        data-te-target="#offcanvasRight"
-                                        aria-controls="offcanvasRight"
-                                        data-te-ripple-init
-                                        data-te-ripple-color="light"
-                                    >
-                                        <img
-                                            alt="ecommerce"
-                                            class="block h-96 w-full object-fit object-center cursor-pointer"
-                                            src={tshirt.img}
-                                        />
-                                        <div class="mt-4 ">
-                                            <div class="flex flex-row justify-between">
-                                                <h3 class="title-font mb-1 text-xs tracking-widest text-white">
-                                                    {tshirt.name}
-                                                </h3>
-                                                <h2 class="title-font  text-md font-medium text-white">
-                                                    KES {tshirt.price}
-                                                </h2>
-                                            </div>
-
-                                            <h2 class="title-font text-xs font-medium text-white">
-                                                {tshirt.color}
-                                            </h2>
-                                            <h2 class="title-font text-xs text-end font-medium text-white">
-                                                {tshirt.description}
-                                            </h2>
-                                            <div class="flex flex-row justify-between">
-                                                <p class="mt-0 text-white font-light text-xs">
-                                                    Available Sizes:
-                                                </p>
-                                                <p class="mt-0 text-white text-xs ">
-                                                    XXL XL L M S
-                                                </p>
-                                            </div>
-                                            {permissions.includes(
-                                                "delete tshirts"
-                                            ) ? (
-                                                <div class="flex flex-row justify-between gap-2 p-2">
-                                                    <Link
-                                                        tabIndex="1"
-                                                        className="px-4 py-2 w-1/2 text-xs text-white bg-blue-500 rounded"
-                                                        href={route(
-                                                            "tshirts.edit",
-                                                            tshirt.id
-                                                        )}
-                                                    >
-                                                        eDIT tSHUT
-                                                    </Link>
-                                                    <button
-                                                        onClick={destruct}
-                                                        id={tshirt.id}
-                                                        type="button"
-                                                        className="  px-4 py-2 text-xs w-1/2 text-white bg-red-500 rounded"
-                                                    >
-                                                        dELETE tSHUT
-                                                    </button>
+                                    <div class='flex flex-col'>
+                                        <div
+                                            class="w-full  h-full "
+                                            onClick={clickMe(tshirt)}
+                                            type="button"
+                                            data-te-offcanvas-toggle
+                                            data-te-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight"
+                                            data-te-ripple-init
+                                            data-te-ripple-color="light"
+                                        >
+                                            <img
+                                                alt="ecommerce"
+                                                class="block h-96 w-full object-fit object-center cursor-pointer"
+                                                src={tshirt.img}
+                                            />
+                                            <div class="mt-4 ">
+                                                <div class="flex flex-row justify-between">
+                                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                                        {tshirt.name}
+                                                    </h3>
+                                                    <h2 class="title-font  text-md font-medium text-white">
+                                                        KES {tshirt.price}
+                                                    </h2>
                                                 </div>
-                                            ) : null}
+
+                                                <h2 class="title-font text-xs font-medium text-white">
+                                                    {tshirt.color}
+                                                </h2>
+                                                <h2 class="title-font text-xs text-end font-medium text-white">
+                                                    {tshirt.description}
+                                                </h2>
+                                                <div class="flex flex-row justify-between">
+                                                    <p class="mt-0 text-white font-light text-xs">
+                                                        Available Sizes:
+                                                    </p>
+                                                    <p class="mt-0 text-white text-xs ">
+                                                        XXL XL L M S
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
+                                        {permissions.includes(
+                                            "delete tshirts"
+                                        ) ? (
+                                            <div class="flex flex-row justify-between gap-2 p-2">
+                                                <Link
+                                                    tabIndex="1"
+                                                    className="px-4 py-2 w-1/2 text-xs text-white bg-blue-500 rounded"
+                                                    href={route(
+                                                        "tshirts.edit",
+                                                        tshirt.id
+                                                    )}
+                                                >
+                                                    eDIT tSHUT
+                                                </Link>
+                                                <button
+                                                    onClick={destruct}
+                                                    id={tshirt.id}
+                                                    type="button"
+                                                    className="  px-4 py-2 text-xs w-1/2 text-white bg-red-500 rounded"
+                                                >
+                                                    dELETE tSHUT
+                                                </button>
+                                            </div>
+                                        ) : null}
                                     </div>
                                 );
                             })}

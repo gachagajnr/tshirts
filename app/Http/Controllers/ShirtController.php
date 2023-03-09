@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Tshirt;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Validator;
 
  
 class ShirtController extends Controller
 {
     
+    public function __construct()
+    {
+    $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
    
     public function index()
     {
@@ -89,7 +94,14 @@ class ShirtController extends Controller
         ])->validate();
     
         Tshirt::find($id)->update($request->all());
-        
+       
+        // $carts = Cart::where('tshirt_id','=', $id)->first();
+ 
+        // foreach ($carts as $cart) {
+        //      $cart->update($request->all());
+        // // Tshirt::find($id)->update($request->all());
+
+        // }
         return redirect()->route('tshirts.index');
      
     }

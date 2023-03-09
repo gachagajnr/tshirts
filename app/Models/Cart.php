@@ -17,13 +17,14 @@ class Cart extends Model
         'price',
         'color',
         'size',
+        'selectedSize',
         'quantity',
         'total',
         'user_id',
         'tshirt_id'
     ];
     public function tshirt() { 
-    return $this->belongsTo(App\Models\Tshirt::class); 
+        return $this->belongsTo(Tshirt::class); 
     }  
  
     public function user(): BelongsTo

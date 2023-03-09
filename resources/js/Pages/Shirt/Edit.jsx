@@ -18,8 +18,7 @@ export default function Edit({ tshirt }) {
 
     return (
         <Layout>
-            <Head title="tSHUT wRLD" />
-
+            
             <div class="md:container md:mx-auto px-4   ">
                 <div class="container flex   mx-auto justify-center p-5">
                     <div class="flex flex-row flex-wrap gap-3 justify-center">

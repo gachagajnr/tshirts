@@ -13,9 +13,9 @@ use App\Http\Controllers\ContactController;
 
  
  
-Route::resource('cart', CartsController::class);
-Route::resource('tshirts', ShirtController::class);
-Route::resource('shuts', ShutsController::class);
+Route::resource('cart', CartsController::class)->middleware(['auth']);
+Route::resource('tshirts', ShirtController::class)->middleware(['auth']);
+Route::resource('shuts', ShutsController::class)->middleware(['auth']);
 Route::resource('about', AboutController::class);
 Route::resource('contact', ContactController::class);
  
