@@ -72,13 +72,20 @@ class CartsController extends Controller
 
         $cart = Cart::find($id);
 
+        
          if($cart) {
-             $cart->quantity = $request->get('quantity');
-            $quat=$request->get('quantity');
-            $pri=$request->get('price');
-            $finalTotal = $quat * $pri;
-            $cart->total = $finalTotal;
-            $cart->save();
+            $quant=$request->get('quantity');
+            if(is_null($quant)){
+                $cart->size = $request->get('size');
+                $cart->save();
+            } else {
+                $cart->quantity = $request->get('quantity');
+                $quat = $request->get('quantity');
+                $pri = $request->get('price');
+                $finalTotal = $quat * $pri;
+                $cart->total = $finalTotal;
+                $cart->save();
+            }
         }
     
          return redirect()->route('cart.index');
