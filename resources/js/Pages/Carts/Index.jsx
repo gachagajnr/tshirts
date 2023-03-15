@@ -101,9 +101,9 @@ export default function Index(props) {
                                 </h5>
                             </div>
 
-                            <div class="flex flex-row   ">
-                                <h5 class="mx-2 text-md  text-neutral-600 ">
-                                    sIZE:
+                            <div class="flex flex-row  p-3 ">
+                                <h5 class="mx-2 text-md  text-neutral-300 ">
+                                    Selected sIZE:
                                 </h5>
                                 <h5 class="  text-md   text-white  ">
                                     {cart.size}
@@ -146,7 +146,18 @@ export default function Index(props) {
                                                 name="inlineRadioOptions"
                                                 id="inlineRadio1"
                                                 value="M"
-                                                onChange={handleRadioChange}
+                                                onChange={(e) =>
+                                                    router.patch(
+                                                        route(
+                                                            "cart.update",
+                                                            cart.id
+                                                        ),
+                                                        {
+                                                            size: e.target
+                                                                .value,
+                                                        }
+                                                    )
+                                                }
                                             />
                                             <label
                                                 class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
@@ -162,7 +173,18 @@ export default function Index(props) {
                                                 name="inlineRadioOptions"
                                                 id="inlineRadio1"
                                                 value="L"
-                                                onChange={handleRadioChange}
+                                                onChange={(e) =>
+                                                    router.patch(
+                                                        route(
+                                                            "cart.update",
+                                                            cart.id
+                                                        ),
+                                                        {
+                                                            size: e.target
+                                                                .value,
+                                                        }
+                                                    )
+                                                }
                                             />
                                             <label
                                                 class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
@@ -178,7 +200,18 @@ export default function Index(props) {
                                                 name="inlineRadioOptions"
                                                 id="inlineRadio1"
                                                 value="XL"
-                                                onChange={handleRadioChange}
+                                                onChange={(e) =>
+                                                    router.patch(
+                                                        route(
+                                                            "cart.update",
+                                                            cart.id
+                                                        ),
+                                                        {
+                                                            size: e.target
+                                                                .value,
+                                                        }
+                                                    )
+                                                }
                                             />
                                             <label
                                                 class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
@@ -194,7 +227,18 @@ export default function Index(props) {
                                                 name="inlineRadioOptions"
                                                 id="inlineRadio1"
                                                 value="XXL"
-                                                onChange={handleRadioChange}
+                                                onChange={(e) =>
+                                                    router.patch(
+                                                        route(
+                                                            "cart.update",
+                                                            cart.id
+                                                        ),
+                                                        {
+                                                            size: e.target
+                                                                .value,
+                                                        }
+                                                    )
+                                                }
                                             />
                                             <label
                                                 class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
@@ -206,21 +250,21 @@ export default function Index(props) {
                                     </div>
                                 </form>
                             </div>
-                            <div class="flex flex-row  flex-wrap  ">
-                                <h5 class="mx-2 text-sm  text-neutral-600 ">
+                            <div class="flex flex-row  flex-wrap  p-4 my-3">
+                                <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     iTEMS:
                                 </h5>
                                 <h5 class="  text-sm   text-white  ">
                                     {cart.quantity}
                                 </h5>
-                                <h5 class="mx-2 text-sm  text-neutral-600  ">
+                                <h5 class="mx-2 text-sm  text-neutral-300  ">
                                     pRICE:
                                 </h5>
                                 <h5 class="  text-sm   text-white ">
                                     {cart.price}
                                 </h5>
 
-                                <h5 class="mx-2 text-sm  text-neutral-600 ">
+                                <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     tOTAL:
                                 </h5>
                                 <h5 class="  text-sm   text-lime-600 ">
@@ -279,9 +323,22 @@ export default function Index(props) {
                     </div>
                 );
             })}
-            <button class="text-white text-center p-3 m-2 border hover:bg-lime-400 border-cyan-100 w-full justify-center rounded">
-                Checkout
-            </button>
+            <div class="flex flex-row justify-between">
+                <Link
+                    as="button"
+                    href="/tshirts"
+                    class="text-white text-center p-3 m-2 border hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                >
+                    cONTINUE sHOPPING
+                </Link>
+                <Link
+                    as="button"
+                    href="/checkout"
+                    class="text-white text-center p-3 m-2 border hover:border- hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                >
+                    pROCCED to cHECKOUT
+                </Link>
+            </div>
         </Layout>
     );
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\CartsController;
 use App\Http\Controllers\ShutsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MpesaSTKPUSHController;
 
  
  
@@ -41,6 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
- 
+Route::post('/v1/mpesatest/stk/push', [MpesaSTKPUSHController::class, 'STKPush']);
+
         
 require __DIR__.'/auth.php';
