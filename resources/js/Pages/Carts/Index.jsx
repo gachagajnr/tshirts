@@ -8,10 +8,8 @@ export default function Index(props) {
     const [currentRadioValue, setCurrentRadioValue] = useState();
     const handleRadioChange = (e) => {
         setCurrentRadioValue(e.target.value);
-        console.log(e);
-    };
-    console.log(currentRadioValue);
-    const { data, setData, post, errors, progress, processing, transform } =
+     };
+     const { data, setData, post, errors, progress, processing, transform } =
         useForm({
             name: "",
             description: "",
@@ -39,7 +37,6 @@ export default function Index(props) {
 
     return (
         <Layout>
-            <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 mY sHUT cART
             </div>
@@ -101,15 +98,15 @@ export default function Index(props) {
                                 </h5>
                             </div>
 
-                            <div class="flex flex-row  p-3 ">
-                                <h5 class="mx-2 text-md  text-neutral-300 ">
-                                    Selected sIZE:
+                            <div class="flex flex-row  justify-start border-b-2 py-1">
+                                <h5 class="mx-2 text-sm  text-neutral-300 ">
+                                    Selected Size:
                                 </h5>
                                 <h5 class="  text-md   text-white  ">
                                     {cart.size}
                                 </h5>
                             </div>
-                            <div class="flex justify-start">
+                            <div class="flex  justify-end py-2">
                                 <form onSubmit={submit}>
                                     <div class="flex flex-row">
                                         <div class="mb-[0.125rem] mr-4 inline-block min-h-[1.5rem] pl-[1.5rem]">
@@ -250,7 +247,7 @@ export default function Index(props) {
                                     </div>
                                 </form>
                             </div>
-                            <div class="flex flex-row  flex-wrap  p-4 my-3">
+                            <div class="flex flex-row  flex-wrap  my-3">
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     iTEMS:
                                 </h5>

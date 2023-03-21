@@ -10,13 +10,15 @@ use App\Http\Controllers\CartsController;
 use App\Http\Controllers\ShutsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MpesaSTKPUSHController;
 
  
  
 Route::resource('cart', CartsController::class)->middleware(['auth']);
-Route::resource('tshirts', ShirtController::class)->middleware(['auth']);
-Route::resource('shuts', ShutsController::class)->middleware(['auth']);
+Route::resource('tshirts', ShirtController::class);
+Route::resource('shuts', ShutsController::class);
+Route::resource('checkout', CheckoutController::class)->middleware(['auth']);
 Route::resource('about', AboutController::class);
 Route::resource('contact', ContactController::class);
  

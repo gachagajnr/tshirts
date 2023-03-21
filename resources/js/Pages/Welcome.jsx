@@ -10,8 +10,7 @@ export default function Welcome(props) {
     const { tshirts, shuts } = usePage().props;
      return (
         <Layout auth={props.auth} errors={props.errors}>
-            <Head title="tSHUTwRLD" />
-            <div class="   ">
+             <div class="   ">
                 <div class="flex justify-center flex-col  pt-6   ">
                     <div class="text-center py-6 text-4xl font-extralight text-white border-r-2 border-lime-400 hover:-translate-y-2 duration-200 ">
                         wORDS oN t-sHIRTs

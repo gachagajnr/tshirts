@@ -10,10 +10,10 @@ export default function Guest({ children }) {
                     <img
                         class="h-14 w-14 cursor-pointer"
                         src={Image}
-                        alt="tSHUTwRLD"
+                        alt="tSHIRTS254"
                     />
                     <p class="text-center pt-3 text-2xl text-white">
-                        <Link href="/">tSHUTwRLD</Link>
+                        <Link href="/">tSHIRTS254</Link>
                     </p>
                 </div>
             </div>

@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     const { user } = usePage().props;
        return (
          <div class="bg-slate-900 p-4 overflow-hidden">
-             <Head title="tSHUTwRLD" />
+             {/* <Head title="tSHIRTS254" /> */}
              <header class="flex  justify-center pt-2 flex-col gap-4 ">
                  <div class="flex flex-row  justify-center">
                      <img
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
                          alt="tSHUT wRLD"
                      />
                      <p class="text-center pt-3 text-2xl text-white">
-                         <Link href="/">tSHUTwRLD</Link>
+                         <Link href="/">tSHIRTS254</Link>
                      </p>
                  </div>
                  {user !== null ? (
@@ -42,7 +42,9 @@ export default function Layout({ children }) {
                                  href="/cart"
                                  class="ml-1 text-sm text-blue-300   hover:scale-105 duration-400"
                              >
+                                
                                  <ShoppingCartIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
+                                 
                              </Link>
                          </div>
                      </header>
@@ -151,12 +153,12 @@ export default function Layout({ children }) {
                  </div>
              </div>
              <div class="text-start tracking-widest text-white  p-2 mt-4 text-md overline">
-                 @tSHUTwRLD
+                 @tSHIRTS254
              </div>
              <h2 class="text-end text-white">
                  {"Copyright © "}{" "}
                  <Link to="/" alt="" style={{ textDecoration: "none" }}>
-                     tSHUTwRLD{" "}
+                     tSHIRTS254{" "}
                  </Link>{" "}
                  {new Date().getFullYear()}
                  {"."}{" "}

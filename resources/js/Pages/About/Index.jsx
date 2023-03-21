@@ -4,9 +4,9 @@ import Layout from "@/Layouts/Layout";
 export default function Index(props) {
     return (
         <Layout>
-            <Head title="tSHUT wRLD" />
+            <Head title="tSHIRTS254" />
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                aBOUT tSHUT wRLD
+                aBOUT tSHIRTS254
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
