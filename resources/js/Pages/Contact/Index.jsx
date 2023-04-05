@@ -21,30 +21,30 @@ export default function Show(props) {
         <Layout>
             <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                cONTACT uS
+                Contact Us
             </div>
 
             <div class="container mx-4  px-8 sm:px-0">
                 <div class="container mx-auto w-auto">
                     <div class="flex flex-row flex-wrap justify-center">
                         <div class="tracking-wide text-center font-light text-3xl mb-3 hover:-translate-x-1 duration-150  leading-tight text-slate-200 p-5 ">
-                            aRE you in need of a cUSTOM solution?
-                            <br /> ~sAY~
+                            Are you in need of a Custom solution?
+                            <br /> ~Say~
                             <br />
                             <div class="p-2 text-3xl">
-                                cUSTOM t-shirt, mASS t-SHIRT branding solutions,
-                                other branding sERVICES or any qUESTIONS ?
+                                Custom t-shirt, Bulk t-Shirt branding solutions,
+                                other branding Services or any Questions ?
                             </div>
-                            rEACH oUT to us to see where we can hELP,
-                            <br /> we'll rESPOND <br />
-                            as soon as we get your qUESTION.
+                            Reach Out to us to see where we can Help,
+                            <br /> we'll Respond <br />
+                            as soon as we get your Question.
                         </div>
 
                         <div class=" p-10   border-l-2 border-t-2 border-green-300 ">
                             <form onSubmit={submit}>
                                 <div class="flex flex-col  ">
                                     <div class="text-white text-center p-4 m-2 text-3xl">
-                                        rEACH oUT nOW
+                                        Reach Out Now
                                     </div>
                                     <div class="flex flex-row">
                                         <div class="flex flex-col">

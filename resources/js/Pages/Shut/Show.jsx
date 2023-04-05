@@ -36,7 +36,7 @@ export default function Show(props) {
         <Layout>
             <Head title="tSHUT wRLD" />
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                sHUT pHRASEs
+                Tshirts Phrases
             </div>
 
             <div class="md:container md:mx-auto px-4   ">

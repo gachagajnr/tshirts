@@ -41,14 +41,14 @@ export default function Show(props) {
     return (
         <Layout>
              <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                t-sHUT dESIGNs
+                Tshirts Designs
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
                 {permissions.includes("write tshirts") ? (
                     <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
                         <Link as="button" href="/tshirts/create">
-                            cREATE tSHUT
+                            Create Tshirt
                         </Link>
                     </div>
                 ) : null}

@@ -13,16 +13,16 @@ export default function Welcome(props) {
              <div class="   ">
                 <div class="flex justify-center flex-col  pt-6   ">
                     <div class="text-center py-6 text-4xl font-extralight text-white border-r-2 border-lime-400 hover:-translate-y-2 duration-200 ">
-                        wORDS oN t-sHIRTs
+                        Words on Tshirts
                     </div>
                     <div class="tracking-tight text-center font-light text-3xl hover:-translate-x-1 duration-150 border-r-2 border-lime-400 leading-tight text-amber-500    ">
-                        uSE aNY pHRASES fROM oUR cATALOGUE
+                        Use Any Phrases From our Catalogue
                     </div>
                     <div class="tracking-tightest text-center  text-6xl border-r-2  hover:text-lime-400  p-2 border-blue-500   mt-2 text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                        cHOOSE aNY dESIGN fROM oUR cATALOGUE
+                        Choose Any Design From Our Catalogue
                     </div>
                     <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2  hover:translate-x-1 duration-300  text-white    border-lime-400 ">
-                        tALK tO uS fOR cUSTOM sOLUTIONS
+                        Talk To Us For Custom Branding Solutions
                     </div>
 
                     <div class="text-center border rounded-md  m-auto w-48 py-3 hover:scale-105 duration-300">
@@ -31,13 +31,13 @@ export default function Welcome(props) {
                             // as="button"
                             class="  text-lime-500 text-lg font-extralight  hover:text-green-500 rounded-md  "
                         >
-                            tALK tO uS
+                            Talk To US
                         </Link>
                     </div>
                 </div>
 
                 <div class="text-end text-white tracking-widest overline p-4 mt-4 text-2xl   transition ease-in-out delay-150  hover:-translate-x-1   duration-300 ">
-                    oUR tSHUT dESIGNS
+                    Our Tshirt Designs
                 </div>
 
                 <div class="container mx-4  px-8 sm:px-0">
@@ -90,16 +90,16 @@ export default function Welcome(props) {
                     </div>
                     <div class="text-amber-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
                         <Link href="/tshirts" as="button">
-                            eXPLORE mORE dESIGNs
+                            Explore More Designs
                         </Link>
                     </div>
                 </div>
 
                 <div class="text-center p-3 mt-4 font-thin font-mono text-4xl tracking-wider text-cyan-500 ">
-                    <q>eVERYDAY iTS oWN mESSAGE or  lANGUAGE; yOU dECIDe</q>
+                    <q>Everyday Its Own Message or Language; You Decide</q>
                 </div>
                 <div class="text-start tracking-widest overline p-4 mt-4 text-2xl text-white hover:translate-x-2 duration-300">
-                    aBOUT t-SHUT Wrld
+                    About Crafty Tshirts
                 </div>
                 <div class="p-3 text-xl leading-relaxed text-white indent-8 italic font-thin tracking-wide text-center">
                     we strongly agree to many uses of words , sometimes to
@@ -117,7 +117,7 @@ export default function Welcome(props) {
                     phrase at your own pace
                 </div>
                 <div class="text-end tracking-widest overline p-4 mt-4 text-2xl text-white hover:-translate-x-3 duration-500">
-                    pHRASES cATALOGUE
+                    Phrases Catalogue
                 </div>
 
                 <div class="container mx-auto  px-4 sm:px-0">
@@ -139,7 +139,7 @@ export default function Welcome(props) {
                 </div>
                 <div class="text-green-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
                     <Link href="/shuts" as="button">
-                        eXPLORE mORE pHRASEs
+                        Explore More Phrases
                     </Link>
                 </div>
             </div>
