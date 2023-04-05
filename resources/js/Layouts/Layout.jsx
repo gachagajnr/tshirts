@@ -52,7 +52,7 @@ export default function Layout({ children }) {
                                class="mr-1 text-sm text-blue-200 hover:scale-105 duration-400"
                                href={route("login")}
                            >
-                               Log in
+                               Log In
                            </Link>
                            <Link
                                href={route("register")}
