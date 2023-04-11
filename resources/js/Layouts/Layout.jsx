@@ -104,8 +104,8 @@ export default function Layout({ children }) {
                <div class="text-center tracking-widest overline p-4 mt-4 text-2xl text-white hover:scale-105 duration-200">
                    Our Service
                </div>
-               <div class="flex flex-wrap justify-center font-thin text-4xl p-4 text-blue-600 text-center">
-                   ~Just TShirt Branding~
+               <div class="flex flex-wrap justify-center font-thin text-6xl p-4 text-blue-600 text-center  ">
+                   ~T-Shirt Branding~
                </div>
                <div class="text-center tracking-widest text-white overline p-4 mt-4 text-2xl hover:scale-105 duration-300">
                    Find Us On
