@@ -88,7 +88,7 @@ export default function Welcome(props) {
                                })
                              : []}
                      </div>
-                      <div class="tracking-tightest text-center  text-4xl border-b-2  hover:text-lime-400  my-4 p-6 border-blue-500    text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                     <div class="tracking-tightest text-center  text-4xl border-b-2  hover:text-lime-400  my-4 p-6 border-blue-500    text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                          <Link href="/tshirts">Explore More Designs</Link>
                      </div>
                  </div>
@@ -135,7 +135,7 @@ export default function Welcome(props) {
                              : []}
                      </div>
                  </div>
-                 <div class="text-green-500  text-center p-4 overline text-3xl cursor-pointer hover:text-white-500 hover:scale-y-105 duration-300">
+                 <div class="tracking-tightest text-center  text-4xl border-b-2  hover:text-lime-400  my-4 p-6 border-blue-500    text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                      <Link href="/shuts" as="button">
                          Explore More Phrases
                      </Link>
