@@ -41,7 +41,7 @@ export default function Show(props) {
     return (
         <Layout>
              <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                Tshirts Designs
+                T-Shirts Designs
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
@@ -136,7 +136,7 @@ export default function Show(props) {
                     </div>
                 </div>
 
-                <div class="container mx-4  px-8 sm:px-0">
+                <div class="container mx-4  px-auto sm:px-0">
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {tshirts.map((tshirt) => {

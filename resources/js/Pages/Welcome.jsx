@@ -112,7 +112,7 @@ export default function Welcome(props) {
                      </div>
                      where we do a series of phrases for a number of clients
                      with our logo on it You can also request your own
-                     customized phrase at your own pace
+                     customized phrase of your liking.
                  </div>
                  <div class="text-end   overline p-4 mt-4 text-3xl text-white hover:-translate-x-3 duration-500">
                      Phrases Catalogue
