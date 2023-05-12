@@ -94,16 +94,16 @@ export default function Layout({ children }) {
                     </div>
                 </div>
                 {children}
-                <div class="border-l-2 border-b-2 border-yellow-500">
+                <div class="border-l-2 py-x px-8 border-indigo-500">
                     <div class="text-start font-thin p-4 mt-4 text-2xl text-white  hover:translate-x-3 duration-200">
                         Our Service
                     </div>
-                    <div class="flex flex-wrap justify-center   font-thin text-4xl p-4 text-white text-center  ">
+                    <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-white text-center  ">
                         ~Custom T-Shirts Branding~
                     </div>
                 </div>
                 {/* <div class="border-r-2 border-b-2 border-white"> */}
-                <div class="text-center font-thin text-white  p-4 mt-4 text-2xl hover:scale-105 duration-300">
+                <div class="text-center font-thin text-white  py-8 px-8 mt-4 text-2xl hover:scale-105 duration-300">
                     Find Us On
                 </div>
                 <div class="flex justify-center gap-2 p-3">
