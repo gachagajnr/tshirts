@@ -19,7 +19,8 @@ export default function Show(props) {
 
     return (
         <Layout>
-            <Head title="tSHUT wRLD" />
+            <Head title="Contact" />
+
             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 Contact Us
             </div>

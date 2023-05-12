@@ -1,13 +1,13 @@
-import './bootstrap';
-import '../css/app.css';
+import "./bootstrap";
+import "../css/app.css";
 import "tw-elements";
-import { createRoot } from 'react-dom/client';
-import { createInertiaApp } from '@inertiajs/react';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { createRoot } from "react-dom/client";
+import { createInertiaApp } from "@inertiajs/react";
+import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 
 const appName =
     window.document.getElementsByTagName("title")[0]?.innerText ||
-    "Crafty Tshirts";
+    "CraftyTshirtsStore";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

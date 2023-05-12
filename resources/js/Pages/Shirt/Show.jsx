@@ -4,7 +4,7 @@ import Layout from "@/Layouts/Layout";
 
 export default function Show(props) {
     const [cart, setCart] = useState({});
-    const { data, setData, router, post, errors, progress } = useForm({
+    const { data, setData,  post, errors, progress } = useForm({
         name: "",
         description: "",
         price: "",
@@ -40,7 +40,9 @@ export default function Show(props) {
 
     return (
         <Layout>
-             <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+            <Head title="Tshirts" />
+
+            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 T-Shirts Designs
             </div>
 
@@ -122,10 +124,14 @@ export default function Show(props) {
                                                 type="submit"
                                                 class="p-2 w-full bg-slate-500 text-white"
                                             >
-                                                aDD tO cART
+                                                Add To Cart
                                             </button>
                                         ) : (
-                                            <Link href={route("login")} as='button' class='p-3 text-center my-2 bg-lime-200 w-full'>
+                                            <Link
+                                                href={route("login")}
+                                                as="button"
+                                                class="p-3 text-center my-2 bg-lime-200 w-full"
+                                            >
                                                 lOGIN tO aCCOUNT
                                             </Link>
                                         )}
@@ -141,7 +147,7 @@ export default function Show(props) {
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {tshirts.map((tshirt) => {
                                 return (
-                                    <div class='flex flex-col'>
+                                    <div class="flex flex-col">
                                         <div
                                             class="w-full  h-full "
                                             onClick={clickMe(tshirt)}
@@ -195,7 +201,7 @@ export default function Show(props) {
                                                         tshirt.id
                                                     )}
                                                 >
-                                                    eDIT tSHUT
+                                                    Edit Tshirt
                                                 </Link>
                                                 <button
                                                     onClick={destruct}
@@ -203,7 +209,7 @@ export default function Show(props) {
                                                     type="button"
                                                     className="  px-4 py-2 text-xs w-1/2 text-white bg-red-500 rounded"
                                                 >
-                                                    dELETE tSHUT
+                                                    Delete Tshirt
                                                 </button>
                                             </div>
                                         ) : null}

@@ -7,13 +7,9 @@ export default function Guest({ children }) {
         <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-slate-900 p-4 ">
             <div class="flex justify-center items-center text-white   flex-col">
                 <div class="flex flex-row  justify-center">
-                    <img
-                        class="h-14 w-14 cursor-pointer"
-                        src={Image}
-                        alt="CraftyTshirts"
-                    />
+                    
                     <p class="text-center pt-3 text-2xl text-white">
-                        <Link href="/">Crafty Tshirts</Link>
+                        <Link href="/">CraftyTshirtsStore</Link>
                     </p>
                 </div>
             </div>

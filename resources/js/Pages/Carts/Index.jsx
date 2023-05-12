@@ -37,21 +37,21 @@ export default function Index(props) {
 
     return (
         <Layout>
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                mY sHUT cART
+            <div class="text-white text-3xl font-thin text-center   m-2 hover:-translate-y-2 duration-500">
+                My TShirt Cart
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
+                <div class="text-green-500 text-end hover:-translate-x-2 duration-500 my-3">
                     <Link as="button" href="/tshirts">
-                        sHOP tSHUTs
+                        Shop TShirts
                     </Link>
                 </div>
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="flex flex-row p-2 gap-3 justify-center my-3 flex-wrap">
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
-                                tOTAL tSHUTs
+                                Total TShirts
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">
                                 {carts
@@ -61,7 +61,7 @@ export default function Index(props) {
                                     .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1")}
                             </div>
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
-                                tOTAL aMOUNT
+                                Total Amount
                             </div>
                             <div class="text-white text-2xl text-center font-extralight">
                                 {
@@ -249,22 +249,22 @@ export default function Index(props) {
                             </div>
                             <div class="flex flex-row  flex-wrap  my-3">
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
-                                    iTEMS:
+                                    Items:
                                 </h5>
                                 <h5 class="  text-sm   text-white  ">
                                     {cart.quantity}
                                 </h5>
                                 <h5 class="mx-2 text-sm  text-neutral-300  ">
-                                    pRICE:
+                                    Price:
                                 </h5>
                                 <h5 class="  text-sm   text-white ">
                                     {cart.price}
                                 </h5>
 
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
-                                    tOTAL:
+                                    Total:
                                 </h5>
-                                <h5 class="  text-sm   text-lime-600 ">
+                                <h5 class="  text-xl   text-white ">
                                     {cart.price * cart.quantity}
                                 </h5>
                                 <div class="flex   p-1">
@@ -312,7 +312,7 @@ export default function Index(props) {
                                         }
                                         class="cursor-pointer text-end text-white   text-md bg-red-600 p-1 rounded text-xs my-1"
                                     >
-                                        rEMOVE fROM cART
+                                        Remove From Cart
                                     </button>
                                 </div>
                             </div>

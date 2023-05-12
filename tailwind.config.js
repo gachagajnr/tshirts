@@ -14,7 +14,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Sans Serif", ...defaultTheme.fontFamily.sans],
+                sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
             },
         },
         // container: {
