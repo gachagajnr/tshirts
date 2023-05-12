@@ -8,7 +8,7 @@ import Image from "@/Images/tshirt.png";
 export default function Layout({ children }) {
     const { user } = usePage().props;
     return (
-        <div class="bg-transparent bg-gradient-to-r from-slate-700 to-teal-600 p-4 overflow-hidden">
+        <div class="bg-transparent bg-gradient-to-br from-slate-700 to-teal-600 p-4 overflow-hidden">
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
                 <div class="flex flex-row  justify-center">
                     <p class="text-center pt-3 text-2xl text-white">
