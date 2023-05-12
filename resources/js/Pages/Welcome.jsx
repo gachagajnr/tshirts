@@ -119,8 +119,8 @@ export default function Welcome(props) {
                         with our logo on it You can also request your own
                         customized phrase of your liking.
                     </div>
-                    <div class="text-center p-3 mt-4 font-thin    text-4xl tracking-widest text-cyan-500 ">
-                        Home of Custom T-shirts
+                    <div class="text-center p-3 mt-4 font-thin    text-4xl tracking-wide text-cyan-500 ">
+                        Your Style, Your Statement.
                     </div>
                 </div>
                 <div class="border-r-2   border-yellow-500">

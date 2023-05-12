@@ -8,7 +8,7 @@ import Image from "@/Images/tshirt.png";
 export default function Layout({ children }) {
     const { user } = usePage().props;
     return (
-        <div class="bg-transparent bg-gradient-to-br from-slate-700 to-teal-600 p-4 overflow-hidden">
+        <div class="bg-transparent bg-gradient-to-br from-slate-700 to-teal-600   overflow-hidden">
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
                 <div class="flex flex-row  justify-center">
                     <p class="text-center pt-3 text-2xl text-white">
@@ -95,7 +95,7 @@ export default function Layout({ children }) {
                 </div>
                 {children}
                 <div class="border-l-2 py-x px-8 border-indigo-500">
-                    <div class="text-start font-thin p-4 mt-4 text-2xl text-white  hover:translate-x-3 duration-200">
+                    <div class="text-start font-thin p-4 mt-4 text-3xl text-white  hover:translate-x-3 duration-200">
                         Our Service
                     </div>
                     <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-white text-center  ">

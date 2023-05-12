@@ -16,6 +16,10 @@ module.exports = {
             fontFamily: {
                 sans: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                "hero": "url('../public/imgs/1676509459.jpg')",
+                // "footer-texture": "url('/img/footer-texture.png')",
+            },
         },
         // container: {
         //     center: true,
