@@ -28,12 +28,12 @@ export default function Layout({ children }) {
                                 {user.name}
                             </Link>
                             <Link
-                                class=" text-sm text-red-600 hover:scale-105 duration-400"
+                                class=" text-sm text-red-500 hover:scale-105 duration-400"
                                 href={route("logout")}
                                 method="post"
                                 as="button"
                             >
-                                lOGOUT
+                                Logout
                             </Link>
                             <Link
                                 href="/cart"
@@ -46,20 +46,20 @@ export default function Layout({ children }) {
                 ) : (
                     <header class="flex flex-row justify-center mb-2 ">
                         <Link
-                            class="mr-1 text-sm text-blue-200 hover:scale-105 duration-400"
+                            class="mr-1 text-sm text-blue-800 font-semibold hover:scale-105 duration-400"
                             href={route("login")}
                         >
                             Log In
                         </Link>
                         <Link
                             href={route("register")}
-                            class="ml-1 text-sm text-blue-300  hover:scale-105 duration-400"
+                            class="ml-1 text-sm text-blue-800  font-semibold hover:scale-105 duration-400"
                         >
                             Register
                         </Link>
                         <Link
                             href="/cart"
-                            class="ml-1 text-sm text-blue-300   hover:scale-105 duration-400"
+                            class="ml-1 text-sm text-blue-800   font-semibold hover:scale-105 duration-400"
                         >
                             <ShoppingCartIcon class="h-6 w-6 text-black ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
                         </Link>
@@ -72,25 +72,25 @@ export default function Layout({ children }) {
                     <div class="flex flex-shrink-0 flex-row justify-center">
                         <Link
                             href="/about"
-                            class="  text-blue-400  text-md font-normal  p-1 hover:-translate-y-1 duration-500    "
+                            class="  text-orange-600 font-semibold  text-md  p-1 hover:-translate-y-1 duration-500    "
                         >
                             ABOUT
                         </Link>
                         <Link
                             href="/tshirts"
-                            class="  text-blue-400 text-md font-normal  p-1 hover:-translate-y-1 duration-500    "
+                            class="  text-orange-600 font-semibold text-md  p-1 hover:-translate-y-1 duration-500    "
                         >
                             T-SHIRTS
                         </Link>
                         <Link
                             href="/shuts"
-                            class="  text-blue-400 text-md font-normal  p-1 hover:-translate-y-1 duration-500    "
+                            class="  text-orange-600 font-semibold text-md  p-1 hover:-translate-y-1 duration-500    "
                         >
                             PHRASES
                         </Link>
                         <Link
                             href="/contact"
-                            class="  text-blue-400 text-md font-normal  p-1 hover:-translate-y-1 duration-500    "
+                            class="  text-orange-600 font-semibold text-md  p-1 hover:-translate-y-1 duration-500    "
                         >
                             CONTACT
                         </Link>
