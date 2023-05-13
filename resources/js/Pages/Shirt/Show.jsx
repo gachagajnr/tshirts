@@ -42,7 +42,7 @@ export default function Show(props) {
         <Layout>
             <Head title="Tshirts" />
 
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+            <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 T-Shirts Designs
             </div>
 
@@ -122,7 +122,7 @@ export default function Show(props) {
                                         {user !== null ? (
                                             <button
                                                 type="submit"
-                                                class="p-2 w-full bg-slate-500 text-white"
+                                                class="p-2 w-full bg-slate-500 text-black"
                                             >
                                                 Add To Cart
                                             </button>
@@ -165,25 +165,25 @@ export default function Show(props) {
                                             />
                                             <div class="mt-4 ">
                                                 <div class="flex flex-row justify-between">
-                                                    <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                                    <h3 class="title-font mb-1 text-xs tracking-widest text-black">
                                                         {tshirt.name}
                                                     </h3>
-                                                    <h2 class="title-font  text-md font-medium text-white">
+                                                    <h2 class="title-font  text-md font-medium text-black">
                                                         KES {tshirt.price}
                                                     </h2>
                                                 </div>
 
-                                                <h2 class="title-font text-xs font-medium text-white">
+                                                <h2 class="title-font text-xs font-medium text-black">
                                                     {tshirt.color}
                                                 </h2>
-                                                <h2 class="title-font text-xs text-end font-medium text-white">
+                                                <h2 class="title-font text-xs text-end font-medium text-black">
                                                     {tshirt.description}
                                                 </h2>
                                                 <div class="flex flex-row justify-between">
-                                                    <p class="mt-0 text-white font-light text-xs">
+                                                    <p class="mt-0 text-black font-light text-xs">
                                                         Available Sizes:
                                                     </p>
-                                                    <p class="mt-0 text-white text-xs ">
+                                                    <p class="mt-0 text-black text-xs ">
                                                         XXL XL L M S
                                                     </p>
                                                 </div>
@@ -195,7 +195,7 @@ export default function Show(props) {
                                             <div class="flex flex-row justify-between gap-2 p-2">
                                                 <Link
                                                     tabIndex="1"
-                                                    className="px-4 py-2 w-1/2 text-xs text-white bg-blue-500 rounded"
+                                                    className="px-4 py-2 w-1/2 text-xs text-black bg-blue-500 rounded"
                                                     href={route(
                                                         "tshirts.edit",
                                                         tshirt.id
@@ -207,7 +207,7 @@ export default function Show(props) {
                                                     onClick={destruct}
                                                     id={tshirt.id}
                                                     type="button"
-                                                    className="  px-4 py-2 text-xs w-1/2 text-white bg-red-500 rounded"
+                                                    className="  px-4 py-2 text-xs w-1/2 text-black bg-red-500 rounded"
                                                 >
                                                     Delete Tshirt
                                                 </button>
