@@ -42,7 +42,7 @@ export default function Index(props) {
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-green-500 text-end hover:-translate-x-2 duration-500 my-3">
+                <div class="text-green-900 text-end hover:-translate-x-2 duration-500 my-3">
                     <Link as="button" href="/tshirts">
                         Shop TShirts
                     </Link>
@@ -50,20 +50,20 @@ export default function Index(props) {
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="flex flex-row p-2 gap-3 justify-center my-3 flex-wrap">
-                            <div class="text-slate-400 text-lg text-center font-extralight mx-2">
-                                Total TShirts
+                            <div class="text-black text-lg text-center font-semibold mx-2">
+                                Total T-Shirts
                             </div>
-                            <div class="text-black text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-semibold">
                                 {carts
                                     .map((item) => item.quantity)
                                     .reduce((prev, next) => prev + next, 0)
                                     .toString()
                                     .replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1")}
                             </div>
-                            <div class="text-slate-400 text-lg text-center font-extralight mx-2">
+                            <div class="text-black text-lg text-center font-semibold mx-2">
                                 Total Amount
                             </div>
-                            <div class="text-black text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-semibold">
                                 {
                                     carts
                                         .map((item) => item.total)
@@ -88,7 +88,7 @@ export default function Index(props) {
                             src={cart.img}
                             alt={cart.name}
                         />
-                        <div class="flex flex-col justify-start  p-3 ">
+                        <div class="flex flex-col justify-start bg-slate-200 p-3 ">
                             <div class="flex flex-row justify-between  ">
                                 <h5 class="  text-xl   text-black ">
                                     {cart.name}
@@ -99,10 +99,10 @@ export default function Index(props) {
                             </div>
 
                             <div class="flex flex-row  justify-start border-b-2 py-1">
-                                <h5 class="mx-2 text-sm  text-neutral-300 ">
+                                <h5 class="mx-2 text-sm  text-maroon-300 ">
                                     Selected Size:
                                 </h5>
-                                <h5 class="  text-md   text-black  ">
+                                <h5 class="  text-md font-bold  text-black  ">
                                     {cart.size}
                                 </h5>
                             </div>
@@ -248,23 +248,23 @@ export default function Index(props) {
                                 </form>
                             </div>
                             <div class="flex flex-row  flex-wrap  my-3">
-                                <h5 class="mx-2 text-sm  text-neutral-300 ">
+                                <h5 class="mx-2 text-sm  text-maroon-300 ">
                                     Items:
                                 </h5>
                                 <h5 class="  text-sm   text-black  ">
                                     {cart.quantity}
                                 </h5>
-                                <h5 class="mx-2 text-sm  text-neutral-300  ">
+                                <h5 class="mx-2 text-sm  text-maroon-300  ">
                                     Price:
                                 </h5>
-                                <h5 class="  text-sm   text-black ">
+                                <h5 class="  text-sm font-bold  text-black ">
                                     {cart.price}
                                 </h5>
 
-                                <h5 class="mx-2 text-sm  text-neutral-300 ">
+                                <h5 class="mx-2 text-sm  text-maroon-300 ">
                                     Total:
                                 </h5>
-                                <h5 class="  text-xl   text-black ">
+                                <h5 class="  text-xl font-bold  text-black ">
                                     {cart.price * cart.quantity}
                                 </h5>
                                 <div class="flex   p-1">
@@ -324,17 +324,25 @@ export default function Index(props) {
                 <Link
                     as="button"
                     href="/tshirts"
-                    class="text-black text-center p-3 m-2 border hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                    class="text-black text-center p-3 m-2 border border-purple-600 bg-lime-200 hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
                 >
                     Continue Shopping
                 </Link>
                 <Link
                     as="button"
                     href="/checkout"
-                    class="text-black text-center p-3 m-2 border hover:border- hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                    class="text-black text-center p-3 m-2 border border-purple-600 bg-lime-200 hover:border- hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
                 >
                     Proceed To Checkout
                 </Link>
+            </div>
+            <div class="border-t-2   px-8 my-6 border-slate-200">
+                <div class="text-center font-thin p-4 mt-2 text-3xl text-black  hover:translate-x-3 duration-200">
+                    Our Service
+                </div>
+                <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
+                    ~Custom T-Shirts Branding~
+                </div>
             </div>
         </Layout>
     );
