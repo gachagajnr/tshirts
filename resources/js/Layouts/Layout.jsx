@@ -4,6 +4,7 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import m5 from "@/Images/magicpatter.svg";
+import Logo from "@/Images/Logo.png";
 
 export default function Layout({ children }) {
     const { user } = usePage().props;
@@ -20,6 +21,11 @@ export default function Layout({ children }) {
                 />
 
                 <div class="flex flex-row  justify-center">
+                    <img
+                        class="h-12 w-12 cursor-pointer"
+                        src={Logo}
+                        alt="Crafty Tshirts"
+                    />
                     <p class="text-center pt-3 text-2xl text-black">
                         <Link href="/">CraftyTshirtsStore</Link>
                     </p>

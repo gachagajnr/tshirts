@@ -1,6 +1,7 @@
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import { Link } from "@inertiajs/react";
 import m5 from "@/Images/magicpatter.svg";
+import Logo from "@/Images/Logo.png";
 
 export default function Guest({ children }) {
     return (
@@ -10,6 +11,11 @@ export default function Guest({ children }) {
         >
             <div class="flex justify-center items-center text-black   flex-col">
                 <div class="flex flex-row  justify-center">
+                    <img
+                        class="h-12 w-12 cursor-pointer"
+                        src={Logo}
+                        alt="Crafty Tshirts"
+                    />
                     <p class="text-center pt-3 text-2xl text-black">
                         <Link href="/">CraftyTshirtsStore</Link>
                     </p>
