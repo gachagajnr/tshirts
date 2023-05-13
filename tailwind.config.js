@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,7 +16,9 @@ module.exports = {
             fontFamily: {
                 sans: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
-            
+            backgroundImage: {
+                magicpat: "url('../public/imgs/magicpat.png')",
+            },
         },
         // container: {
         //     center: true,

@@ -14,14 +14,14 @@ export default function Welcome(props) {
             <div>
                 <div class="border-l-2   border-purple-500">
                     <div class="flex justify-center flex-col  pt-6   ">
-                        <div class="text-center py-2 lg:text-5xl xs:text-4xl font-light text-white tracking-tight hover:-translate-y-2 duration-200 ">
+                        <div class="text-center py-2 lg:text-5xl text-black xs:text-4xl font-light text-black tracking-tight hover:-translate-y-2 duration-200 ">
                             Custom Tees, Custom Stories
                         </div>
                         <div class="tracking-tightest text-center  lg:text-8xl xs:text-6xl border-r-2  hover:text-lime-400  p-2     mt-2 text-orange-500  ">
                             Wear Your Personality
                         </div>
 
-                        <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2  hover:translate-x-1 duration-300  text-white    border-lime-400 ">
+                        <div class="tracking-tight p-4 my-4 font-light text-center text-3xl border-r-2  hover:translate-x-1 duration-300  text-black    border-lime-400 ">
                             Talk To Us For Other Custom Solutions
                         </div>
 
@@ -29,7 +29,7 @@ export default function Welcome(props) {
                             <Link
                                 href="/contact"
                                 // as="button"
-                                class="  text-white text-lg font-semibold  hover:text-green-500 rounded-md  "
+                                class="  text-black text-lg font-semibold  hover:text-green-500 rounded-md  "
                             >
                                 Talk To Us
                             </Link>
@@ -37,7 +37,7 @@ export default function Welcome(props) {
                     </div>
                 </div>
                 <div class="border-r-2   border-orange-500">
-                    <div class="text-end text-white  font-thin p-4 mt-4 text-3xl   transition ease-in-out delay-150  hover:-translate-x-1   duration-300 ">
+                    <div class="text-end text-black  font-thin p-4 mt-4 text-3xl   transition ease-in-out delay-150  hover:-translate-x-1   duration-300 ">
                         Our T-Shirts Collection
                     </div>
 
@@ -50,7 +50,7 @@ export default function Welcome(props) {
                                       .map((tshirt) => {
                                           return (
                                               <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/4  mb-4   ">
-                                                  <div class="w-full h-full   text-white  p-4">
+                                                  <div class="w-full h-full   text-black  p-4">
                                                       <a class="relative block  overflow-hidden rounded  ">
                                                           <img
                                                               alt="tshirt"
@@ -60,30 +60,30 @@ export default function Welcome(props) {
                                                       </a>
                                                       <div class="mt-4">
                                                           <div class="flex flex-row justify-between">
-                                                              <h3 class="title-font mb-1 text-xs tracking-widest text-white">
+                                                              <h3 class="title-font mb-1 text-xs tracking-widest text-black">
                                                                   {tshirt.name}
                                                               </h3>
-                                                              <h2 class="title-font  text-lg font-medium text-white">
+                                                              <h2 class="title-font  text-lg font-medium text-black">
                                                                   KES{" "}
                                                                   {tshirt.price}
                                                               </h2>
                                                           </div>
 
-                                                          <h2 class="title-font text-xs font-medium text-white">
+                                                          <h2 class="title-font text-xs font-medium text-black">
                                                               All Colors
                                                               Available
                                                           </h2>
-                                                          <h2 class="title-font text-md text-end font-medium text-white">
+                                                          <h2 class="title-font text-md text-end font-medium text-black">
                                                               {
                                                                   tshirt.description
                                                               }
                                                           </h2>
                                                           <div class="flex flex-row justify-between">
-                                                              <p class="mt-1 text-white font-light text-xs">
+                                                              <p class="mt-1 text-black font-light text-xs">
                                                                   Available
                                                                   Sizes:
                                                               </p>
-                                                              <p class="mt-0 text-white text-sm ">
+                                                              <p class="mt-0 text-black text-sm ">
                                                                   XXL XL L M S
                                                               </p>
                                                           </div>
@@ -101,10 +101,10 @@ export default function Welcome(props) {
                 </div>
 
                 <div class="border-l-2    border-green-500 py-8 px-8">
-                    <div class="text-start  p-4 mt-4 text-3xl font-thin text-white hover:translate-x-2 duration-300">
+                    <div class="text-start  p-4 mt-4 text-3xl font-thin text-black hover:translate-x-2 duration-300">
                         About CraftyTshirtsStore
                     </div>
-                    <div class="p-3 text-xl leading-relaxed text-white indent-8 italic font-thin tracking-wide text-center">
+                    <div class="p-3 text-xl leading-relaxed text-black indent-8 italic font-thin tracking-wide text-center">
                         we strongly agree to many uses of words , sometimes to
                         inspire , to affirm, to pass a message, as well as to
                         manifest,
@@ -124,7 +124,7 @@ export default function Welcome(props) {
                     </div>
                 </div>
                 <div class="border-r-2   border-yellow-500">
-                    <div class="text-end   font-thin p-4 mt-4 text-3xl text-white hover:-translate-x-3 duration-500">
+                    <div class="text-end   font-thin p-4 mt-4 text-3xl text-black hover:-translate-x-3 duration-500">
                         Phrases Catalogue
                     </div>
 
@@ -134,8 +134,8 @@ export default function Welcome(props) {
                                 ? shuts.map((shut) => {
                                       return (
                                           <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                                              <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
-                                                  <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
+                                              <div class="w-full h-full bg-grey shadow-lg text-black text-center p-3">
+                                                  <div class="shadow-md text-center hover:text-blue-300 text-black bg-black p-1 border-gray-50 rounded">
                                                       {shut.name}
                                                   </div>
                                               </div>

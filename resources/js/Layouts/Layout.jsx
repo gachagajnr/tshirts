@@ -3,15 +3,18 @@ import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
-import Image from "@/Images/tshirt.png";
+import m5 from "@/Images/magicpatter.svg";
 
 export default function Layout({ children }) {
     const { user } = usePage().props;
     return (
-        <div class="bg-transparent bg-gradient-to-br from-slate-700 to-teal-600   overflow-hidden">
+        <div
+            class="bg-[url('../public/imgs/magicpat.png')]"
+            style={{ backgroundImage: `url(${m5})` }}
+        >
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
                 <div class="flex flex-row  justify-center">
-                    <p class="text-center pt-3 text-2xl text-white">
+                    <p class="text-center pt-3 text-2xl text-black">
                         <Link href="/">CraftyTshirtsStore</Link>
                     </p>
                 </div>
@@ -36,7 +39,7 @@ export default function Layout({ children }) {
                                 href="/cart"
                                 class="ml-1 text-sm text-blue-300   hover:scale-105 duration-400"
                             >
-                                <ShoppingCartIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
+                                <ShoppingCartIcon class="h-6 w-6 text-black ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
                             </Link>
                         </div>
                     </header>
@@ -58,7 +61,7 @@ export default function Layout({ children }) {
                             href="/cart"
                             class="ml-1 text-sm text-blue-300   hover:scale-105 duration-400"
                         >
-                            <ShoppingCartIcon class="h-6 w-6 text-white ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
+                            <ShoppingCartIcon class="h-6 w-6 text-black ml-2 cursor-pointer text-center  hover:scale-105 duration-400" />
                         </Link>
                     </header>
                 )}
@@ -95,20 +98,20 @@ export default function Layout({ children }) {
                 </div>
                 {children}
                 <div class="border-l-2 py-x px-8 border-indigo-500">
-                    <div class="text-start font-thin p-4 mt-4 text-3xl text-white  hover:translate-x-3 duration-200">
+                    <div class="text-start font-thin p-4 mt-4 text-3xl text-black  hover:translate-x-3 duration-200">
                         Our Service
                     </div>
-                    <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-white text-center  ">
+                    <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
                         ~Custom T-Shirts Branding~
                     </div>
                 </div>
                 {/* <div class="border-r-2 border-b-2 border-white"> */}
-                <div class="text-center font-thin text-white  py-8 px-8 mt-4 text-2xl hover:scale-105 duration-300">
+                <div class="text-center font-thin text-black  py-8 px-8 mt-4 text-2xl hover:scale-105 duration-300">
                     Find Us On
                 </div>
                 <div class="flex justify-center gap-2 p-3">
                     <div href="" class="hover:scale-105 duration-500">
-                        <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+                        <button class="  p-2 font-semibold text-black inline-flex items-center space-x-2 rounded-full">
                             <svg
                                 class="w-8 h-8 fill-current"
                                 role="img"
@@ -120,7 +123,7 @@ export default function Layout({ children }) {
                         </button>
                     </div>
                     <div href="" class="hover:scale-105 duration-500">
-                        <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                        <button class="  p-2 font-semibold text-black inline-flex items-center space-x-2 rounded">
                             <svg
                                 class="w-8 h-8 fill-current"
                                 role="img"
@@ -134,7 +137,7 @@ export default function Layout({ children }) {
                         </button>
                     </div>
                     <div href="" class="hover:scale-105 duration-500">
-                        <button class="  p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                        <button class="  p-2 font-semibold text-black inline-flex items-center space-x-2 rounded">
                             <svg
                                 class="w-8 h-8 fill-current"
                                 role="img"
@@ -146,12 +149,12 @@ export default function Layout({ children }) {
                         </button>
                     </div>
                 </div>
-                <div class="text-start tracking-widest text-white  p-2 mt-4 text-md overline">
+                <div class="text-start tracking-widest text-black  p-2 mt-4 text-md overline">
                     @CraftyTshirtsStore
                 </div>
                 {/* </div> */}
 
-                <h2 class="text-end text-white">
+                <h2 class="text-end text-black">
                     {"Copyright © "}{" "}
                     <Link to="/" alt="" style={{ textDecoration: "none" }}>
                         CraftyTshirtsStore{" "}
