@@ -37,7 +37,7 @@ export default function Index(props) {
 
     return (
         <Layout>
-            <div class="text-white text-3xl font-thin text-center   m-2 hover:-translate-y-2 duration-500">
+            <div class="text-black text-3xl font-thin text-center   m-2 hover:-translate-y-2 duration-500">
                 My TShirt Cart
             </div>
 
@@ -53,7 +53,7 @@ export default function Index(props) {
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 Total TShirts
                             </div>
-                            <div class="text-white text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-extralight">
                                 {carts
                                     .map((item) => item.quantity)
                                     .reduce((prev, next) => prev + next, 0)
@@ -63,7 +63,7 @@ export default function Index(props) {
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 Total Amount
                             </div>
-                            <div class="text-white text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-extralight">
                                 {
                                     carts
                                         .map((item) => item.total)
@@ -90,10 +90,10 @@ export default function Index(props) {
                         />
                         <div class="flex flex-col justify-start  p-3 ">
                             <div class="flex flex-row justify-between  ">
-                                <h5 class="  text-xl   text-white ">
+                                <h5 class="  text-xl   text-black ">
                                     {cart.name}
                                 </h5>
-                                <h5 class="  font-mono text-white ">
+                                <h5 class="  font-mono text-black ">
                                     {cart.color.toLowerCase()}
                                 </h5>
                             </div>
@@ -102,7 +102,7 @@ export default function Index(props) {
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     Selected Size:
                                 </h5>
-                                <h5 class="  text-md   text-white  ">
+                                <h5 class="  text-md   text-black  ">
                                     {cart.size}
                                 </h5>
                             </div>
@@ -130,7 +130,7 @@ export default function Index(props) {
                                                 }
                                             />
                                             <label
-                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-black"
                                                 for="inlineRadio1"
                                             >
                                                 S
@@ -157,7 +157,7 @@ export default function Index(props) {
                                                 }
                                             />
                                             <label
-                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-black"
                                                 for="inlineRadio1"
                                             >
                                                 M
@@ -184,7 +184,7 @@ export default function Index(props) {
                                                 }
                                             />
                                             <label
-                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-black"
                                                 for="inlineRadio1"
                                             >
                                                 L
@@ -211,7 +211,7 @@ export default function Index(props) {
                                                 }
                                             />
                                             <label
-                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-black"
                                                 for="inlineRadio1"
                                             >
                                                 XL
@@ -238,7 +238,7 @@ export default function Index(props) {
                                                 }
                                             />
                                             <label
-                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-white"
+                                                class="mt-px inline-block pl-[0.15rem] hover:cursor-pointer text-black"
                                                 for="inlineRadio1"
                                             >
                                                 XXL
@@ -251,20 +251,20 @@ export default function Index(props) {
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     Items:
                                 </h5>
-                                <h5 class="  text-sm   text-white  ">
+                                <h5 class="  text-sm   text-black  ">
                                     {cart.quantity}
                                 </h5>
                                 <h5 class="mx-2 text-sm  text-neutral-300  ">
                                     Price:
                                 </h5>
-                                <h5 class="  text-sm   text-white ">
+                                <h5 class="  text-sm   text-black ">
                                     {cart.price}
                                 </h5>
 
                                 <h5 class="mx-2 text-sm  text-neutral-300 ">
                                     Total:
                                 </h5>
-                                <h5 class="  text-xl   text-white ">
+                                <h5 class="  text-xl   text-black ">
                                     {cart.price * cart.quantity}
                                 </h5>
                                 <div class="flex   p-1">
@@ -282,9 +282,9 @@ export default function Index(props) {
                                         }
                                         type="submit"
                                     >
-                                        <MinusCircleIcon class="cursor-pointer text-white h-6 w-6 mx-2 hover:text-red-500" />
+                                        <MinusCircleIcon class="cursor-pointer text-black h-6 w-6 mx-2 hover:text-red-500" />
                                     </button>
-                                    <div class="text-white text-2xl">
+                                    <div class="text-black text-2xl">
                                         {cart.quantity}
                                     </div>
                                     <button
@@ -300,7 +300,7 @@ export default function Index(props) {
                                         }
                                         type="submit"
                                     >
-                                        <PlusCircleIcon class="text-white h-6 w-6 mx-2 hover:text-green-600" />
+                                        <PlusCircleIcon class="text-black h-6 w-6 mx-2 hover:text-green-600" />
                                     </button>
                                     <button
                                         as="button"
@@ -310,7 +310,7 @@ export default function Index(props) {
                                                 route("cart.destroy", cart.id)
                                             )
                                         }
-                                        class="cursor-pointer text-end text-white   text-md bg-red-600 p-1 rounded text-xs my-1"
+                                        class="cursor-pointer text-end text-black   text-md bg-red-600 p-1 rounded text-xs my-1"
                                     >
                                         Remove From Cart
                                     </button>
@@ -324,16 +324,16 @@ export default function Index(props) {
                 <Link
                     as="button"
                     href="/tshirts"
-                    class="text-white text-center p-3 m-2 border hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                    class="text-black text-center p-3 m-2 border hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
                 >
-                    cONTINUE sHOPPING
+                    Continue Shopping
                 </Link>
                 <Link
                     as="button"
                     href="/checkout"
-                    class="text-white text-center p-3 m-2 border hover:border- hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
+                    class="text-black text-center p-3 m-2 border hover:border- hover:-translate-y-2 duration-300  w-1/2 rounded-lg justify-center "
                 >
-                    pROCCED to cHECKOUT
+                    Proceed To Checkout
                 </Link>
             </div>
         </Layout>
