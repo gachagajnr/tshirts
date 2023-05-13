@@ -36,7 +36,7 @@ export default function Index(props) {
 
     return (
         <Layout>
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+            <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 mY tSHIRT cART
             </div>
 
@@ -52,7 +52,7 @@ export default function Index(props) {
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 tOTAL tSHUTs
                             </div>
-                            <div class="text-white text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-extralight">
                                 {carts
                                     .map((item) => item.quantity)
                                     .reduce((prev, next) => prev + next, 0)
@@ -62,7 +62,7 @@ export default function Index(props) {
                             <div class="text-slate-400 text-lg text-center font-extralight mx-2">
                                 tOTAL aMOUNT
                             </div>
-                            <div class="text-white text-2xl text-center font-extralight">
+                            <div class="text-black text-2xl text-center font-extralight">
                                 {carts
                                     .map((item) => item.total)
                                     .reduce((prev, next) => prev + next, 0)}
@@ -77,7 +77,7 @@ export default function Index(props) {
                         <div class="flex flex-col ">
                             <div class="flex flex-row">
                                 <div class="flex flex-col   ">
-                                    <label htmlFor="firstname" class="text-white">
+                                    <label htmlFor="firstname" class="text-black">
                                         First Name:
                                     </label>
                                     <input
@@ -96,7 +96,7 @@ export default function Index(props) {
                                     )}
                                 </div>
                                 <div class="flex flex-col  ">
-                                    <label htmlFor="lastname" class="text-white">
+                                    <label htmlFor="lastname" class="text-black">
                                         Last Name:
                                     </label>
                                     <input
@@ -115,7 +115,7 @@ export default function Index(props) {
                                     )}
                                 </div>
                             </div>
-                            <label htmlFor="phone" class="text-white">
+                            <label htmlFor="phone" class="text-black">
                                 Phone Number:
                             </label>
                             <input
@@ -132,7 +132,7 @@ export default function Index(props) {
                                     {errors.phone}
                                 </div>
                             )}
-                            <label htmlFor="location" class="text-white">
+                            <label htmlFor="location" class="text-black">
                                 Delivery Location:
                             </label>
                             <input
@@ -154,7 +154,7 @@ export default function Index(props) {
                             </h5>
                             <div class="flex flex-row">
                                 <div class="flex flex-col  ">
-                                    <label htmlFor="street" class="text-white">
+                                    <label htmlFor="street" class="text-black">
                                         Street:
                                     </label>
                                     <input
@@ -173,7 +173,7 @@ export default function Index(props) {
                                     )}
                                 </div>
                                 <div class="flex flex-col  ">
-                                    <label htmlFor="city" class="text-white">
+                                    <label htmlFor="city" class="text-black">
                                         City:
                                     </label>
                                     <input
@@ -196,7 +196,7 @@ export default function Index(props) {
                             <button
                                 disabled={processing}
                                 type="submit"
-                                class="  bg-blue-600 w-30 hover:bg-green-600 text-white, p-2 my-3 rounded"
+                                class="  bg-blue-600 w-30 hover:bg-green-600 text-black, p-2 my-3 rounded"
                             >
                                 Place Order & Pay
                             </button>
@@ -216,27 +216,27 @@ export default function Index(props) {
                                     alt={cart.name}
                                 />
                                 <div class="flex flex-col justify-start  p-3 ">
-                                    <h5 class="  text-xs   text-white ">
+                                    <h5 class="  text-xs   text-black ">
                                         Name: {cart.name}
                                     </h5>
-                                    <h5 class=" text-xs font-mono text-white ">
+                                    <h5 class=" text-xs font-mono text-black ">
                                         Color: {cart.color.toLowerCase()}
                                     </h5>
 
                                     <div class="flex flex-row  justify-start border-b-2 py-1">
-                                        <h5 class="  text-xs   text-white  ">
+                                        <h5 class="  text-xs   text-black  ">
                                             Size: {cart.size}
                                         </h5>
                                     </div>
 
                                     <div class="flex flex-row  flex-wrap  my-3">
-                                        <h5 class="  text-sm   text-white  ">
+                                        <h5 class="  text-sm   text-black  ">
                                             {cart.quantity}
                                         </h5>
                                         <h5 class="mx-2 text-sm  text-neutral-300  ">
                                             @
                                         </h5>
-                                        <h5 class="  text-sm   text-white ">
+                                        <h5 class="  text-sm   text-black ">
                                             {cart.price}
                                         </h5>
                                     </div>
