@@ -17,7 +17,7 @@ export default function Welcome(props) {
                         <div class="text-center my-6 lg:text-5xl text-black xs:text-4xl font-light text-black tracking-tight hover:-translate-y-2 duration-200 ">
                             Custom Tees, Custom Stories
                         </div>
-                        <div class="tracking-tightest text-center  lg:text-8xl xs:text-6xl border-r-2  hover:text-lime-400  p-2     mt-2 text-orange-500  ">
+                        <div class="tracking-tightest text-center  lg:text-8xl xs:text-6xl border-r-2  hover:text-orange-500  p-2     mt-2 text-orange-700  ">
                             Wear Your Personality
                         </div>
 
@@ -119,7 +119,7 @@ export default function Welcome(props) {
                         with our logo on it You can also request your own
                         customized phrase of your liking.
                     </div>
-                    <div class="text-center p-3 mt-4 font-thin    text-4xl tracking-wide text-cyan-800 ">
+                    <div class="text-center p-3 mt-4 font-normal    text-4xl tracking-wide text-orange-500 ">
                         Your Style, Your Statement.
                     </div>
                 </div>

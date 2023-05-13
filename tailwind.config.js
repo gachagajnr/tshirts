@@ -16,9 +16,7 @@ module.exports = {
             fontFamily: {
                 sans: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
-            backgroundImage: {
-                magicpat: "url('../public/imgs/magicpat.png')",
-            },
+           
         },
         // container: {
         //     center: true,

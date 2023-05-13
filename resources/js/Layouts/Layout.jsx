@@ -13,6 +13,12 @@ export default function Layout({ children }) {
             style={{ backgroundImage: `url(${m5})` }}
         >
             <header class="flex  justify-center pt-2 flex-col gap-4 ">
+                <link
+                    rel="shortcut icon"
+                    type="image/x-icon"
+                    href="{{ asset('favicon.ico') }}"
+                />
+
                 <div class="flex flex-row  justify-center">
                     <p class="text-center pt-3 text-2xl text-black">
                         <Link href="/">CraftyTshirtsStore</Link>
@@ -122,7 +128,6 @@ export default function Layout({ children }) {
                         class="hover:scale-105 duration-500 "
                         target="_blank"
                     >
-                       
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-8 w-8"
