@@ -36,7 +36,7 @@ export default function Show(props) {
         <Layout>
             <Head title="Phrases" />
 
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+            <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 Tshirts Phrases
             </div>
 
@@ -44,7 +44,7 @@ export default function Show(props) {
                 {permissions.includes("write tshirts") ? (
                     <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
                         <Link as="button" href="/shuts/create">
-                            cREATE sHUT pHRASE
+                            Create Shut Phrases
                         </Link>
                     </div>
                 ) : null}
@@ -120,7 +120,7 @@ export default function Show(props) {
                                     >
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
-                                                <h3 class="title-font mb-1 text-lg border rounded p-2 tracking-wide hover:-translate-y-1 cursor-pointer duration-300 text-white">
+                                                <h3 class="title-font mb-1 text-lg border rounded p-2 tracking-wide hover:-translate-y-1 cursor-pointer duration-300 text-black">
                                                     {shut.name}
                                                 </h3>
                                             </div>
@@ -130,7 +130,7 @@ export default function Show(props) {
                                                 <div class="flex flex-row justify-start  ">
                                                     <Link
                                                         tabIndex="1"
-                                                        className="px-4 py-2 text-xs text-white bg-blue-500 rounded"
+                                                        className="px-4 py-2 text-xs text-black bg-blue-500 rounded"
                                                         href={route(
                                                             "shuts.edit",
                                                             shut.id
@@ -142,7 +142,7 @@ export default function Show(props) {
                                                         onClick={destruct}
                                                         id={shut.id}
                                                         type="button"
-                                                        className="mx-1 px-4 py-2 text-xs text-white bg-red-500 rounded"
+                                                        className="mx-1 px-4 py-2 text-xs text-black bg-red-500 rounded"
                                                     >
                                                         Delete
                                                     </button>
