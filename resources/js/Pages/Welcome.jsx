@@ -25,7 +25,7 @@ export default function Welcome(props) {
                             Talk To Us For Other Custom Solutions
                         </div>
 
-                        <div class="text-center border rounded-md my-5 m-auto w-48 py-3 hover:scale-105 duration-300">
+                        <div class="text-center border border-green-700 rounded-md my-5 m-auto w-48 py-3 hover:scale-105 duration-300">
                             <Link
                                 href="/contact"
                                 // as="button"
@@ -104,22 +104,22 @@ export default function Welcome(props) {
                     <div class="text-start  p-4 mt-4 text-3xl font-thin text-black hover:translate-x-2 duration-300">
                         About CraftyTshirtsStore
                     </div>
-                    <div class="p-3 text-xl leading-relaxed text-black indent-8 italic font-thin tracking-wide text-center">
+                    <div class="p-3 text-xl leading-relaxed text-black indent-8 italic font-normal tracking-wide text-center">
                         we strongly agree to many uses of words , sometimes to
                         inspire , to affirm, to pass a message, as well as to
                         manifest,
-                        <div class="text-md text-blue-400 font thin">
+                        <div class="text-md text-blue-600 font thin">
                             we print your choice of words on tshirts to deliver
                             your message to the world and by crafted designs,
                         </div>
-                        <div class="text-md text-blue-200 font thin">
+                        <div class="text-md text-blue-600 font thin">
                             We do our own words which appear as limited edition
                         </div>
                         where we do a series of phrases for a number of clients
                         with our logo on it You can also request your own
                         customized phrase of your liking.
                     </div>
-                    <div class="text-center p-3 mt-4 font-thin    text-4xl tracking-wide text-cyan-500 ">
+                    <div class="text-center p-3 mt-4 font-thin    text-4xl tracking-wide text-cyan-800 ">
                         Your Style, Your Statement.
                     </div>
                 </div>
