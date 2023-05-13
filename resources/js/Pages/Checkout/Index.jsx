@@ -36,16 +36,13 @@ export default function Index(props) {
 
     return (
         <Layout>
+            <Head title="Checkout"/>
             <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 Checkout
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
-                <div class="text-red-500 text-end hover:-translate-x-2  duration-500 my-3">
-                    <Link as="button" href="/tshirts">
-                        Continue Shopping
-                    </Link>
-                </div>
+                
                 <div class="container mx-4  px-8 sm:px-0">
                     <div class="container mx-auto">
                         <div class="flex flex-row p-2 gap-3 justify-center my-3 flex-wrap">
@@ -159,7 +156,7 @@ export default function Index(props) {
                                     {errors.location}
                                 </div>
                             )}
-                            <h5 class="text-yellow-400 font-extralight">
+                            <h5 class="text-red-400 font-light">
                                 Free Delivery in CDB
                             </h5>
                             <div class="flex flex-row">

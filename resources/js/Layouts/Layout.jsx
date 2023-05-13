@@ -22,7 +22,7 @@ export default function Layout({ children }) {
                     <header class="flex flex-row justify-center mb-2 ">
                         <div className="flex justify-around">
                             <Link
-                                class="mr-2 text-sm capitalize text-blue-200 hover:scale-105 duration-400"
+                                class="mr-2 text-sm capitalize text-black hover:scale-105 duration-400"
                                 href={route("profile.edit")}
                             >
                                 {user.name}
