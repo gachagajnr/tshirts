@@ -37,14 +37,14 @@ export default function Show(props) {
             <Head title="Phrases" />
 
             <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                Tshirts Phrases
+                Phrases Collection
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
                 {permissions.includes("write tshirts") ? (
                     <div class="text-red-500 text-end hover:-translate-x-2 duration-500 my-3">
                         <Link as="button" href="/shuts/create">
-                            Create Shut Phrases
+                            Create TShirt Phrases
                         </Link>
                     </div>
                 ) : null}
@@ -120,7 +120,7 @@ export default function Show(props) {
                                     >
                                         <div class="mt-4 ">
                                             <div class="flex flex-row justify-between">
-                                                <h3 class="title-font mb-1 text-lg border rounded p-2 tracking-wide hover:-translate-y-1 cursor-pointer duration-300 text-black">
+                                                <h3 class="title-font mb-1 text-lg border border-black rounded p-2 tracking-wide hover:-translate-y-1 cursor-pointer duration-300 text-black">
                                                     {shut.name}
                                                 </h3>
                                             </div>
@@ -154,6 +154,14 @@ export default function Show(props) {
                             })}
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="border-t-2   px-8 my-6 border-slate-200">
+                <div class="text-center font-thin p-4 mt-2 text-3xl text-black  hover:translate-x-3 duration-200">
+                    Our Service
+                </div>
+                <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
+                    ~Custom T-Shirts Branding~
                 </div>
             </div>
         </Layout>

@@ -43,7 +43,7 @@ export default function Show(props) {
             <Head title="Tshirts" />
 
             <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
-                T-Shirts Designs
+                T-Shirts Collection
             </div>
 
             <div class="md:container md:mx-auto px-4   ">
@@ -218,6 +218,14 @@ export default function Show(props) {
                             })}
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="border-t-2   px-8 my-6 border-slate-200">
+                <div class="text-center font-thin p-4 mt-2 text-3xl text-black  hover:translate-x-3 duration-200">
+                    Our Service
+                </div>
+                <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
+                    ~Custom T-Shirts Branding~
                 </div>
             </div>
         </Layout>

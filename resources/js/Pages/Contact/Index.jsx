@@ -21,37 +21,29 @@ export default function Show(props) {
         <Layout>
             <Head title="Contact" />
 
-            <div class="text-white text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
+            <div class="text-black text-4xl text-center p-5   m-2 hover:-translate-y-2 duration-500">
                 Contact Us
             </div>
 
             <div class="container mx-4  px-8 sm:px-0">
                 <div class="container mx-auto w-auto">
                     <div class="flex flex-row flex-wrap justify-center">
-                        <div class="tracking-wide text-center font-light text-3xl mb-3 hover:-translate-x-1 duration-150  leading-tight text-slate-200 p-5 ">
-                            Are you in need of a Custom solution?
-                            <br /> ~Say~
-                            <br />
-                            <div class="p-2 text-3xl">
-                                Custom t-shirt, Bulk t-Shirt branding solutions,
-                                other branding Services or any Questions ?
-                            </div>
-                            Reach Out to us to see where we can Help,
-                            <br /> we'll Respond <br />
-                            as soon as we get your Question.
+                        <div class="tracking-wide text-center font-light text-3xl mb-3 hover:-translate-x-1 duration-150  leading-tight text-slate-900 p-5 ">
+                            At CraftyTshirtsStore, we are committed to providing
+                            our customers with exceptional service and
+                            high-quality products. If you have any questions
+                            about our custom t-shirt orders, we invite you to
+                            get in touch with us.
                         </div>
 
                         <div class=" p-10   border-l-2 border-t-2 border-green-300 ">
                             <form onSubmit={submit}>
                                 <div class="flex flex-col  ">
-                                    <div class="text-white text-center p-4 m-2 text-3xl">
-                                        Reach Out Now
-                                    </div>
                                     <div class="flex flex-row">
                                         <div class="flex flex-col">
                                             <label
                                                 htmlFor="firstname"
-                                                class="text-white"
+                                                class="text-black"
                                             >
                                                 First Name:
                                             </label>
@@ -76,7 +68,7 @@ export default function Show(props) {
                                         <div class="flex flex-col">
                                             <label
                                                 htmlFor="lastname"
-                                                class="text-white"
+                                                class="text-black"
                                             >
                                                 Last Name:
                                             </label>
@@ -101,7 +93,7 @@ export default function Show(props) {
                                             )}
                                         </div>
                                     </div>
-                                    <label htmlFor="email" class="text-white">
+                                    <label htmlFor="email" class="text-black">
                                         Email Address:
                                     </label>
                                     <input
@@ -121,7 +113,7 @@ export default function Show(props) {
                                         </div>
                                     )}
 
-                                    <label htmlFor="phone" class="text-white">
+                                    <label htmlFor="phone" class="text-black">
                                         Phone Number
                                     </label>
                                     <input
@@ -140,7 +132,7 @@ export default function Show(props) {
                                         </div>
                                     )}
 
-                                    <label htmlFor="query" class="text-white">
+                                    <label htmlFor="query" class="text-black">
                                         Question
                                     </label>
                                     <input
@@ -161,14 +153,22 @@ export default function Show(props) {
                                     <button
                                         disabled={processing}
                                         type="submit"
-                                        class="  bg-blue-600 hover:bg-green-600 text-white p-2 my-3 rounded"
+                                        class="  bg-blue-600 hover:bg-green-600 text-black p-2 my-3 rounded"
                                     >
-                                        sUBMIT qUESTION
+                                        Submit Question
                                     </button>
                                 </div>
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="border-t-2   px-8 my-6 border-slate-200">
+                <div class="text-center font-thin p-4 mt-2 text-3xl text-black  hover:translate-x-3 duration-200">
+                    Our Service
+                </div>
+                <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
+                    ~Custom T-Shirts Branding~
                 </div>
             </div>
         </Layout>

@@ -152,6 +152,14 @@ export default function Welcome(props) {
                     </div>
                 </div>
             </div>
+            <div class="border-t-2   px-8 my-6 border-slate-200">
+                <div class="text-center font-thin p-4 mt-2 text-3xl text-black  hover:translate-x-3 duration-200">
+                    Our Service
+                </div>
+                <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
+                    ~Custom T-Shirts Branding~
+                </div>
+            </div>
         </Layout>
     );
 }

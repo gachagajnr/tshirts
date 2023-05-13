@@ -97,14 +97,7 @@ export default function Layout({ children }) {
                     </div>
                 </div>
                 {children}
-                <div class="border-l-2 py-x px-8 border-indigo-500">
-                    <div class="text-start font-thin p-4 mt-4 text-3xl text-black  hover:translate-x-3 duration-200">
-                        Our Service
-                    </div>
-                    <div class="flex flex-wrap justify-center   font-thin text-5xl p-4 text-black text-center  ">
-                        ~Custom T-Shirts Branding~
-                    </div>
-                </div>
+                
                 {/* <div class="border-r-2 border-b-2 border-white"> */}
                 <div class="text-center font-thin text-black  py-8 px-8 mt-4 text-2xl hover:scale-105 duration-300">
                     Find Us On
