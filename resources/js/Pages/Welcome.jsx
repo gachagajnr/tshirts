@@ -14,7 +14,7 @@ export default function Welcome(props) {
             <div>
                 <div class="border-l-2   border-purple-500">
                     <div class="flex justify-center flex-col  pt-6   ">
-                        <div class="text-center py-2 lg:text-5xl text-black xs:text-4xl font-light text-black tracking-tight hover:-translate-y-2 duration-200 ">
+                        <div class="text-center my-6 lg:text-5xl text-black xs:text-4xl font-light text-black tracking-tight hover:-translate-y-2 duration-200 ">
                             Custom Tees, Custom Stories
                         </div>
                         <div class="tracking-tightest text-center  lg:text-8xl xs:text-6xl border-r-2  hover:text-lime-400  p-2     mt-2 text-orange-500  ">
@@ -131,17 +131,20 @@ export default function Welcome(props) {
                     <div class="container mx-auto  px-8 sm:px-8">
                         <div class="flex flex-wrap">
                             {shuts.length >= 1
-                                ? shuts.map((shut) => {
-                                      return (
-                                          <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
-                                              <div class="w-full h-full bg-grey shadow-lg text-black text-center p-3">
-                                                  <div class="shadow-md text-center hover:text-blue-300 text-black bg-black p-1 border-gray-50 rounded">
-                                                      {shut.name}
+                                ? shuts
+                                      .sort(() => 0.4 - Math.random())
+                                      .slice(0, 8)
+                                      .map((shut) => {
+                                          return (
+                                              <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3 px-2 mb-2">
+                                                  <div class="w-full h-full bg-grey shadow-lg text-white text-center p-3">
+                                                      <div class="shadow-md text-center hover:text-blue-300 text-white bg-black p-1 border-gray-50 rounded">
+                                                          {shut.name}
+                                                      </div>
                                                   </div>
                                               </div>
-                                          </div>
-                                      );
-                                  })
+                                          );
+                                      })
                                 : []}
                         </div>
                     </div>

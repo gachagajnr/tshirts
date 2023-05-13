@@ -1,14 +1,16 @@
 import ApplicationLogo from "@/Components/ApplicationLogo";
 import { Link } from "@inertiajs/react";
-import Image from "@/Images/tshirt.png";
+import m5 from "@/Images/magicpatter.svg";
 
 export default function Guest({ children }) {
     return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-slate-900 p-4 ">
-            <div class="flex justify-center items-center text-white   flex-col">
+        <div
+            className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0  p-4 "
+            style={{ backgroundImage: `url(${m5})` }}
+        >
+            <div class="flex justify-center items-center text-black   flex-col">
                 <div class="flex flex-row  justify-center">
-                    
-                    <p class="text-center pt-3 text-2xl text-white">
+                    <p class="text-center pt-3 text-2xl text-black">
                         <Link href="/">CraftyTshirtsStore</Link>
                     </p>
                 </div>

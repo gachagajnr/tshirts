@@ -81,7 +81,7 @@ export default function Login({ status, canResetPassword }) {
                             value={data.remember}
                             handleChange={onHandleChange}
                         />
-                        <span className="ml-2 text-sm text-white  ">
+                        <span className="ml-2 text-sm text-black  ">
                             Remember me
                         </span>
                     </label>
@@ -90,14 +90,14 @@ export default function Login({ status, canResetPassword }) {
                 <div className="flex items-center justify-end gap-3 mt-4">
                     <Link
                         href={route("register")}
-                        className="underline text-sm text-white     "
+                        className="underline text-sm text-black     "
                     >
                         Register
                     </Link>
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
-                            className="underline text-sm text-white"
+                            className="underline text-sm text-black"
                         >
                             Forgot your password?
                         </Link>
